@@ -12,6 +12,4 @@ Para todo publico.
 Podes visitarnos en nuestro showroom en Av Alvear 1433, o visitar nuestra pagina web www.finour.com.
 Instpiradas en: https://www.tiffany.com.mx/jewelry/ por su estetic
 https://wa.me/c/5491128673525por sus textos.
-https://www.antuanjoyerias.com/institucional/sobre-antuan por sus funcionalidades impelmentadas
-https://www.swarovski.com.ar/sale por la calidad de las  fotos
-
+https://www.antuanjoyerias.com/institucional/sobre-antuan por sus funcionalidades implementada

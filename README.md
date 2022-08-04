@@ -16,3 +16,6 @@ https://wa.me/c/5491128673525 esta nos parecio buena por sus textos.
 https://www.antuanjoyerias.com/institucional/sobre-antuan por sus por como esta hecha la pagina y sus contenidos.
 https://www.swarovski.com.ar/sale esta nos parecio que tiene muy buenos colores sobrios.
 https://www.joyeriajeanpierre.com/ elegimos esta pagina por su estetica.
+
+
+HOME https://www.figma.com/file/dDUEDntQ3YepKsIuaSoBsT/HOME?node-id=0%3A1

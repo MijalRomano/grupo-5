@@ -17,7 +17,7 @@ body {
     padding: 5px;
     box-sizing: content-box;
     width: fit-content;
-    color: black;
+    color: rgb(126, 25, 25);
     border-radius: 8px;
     max-width: 50px;
     font-size: 18px;
@@ -54,7 +54,7 @@ main section {
     width: 40vw;
 }
 
-logo search {
+.logo-search {
     width: 70vw;
     display: flex;
     flex-wrap: wrap;
@@ -108,7 +108,10 @@ footer {
 
 p {
     text-align: center;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
+    
+    
+
 }
 
 
@@ -144,3 +147,9 @@ article img {
         justify-content: space-between;
     }
 }
+
+form .register{
+    background-color:#0022AA;
+    text-align: bottom;
+}
+

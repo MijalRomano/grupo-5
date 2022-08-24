@@ -79,14 +79,15 @@
 
 .banner {
     width: 100%;
-    height:25%;
+    height: 25%;
     align-items: center;
 }
 
 
-.main{
-    background-color:#f3b1d4
+.main {
+    background-color: #f3b1d4
 }
+
 .copy-header {
     font-weight: 400;
     text-align: center;
@@ -148,31 +149,31 @@
     flex-wrap: wrap;
 }
 
-article{
-flex-direction: row;
-flex-wrap: wrap;
-display: flex;
-overflow: hidden;
-box-shadow: 5px 8px 12px black;
-margin: 200px auto;
-border-radius: 15px;
-transition: 0.25s;
-width: 700px;
-height: 300px;
-border: 1px solid black;
-box-shadow: 0 0 10px rgb(100, 100, 100);
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 12px;
-margin: 20px;
-animation-name: enmovimiento;
-animation-duration: 3em;
-animation-timing-function: ease-out;
-animation-iteration-count: infinite;
-
-<<<<<<< HEAD
 article {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 5px 8px 12px black;
+    margin: 200px auto;
+    border-radius: 15px;
+    transition: 0.25s;
+    width: 700px;
+    height: 300px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin: 20px;
+    animation-name: enmovimiento;
+    animation-duration: 3em;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+.article {
     position: relative;
     overflow: hidden;
     box-shadow: 5px 8px 12px black;
@@ -196,17 +197,17 @@ article {
     flex-wrap: wrap;
     display: flex;
     background-color: #fff;
-=======
->>>>>>> 1523e9265f925813708e8daa58fe4a8eeff525c6
+
 }
 
 .descuentos.descripciones.precio {
     justify-content: center;
-align-items: center;
-flex-direction: row;
-flex-wrap: wrap;
-display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
 }
+
 section {
     display: flex;
     text-align: center;
@@ -217,7 +218,7 @@ section {
 article:hover {
     border: solid 1px palevioletred;
     width: 90vw;
-    transition:1s;
+    transition: 1s;
 }
 
 
@@ -253,7 +254,7 @@ ul i:hover {
     font-family: arial;
     display: flex;
     text-align: center;
-    color:#700738;
+    color: #700738;
 }
 
 
@@ -267,7 +268,7 @@ h4,
     font-weight: bold;
     font-size: 1rem;
     text-align: center;
-    color:rgb(54, 51, 51);
+    color: rgb(54, 51, 51);
 }
 
 
@@ -277,11 +278,11 @@ h5,
 .envio {
     border-top: solid 1px #ebebeb;
     padding-left: 15px;
-    font-family:arial;
+    font-family: arial;
     font-weight: bold;
     font-size: 1rem;
     text-align: center;
-    color:rgb(54, 51, 51);
+    color: rgb(54, 51, 51);
 }
 
 h6,
@@ -294,7 +295,7 @@ h6,
     font-weight: bold;
     font-size: 1rem;
     text-align: center;
-    color:rgb(54, 51, 51);
+    color: rgb(54, 51, 51);
 }
 
 

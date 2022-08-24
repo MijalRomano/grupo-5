@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.burger {
+    background-color: rgba (240 128 128 0.5);
+    padding: 5px;
+    box-sizing: content-box;
+    width: fit-content;
+    color: rgb(126, 25, 25);
+    border-radius: 8px;
+    max-width: 50px;
+    font-size: 18px;
+    margin: auto;
+    display: flex;
+}
+
+
+.logo-finour-joyas{
+    width: 15vw;
+    height: 20wh;
+    display: flex;
+}
+
+
+.logo-banner{
+    background-color:aqua;
+}
+
+main section {
+    flex-direction: row;
+}
+
+.logo-buscador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.logo-search img {
+    width: 40vw;
+}
+
+.logo-search {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;   
+}
+
+.search button{
+    float:right;
+    margin:5px;
+display: flex;
+}
+
+.search input[type=text]{
+    width:300px;
+    height:25px;
+    border-radius:25px;
+    border: none;
+}
+
+.search button {
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+
+footer {
+    display: flex;
+    text-align: center;
+}
+
+
+.descuento,detalles i {
+    color: blue;
+}
+
+p {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    
+    
+
+}
+
+
+.article {
+    border: solid 1px black;
+    padding: 12px;
+    margin: 10px;
+    width: 25vw;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+    flex-direction: row;
+}
+
+
+
+article img {
+    width: 80%;
+}
+
+
+@media (min-width: 361px) {
+    article {
+        width: 20vw;
+    }
+}
+
+@media (min-width: 768px) {
+    article {
+        width: 20vw;
+    }
+
+    .logo-search{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+form .register{
+    background-color:#0022AA;
+    text-align: bottom;
+}
+

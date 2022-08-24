@@ -172,6 +172,7 @@ article {
     animation-iteration-count: infinite;
     flex-wrap: wrap;
     display: flex;
+    background-color: #fff;
 }
 
 article img {

@@ -148,7 +148,30 @@
     flex-wrap: wrap;
 }
 
+article{
+flex-direction: row;
+flex-wrap: wrap;
+display: flex;
+overflow: hidden;
+box-shadow: 5px 8px 12px black;
+margin: 200px auto;
+border-radius: 15px;
+transition: 0.25s;
+width: 700px;
+height: 300px;
+border: 1px solid black;
+box-shadow: 0 0 10px rgb(100, 100, 100);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 12px;
+margin: 20px;
+animation-name: enmovimiento;
+animation-duration: 3em;
+animation-timing-function: ease-out;
+animation-iteration-count: infinite;
 
+<<<<<<< HEAD
 article {
     position: relative;
     overflow: hidden;
@@ -173,12 +196,37 @@ article {
     flex-wrap: wrap;
     display: flex;
     background-color: #fff;
+=======
+>>>>>>> 1523e9265f925813708e8daa58fe4a8eeff525c6
 }
 
-article img {
+.descuentos.descripciones.precio {
+    justify-content: center;
+align-items: center;
+flex-direction: row;
+flex-wrap: wrap;
+display: flex;
+}
+section {
+    display: flex;
+    text-align: center;
+    position: relative;
+    border-radius: 15px;
+}
+
+article:hover {
+    border: solid 1px palevioletred;
+    width: 90vw;
+    transition:1s;
+}
+
+
+
+.article img {
     width: 100%;
     height: 50%;
 }
+
 
 
 p {
@@ -197,21 +245,6 @@ ul i {
 ul i:hover {
     color: darkcyan;
     transition: 0.5s;
-}
-
-article:hover {
-    border: solid 1px palevioletred;
-    width: 90vw;
-    transition:1s;
-}
-
-
-.article {
-    text-align: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
-
 }
 
 

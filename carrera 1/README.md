@@ -22,3 +22,4 @@ Podes visitarnos en nuestro showroom en Av. Alvear 1433, o visitar nuestra pagin
 
 
 Este es nuestro boceto del HOME: https://www.figma.com/file/dDUEDntQ3YepKsIuaSoBsT/HOME?node-id=0%3A1
+trello: https://trello.com/b/WauGCDKt/grupo-5-nombre-finour-joyas

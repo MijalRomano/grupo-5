@@ -29,11 +29,11 @@ app.listen(3001,  (req, res) => {
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'http://localhost:3001/login'));
+    res.sendFile(path.join(__dirname, '/login'));
 });
 
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'http://localhost:3001/register'));
+    res.sendFile(path.join(__dirname, '/register'));
 });

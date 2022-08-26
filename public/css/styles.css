@@ -11,39 +11,29 @@
 }
 
 
+
 .hamburger-button {
-    background-color: #E86CAE;
     padding: 5px;
     box-sizing: content-box;
     width: fit-content;
-    color: #700738;
-    border-radius: 6px;
+    color: #eb5fc1;
+    border-radius: 4px;
     max-width: 30px;
     font-size: 18px;
     margin: auto;
     display: flex;
     width: 1.3vw;
     height: 2.7vh;
-    border: solid 1px #fff;
 
 
 }
 
 
 .hamburger-button:hover {
-    background-color: rgb(1, 1, 36);
-    color: white;
-    border: solid 1px salmon;
+    color: salmon;
+    border: solid 1px;
     font-size: 14;
 
-}
-
-.hamburger-button {
-    display: flex;
-}
-
-.logo {
-    width: 50vw;
 }
 
 .copy-header {
@@ -65,16 +55,9 @@
 .main-header {
     padding: 0px;
     width: auto;
-    background-color: #f3b1d4;
+    background-color: #f5da91;
 }
 
-
-.logo:hover {
-    width: 20vw;
-    transform: rotatey(180deg);
-    transition: 3s;
-    border: solid 6px rgb(201, 78, 78);
-}
 
 
 .banner {
@@ -117,7 +100,7 @@
 
 .main-navbar a {
     text-decoration: none;
-    color: #e90ac4;
+    color: #e90a85;
     display: inline-block;
     padding: 7px 0;
     font-size: 20px;
@@ -251,7 +234,6 @@ ul i:hover {
     font-family: arial;
     display: flex;
     text-align: center;
-    color: #700738;
 }
 
 h4,

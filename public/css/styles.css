@@ -29,9 +29,9 @@
 }
 
 
+
 .hamburger-button:hover {
     color: salmon;
-    border: solid 1px;
     font-size: 14;
 
 }
@@ -97,6 +97,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 
 .main-navbar a {
     text-decoration: none;

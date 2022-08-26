@@ -18,6 +18,10 @@ app.get('/login', function(req, res){
 
     res.sendFile(path.join(__dirname, '/views/login.html'));
 })
+app.get('/productCart', function(req, res){
+
+    res.sendFile(path.join(__dirname, '/views/productCart.html'));
+})
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/images/styles.css'));
@@ -36,4 +40,8 @@ app.get('/', (req, res) => {
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/register'));
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/productCart'));
 });

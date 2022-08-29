@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-
+let rutasProductos = require ("./routes/productsRuters.js");
+let rutasMin = require ("./routes/main.js");
 const app = express();
 
 app.use(express.static('public'));

@@ -1,0 +1,284 @@
+[33mcommit 551a30401adeb7fcc844f1141c15ff57d2d06521[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Mon Aug 29 18:30:34 2022 -0300
+
+    commit
+
+[33mcommit 0226974721541c4850881bea0dc1f48c51dc0e3b[m
+Merge: 57760bc a3e45a4
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Mon Aug 29 18:07:37 2022 -0300
+
+    Merge branch 'main' of https://github.com/MijalRomano/grupo-5-Finour-joyas
+
+[33mcommit 57760bc27279f948ef460cc15a2fa27f6c8338b4[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Mon Aug 29 18:06:49 2022 -0300
+
+    detalle del producto y rutas mijal
+
+[33mcommit a3e45a4ca9630de18953a94d35962f0947caca36[m
+Author: MijalRomano <109231008+MijalRomano@users.noreply.github.com>
+Date:   Mon Aug 29 15:39:34 2022 -0300
+
+    Delete videoFinourJoyas.mp4
+
+[33mcommit 3d9b66be5afc70596fd4298b7bc760ee55fe18e8[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Mon Aug 29 15:22:33 2022 -0300
+
+    proyecto terminado con correcciones
+
+[33mcommit 2dedbefd7030d6ba36325c235dee7256369c995a[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Sat Aug 27 23:33:27 2022 -0300
+
+    proyecto terminado!
+
+[33mcommit c707e99a64a2af81b4f22fabd21e6b3a5c7ed64b[m
+Merge: 216044b 132ed01
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Fri Aug 26 10:26:02 2022 -0300
+
+    Merge branch 'main' of https://github.com/MijalRomano/grupo-5-Finour-joyas
+
+[33mcommit 216044bdd20a9b836996662d4085739bddafdd02[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Fri Aug 26 10:25:57 2022 -0300
+
+    ver
+
+[33mcommit 132ed01f295238b4d1dc3b1c7da7ca6d354fa886[m
+Merge: a45fe7c 9b951db
+Author: johanna tacher <johanna.tacher@gmail.com>
+Date:   Fri Aug 26 10:09:58 2022 -0300
+
+    carrito
+
+[33mcommit a45fe7cd407a3087b22792eccb7ed5ee8dd9e177[m
+Author: johanna tacher <johanna.tacher@gmail.com>
+Date:   Fri Aug 26 09:44:46 2022 -0300
+
+    carrito
+
+[33mcommit 9b951dbb8e469cb9e7345a4f4aefe6115b31c5fc[m
+Author: MijalRomano <109231008+MijalRomano@users.noreply.github.com>
+Date:   Thu Aug 25 21:55:10 2022 -0300
+
+    Delete weekly.md
+
+[33mcommit 02e2df9cecdc6da177196011082edc1078990f71[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Thu Aug 25 21:53:12 2022 -0300
+
+    home terminado
+
+[33mcommit 58e1b34a19fabb2b79c1f203da8171ffcd93f381[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Thu Aug 25 21:01:50 2022 -0300
+
+    modificacion
+
+[33mcommit 8dd7ad12d2eaa74b2b51632afd482b8f4a746605[m
+Merge: 9d4ad4b 2fa7fe1
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Thu Aug 25 16:31:02 2022 -0300
+
+    Merge branch 'main' of https://github.com/MijalRomano/grupo-5-Finour-joyas
+
+[33mcommit 9d4ad4bf1fe9481660f85a1bfdfbc5cb54847d67[m
+Merge: 052e093 b911b15
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Thu Aug 25 16:30:57 2022 -0300
+
+    cambios
+
+[33mcommit 2fa7fe14a0a5d94524744414a819315182a13d74[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Thu Aug 25 16:14:50 2022 -0300
+
+    subiendo cambios
+
+[33mcommit 052e093b04ca3f411f7aab7b79648fb92979daa7[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Thu Aug 25 15:55:39 2022 -0300
+
+    cambios
+
+[33mcommit b911b15cba4c8912991edc478b73e953553afa86[m
+Merge: c098509 7cb3325
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Wed Aug 24 19:56:27 2022 -0300
+
+    Merge branch 'main' of https://github.com/MijalRomano/grupo-5-Finour-joyas
+
+[33mcommit c098509b2a929a6ec701c48ef23cac44470734d9[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Wed Aug 24 19:56:00 2022 -0300
+
+    footer
+
+[33mcommit 7cb332504856deaec44c6bd0177d99b61ae0145a[m
+Author: EstySrugo <108778870+EstySrugo@users.noreply.github.com>
+Date:   Wed Aug 24 12:28:44 2022 -0300
+
+    Update README.md
+
+[33mcommit 933bebaba0fabba797bf4401f6e444a1259d5745[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Wed Aug 24 12:14:46 2022 -0300
+
+    arreglando cositas
+
+[33mcommit 63fa01b3f0653ee43569999a50b1e3a35a6d45a1[m
+Merge: e90cd53 117178e
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Wed Aug 24 11:37:07 2022 -0300
+
+    terminando
+
+[33mcommit e90cd531a3c88bf388b5e4329cad0bd05e17f0ca[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Wed Aug 24 11:27:15 2022 -0300
+
+    subiendo el logistro
+
+[33mcommit 117178e176612e11175acb381007a21ba4fb7df9[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Tue Aug 23 23:25:52 2022 -0300
+
+    correcciones
+
+[33mcommit 64929b7f77c8b8f85e905faa60342f5c2b6e53cf[m
+Merge: 90b39f5 1523e92
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Tue Aug 23 23:13:55 2022 -0300
+
+    comiteando
+
+[33mcommit 90b39f51c3e1b9f8327c749358e4c47552796c8a[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Tue Aug 23 23:07:18 2022 -0300
+
+    commiteando
+
+[33mcommit 1523e9265f925813708e8daa58fe4a8eeff525c6[m
+Author: MijalRomano <109231008+MijalRomano@users.noreply.github.com>
+Date:   Tue Aug 23 22:40:15 2022 -0300
+
+    Rename sprint 1/README.md to carrera 1/README.md
+
+[33mcommit ed55d9921b6ceada71a2c3bc723ee8518b539cf0[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Tue Aug 23 21:36:41 2022 -0300
+
+    mirando cambios
+
+[33mcommit dd57d4ecd93ff68a8c0c10889ae78b24a8faffbe[m
+Merge: 473cb0d 31ac9b8
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Tue Aug 23 21:28:41 2022 -0300
+
+    modificacion
+
+[33mcommit 473cb0da0b43f469e07bd8bb156f64084410bf72[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Tue Aug 23 21:23:49 2022 -0300
+
+    modificacion
+
+[33mcommit 31ac9b879f9362d1fdbe4249ca9351e4b2a6a1d2[m
+Merge: 886b544 ccdda67
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Tue Aug 23 19:45:43 2022 -0300
+
+    pusheando el register
+
+[33mcommit 886b544c2588e2ffc3dee84bfdaaa3d22568b866[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Tue Aug 23 19:35:55 2022 -0300
+
+    nuevos cambios
+
+[33mcommit ccdda67b704723f8d52aef850faf73e148162af3[m
+Merge: 3ffc465 cde2460
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Tue Aug 23 19:06:45 2022 -0300
+
+    Merge branch 'main' of https://github.com/MijalRomano/grupo-5-Finour-joyas
+
+[33mcommit 3ffc465afbbc520d7d52f11d3403e854658c5450[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Tue Aug 23 18:55:43 2022 -0300
+
+    home
+
+[33mcommit cde2460443523f864358218e28851e9ec6745c72[m
+Author: MijalRomano <109231008+MijalRomano@users.noreply.github.com>
+Date:   Sun Aug 21 20:01:30 2022 -0300
+
+    Delete banner.jpg
+
+[33mcommit 012e8c5449caac33b73bd3b8159ecbbb9238c4ca[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Fri Aug 19 13:52:44 2022 -0300
+
+    subiendo el sprint 1
+
+[33mcommit 0cc046eafad895855a96a3461b9bc9ecc166d975[m
+Author: EstySrugo <estelasrugo@gmail.com>
+Date:   Fri Aug 19 13:50:31 2022 -0300
+
+    sprint 1
+
+[33mcommit 1a05a9b4405fc7b743a492dc12b9f043502676f8[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Thu Aug 18 16:11:14 2022 -0300
+
+    home
+
+[33mcommit ad39d5c3cbc0c841d56abbd37bbea3f7aa7afd11[m
+Author: mijalromano <mijalmsr@gmail.com>
+Date:   Thu Aug 18 16:04:35 2022 -0300
+
+    home
+
+[33mcommit 6ecb5a2d7e1b242ecb5616ad028c648fcb11b23e[m
+Merge: e8aa9bb 9559e7f
+Author: johanna tacher <johanna.tacher@gmail.com>
+Date:   Tue Aug 16 18:28:41 2022 -0300
+
+    Merge branch 'main' of https://github.com/MijalRomano/grupo-5-Finour-joyas
+
+[33mcommit e8aa9bb311f43db6ba1c1aac654d2c8fdd4e3f33[m
+Author: johanna tacher <johanna.tacher@gmail.com>
+Date:   Tue Aug 16 18:03:01 2022 -0300
+
+    esqueleto
+
+[33mcommit 9559e7f111d922a480153b831d22f150e0dd0802[m
+Author: johannatacher <109443372+johannatacher@users.noreply.github.com>
+Date:   Thu Aug 11 19:46:44 2022 -0300
+
+    Update retro.md
+
+[33mcommit 9556be29d756889a442bf153fbfa2ab34cfebaec[m
+Author: EstySrugo <108778870+EstySrugo@users.noreply.github.com>
+Date:   Wed Aug 10 19:27:09 2022 -0300
+
+    Update retro.md
+
+[33mcommit a134547a3c70d0a6eb78a064a28a0a0680531d19[m
+Author: EstySrugo <108778870+EstySrugo@users.noreply.github.com>
+Date:   Wed Aug 10 16:52:30 2022 -0300
+
+    Create retro.md
+
+[33mcommit 8feff56d326e3e3729087dd7096e95d2b2e3baa6[m
+Author: EstySrugo <108778870+EstySrugo@users.noreply.github.com>
+Date:   Wed Aug 3 21:45:22 2022 -0300
+
+    Update README.md
+
+[33mcommit 1b74b51203e65212702206dec3fad3ecd9457771[m
+Author: EstySrugo 

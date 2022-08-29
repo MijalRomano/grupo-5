@@ -9,16 +9,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
-app.get('/register', function(req, res){
+app.get('/register', (req, res) => {
 
     res.sendFile(path.join(__dirname,  '/views/register.html'));
 })
 
-app.get('/login', function(req, res){
+app.get('/login', (req, res) => {
 
     res.sendFile(path.join(__dirname, '/views/login.html'));
 })
-app.get('/productCart', function(req, res){
+app.get('/productCart', (req, res) => {
 
     res.sendFile(path.join(__dirname, '/views/productCart.html'));
 })
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/images/styles.css'));
 });
 
-app.listen(3001,  (req, res) => {
+app.listen(3001, (req, res) => {
     console.log('Servidor escuchando en el puerto 3001');
 });
 
@@ -45,3 +45,6 @@ app.get('/', (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/productCart'));
 });
+
+
+

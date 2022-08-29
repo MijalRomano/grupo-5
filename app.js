@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 app.get('/register', (req, res) => {
 
-    res.sendFile(path.join(__dirname,  '/views/register.html'));
+    res.sendFile(path.join(__dirname, '/views/register.html'));
 })
 
 app.get('/login', (req, res) => {
@@ -31,12 +31,9 @@ app.listen(3001, (req, res) => {
     console.log('Servidor escuchando en el puerto 3001');
 });
 
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/login'));
 });
-
-
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/register'));
@@ -46,5 +43,5 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/productCart'));
 });
 
-
+app.use("./user", userRoutes);
 

@@ -43,5 +43,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/productCart'));
 });
 
-app.use("./user", userRoutes);
+app.use(express.static('public'));
+app.use('/main', routerMain);
+app.use('/user', routerUser);
+app.use('/products', routerProducts);
 

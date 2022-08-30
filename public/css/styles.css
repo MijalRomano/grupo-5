@@ -365,6 +365,10 @@ h6,
 
     }
 
+    .barra-de-busqueda:hover{
+        background-color: rgb(118, 118, 157);
+    }
+
 }
 
 @media (min-width: 361px) {

@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
-let rutasProductos = require ("./routes/productsRuters.js");
-let rutasMin = require ("./routes/main.js");
+let productsRouters = require ('./routes/productsRouters.js');
+let router = express.Router();
 const app = express();
 
 app.use(express.static('public'));
@@ -19,6 +19,7 @@ app.get('/login', (req, res) => {
 
     res.sendFile(path.join(__dirname, '/views/login.html'));
 })
+
 app.get('/productCart', (req, res) => {
 
     res.sendFile(path.join(__dirname, '/views/productCart.html'));
@@ -42,10 +43,5 @@ app.get('/', (req, res) => {
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/productCart'));
+
 });
-
-app.use(express.static('public'));
-app.use('/main', routerMain);
-app.use('/user', routerUser);
-app.use('/products', routerProducts);
-

@@ -1,6 +1,4 @@
-
-
-const mainController = {
+const loginController = {
     index: (req, res) => {
         return res.render('index');
 
@@ -25,8 +23,5 @@ Userdelete: (req, res) => {
 
  }
 
-module.exports = mainController;
-
-
-
+module.exports = loginController;
 

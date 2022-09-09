@@ -9,10 +9,6 @@ const mainController = {
     login: (req, res) => {
         return res.render('login');
     },
-
-    productCart: (req, res) => {
-        return res.render('porductCart');
-    },
 }
 
 module.exports = mainController;

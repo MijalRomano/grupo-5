@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+   
 }
 
 .descuentos {
@@ -54,7 +55,7 @@
 .main-header {
     padding: 0px;
     width: auto;
-    background-color: #f5da91;
+    background: linear-gradient( rgb(246, 218, 231) , #bd6180, #fff, #b8e0eb); 
 }
 
 
@@ -67,6 +68,7 @@
 
 .main{
     background-color:#e9c2d7;
+   
 }
 
 .copy-header {
@@ -78,16 +80,19 @@
     list-style: none;
     margin: 0px;
     padding: 0px;
+    font-size: 40px;
 }
 
 
 .main-navbar {
     display: flex;
     justify-content: space-between;
+    font-size: 30px;
 }
 
 .main-navbar li {
     margin: 0 15px;
+    font-size: 30px;
 }
 
 .main-navbar ul {
@@ -99,11 +104,13 @@
 
 
 .main-navbar a {
+    font-size: 40px;
     text-decoration: none;
-    color: #e90a85;
+    color: #ffffff;
     display: inline-block;
     padding: 7px 0;
-    font-size: 20px;
+text-shadow:  0 0 19px rgb(247, 247, 247) ;
+    
 }
 
 .main-navbar a:hover {
@@ -116,10 +123,13 @@
     justify-content: center;
     align-items: center;
     width: 25vw;
+    
+    
 }
 
 .search-button:hover {
-    background-color: rgb(75, 75, 156);
+    background-color: rgb(201, 201, 206);
+   
 }
 
 
@@ -366,7 +376,8 @@ h6,
     }
 
     .barra-de-busqueda:hover{
-        background-color: rgb(118, 118, 157);
+        background-color: rgb(255, 255, 255);
+       
     }
 
 }

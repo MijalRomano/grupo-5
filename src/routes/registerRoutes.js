@@ -7,10 +7,8 @@ router.get('/delete', registerController.Userdelete);
 router.get('/edit', registerController.edit);
 router.get('/Usercreate', registerController.Usercreate);
 router.get('/productCart', registerController.productCart);
-router.get('/create', registerController.register);
-
-
-
+router.get('/register', registerController.register);
+router.get('/create', registerController.create);
 
 
 module.exports = router;

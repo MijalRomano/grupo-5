@@ -1,4 +1,4 @@
-const controller = { 
+const registerController = { 
 index: (req, res) => {
     return res.render('index');
 
@@ -19,9 +19,11 @@ Usercreate:  (req, res) => {
     return res.render('Usercreate'); },
 
     edit:  (req, res) => {
-        return res.render('edit'); }
+        return res.render('edit'); },
+        create:  (req, res) => {
+            return res.render('create'); }
 
 } 
     
     
-    module.exports = controller;
+    module.exports = registerController;

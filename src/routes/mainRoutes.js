@@ -8,6 +8,7 @@ router.get('/Usercreate', mainController.Usercreate);
 router.get('/productCart', mainController.productCart);
 router.get('/login', mainController.login);
 router.get('/create', mainController.register);
+router.get('/', mainController.index);
 
 module.exports = router;
 

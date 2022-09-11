@@ -6,21 +6,22 @@ const productDetailRoutes = require ("../src/routes/productDetailRoutes");
 const mainRoutes = require("../src/routes/mainRoutes");
 const loginRoutes = require("../src/routes/loginRoutes");
 const registerRoutes = require("../src/routes/registerRoutes");
-app.use(express.static("./public"));
-
-app.set ('views engine', 'ejs');
+const productRoutes = require ("../src/routes/productRoutes");
 
 
+
+app.use(express.static("../public"));
+
+app.set("view engine", "ejs");
 
 app.use("/", mainRoutes);
 app.use("/", loginRoutes);
 app.use("/", registerRoutes);
-
+app.use("/", productRoutes);
 app.use("/", productCartRoutes );
 app.use("/", productDetailRoutes);
 
 
 app.listen(3001, (req, res) => {
     console.log('Servidor escuchando en el puerto 3001');
-});
-
+})

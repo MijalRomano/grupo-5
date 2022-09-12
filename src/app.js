@@ -4,8 +4,6 @@ const app = express();
 const productCartRoutes = require ("../src/routes/productCartRoutes");
 const productDetailRoutes = require ("../src/routes/productDetailRoutes");
 const mainRoutes = require("../src/routes/mainRoutes");
-const loginRoutes = require("../src/routes/loginRoutes");
-const registerRoutes = require("../src/routes/registerRoutes");
 const productRoutes = require ("../src/routes/productRoutes");
 
 
@@ -15,8 +13,6 @@ app.use(express.static("../public"));
 app.set("view engine", "ejs");
 
 app.use("/", mainRoutes);
-app.use("/", loginRoutes);
-app.use("/", registerRoutes);
 app.use("/", productRoutes);
 app.use("/", productCartRoutes );
 app.use("/", productDetailRoutes);

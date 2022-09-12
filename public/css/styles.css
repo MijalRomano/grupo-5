@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
    
 }
 
@@ -55,7 +56,7 @@
 .main-header {
     padding: 0px;
     width: auto;
-    background: linear-gradient( rgb(246, 218, 231) , #bd6180, #fff, #b8e0eb); 
+    background: linear-gradient( #950202a1, rgb(253, 225, 225) , #fff ); 
 }
 
 
@@ -68,6 +69,7 @@
 
 .main{
     background-color:#e9c2d7;
+    
    
 }
 
@@ -88,11 +90,13 @@
     display: flex;
     justify-content: space-between;
     font-size: 30px;
+    
 }
 
 .main-navbar li {
     margin: 0 15px;
     font-size: 30px;
+    
 }
 
 .main-navbar ul {
@@ -139,6 +143,7 @@ text-shadow:  0 0 19px rgb(247, 247, 247) ;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 
 article {
@@ -163,6 +168,7 @@ article {
     animation-duration: 3em;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
+   
 }
 
 .article {
@@ -189,6 +195,7 @@ article {
     flex-wrap: wrap;
     display: flex;
     background-color: #fff;
+  
 
 }
 
@@ -205,6 +212,7 @@ section {
     text-align: center;
     position: relative;
     border-radius: 15px;
+    
 }
 
 article:hover {

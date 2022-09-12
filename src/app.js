@@ -5,6 +5,7 @@ const productCartRoutes = require ("../src/routes/productCartRoutes");
 const productDetailRoutes = require ("../src/routes/productDetailRoutes");
 const mainRoutes = require("../src/routes/mainRoutes");
 const productRoutes = require ("../src/routes/productRoutes");
+const errorRoutes = require ("../src/routes/errorRoutes");
 
 
 
@@ -16,6 +17,7 @@ app.use("/", mainRoutes);
 app.use("/", productRoutes);
 app.use("/", productCartRoutes );
 app.use("/", productDetailRoutes);
+app.use("/", errorRoutes);
 
 
 app.listen(3001, (req, res) => {

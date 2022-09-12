@@ -14,6 +14,10 @@ app.use(express.static(publicPath));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 
+app.get('/index', function(req, res){
+
+    res.sendFile(path.join(__dirname,  '/index'));
+})
 
 
 app.use("/", mainRoutes);

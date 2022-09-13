@@ -13,11 +13,11 @@ const mainController = {
     productCart: (req, res) => {
         return res.render('productCart');
 },
-Userdelete: (req, res) => {
-    return res.render('userDelete'); },
+delete: (req, res) => {
+    return res.render('delete'); },
 
-    Usercreate:  (req, res) => {
-        return res.render('Usercreate'); },
+    create:  (req, res) => {
+        return res.render('create'); },
 
         edit:  (req, res) => {
             return res.render('edit'); }

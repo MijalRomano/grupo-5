@@ -12,7 +12,7 @@ const deleteController = {
     productCart: (req, res) => {
         return res.render('productCart');
 },
-Delete: (req, res) => {
+delete: (req, res) => {
     return res.render('delete'); },
 
     create:  (req, res) => {

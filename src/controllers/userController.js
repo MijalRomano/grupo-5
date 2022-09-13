@@ -3,14 +3,14 @@ const controller= {
        return res.render('user');
 
    },
-   editUser: (req, res) => {
+   edit: (req, res) => {
         return res.render('edit');
    },
-   deleteUser: (req, res) => {
+   delete: (req, res) => {
         return res.render('delete');  
     },
 
-   createUser: (req, res) => {
+   create: (req, res) => {
         return res.render('create');  
     },
 }

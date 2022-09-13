@@ -9,6 +9,7 @@ const errorRoutes = require ("../src/routes/errorRoutes");
 const createRoutes = require ("../src/routes/createRoutes");
 const editRoutes = require ("../src/routes/editRoutes");
 const deleteRoutes = require ("../src/routes/deleteRoutes");
+const userRoutes = require ("../src/routes/userRoutes");
 
 const publicPath= path.resolve(__dirname, "../public")
 app.use(express.static(publicPath));
@@ -16,10 +17,12 @@ app.use(express.static(publicPath));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 
+app.set("user", path.join(__dirname, "./user"));
+
 app.get('/index', function(req, res){
 
     res.sendFile(path.join(__dirname,  '/index'));
-    path.join(__dirname,'./views/user');
+    res.sendFile(path.join(__dirname,'/'));
 })
 
 
@@ -31,6 +34,7 @@ app.use("/", errorRoutes);
 app.use("/", createRoutes);
 app.use("/", editRoutes);
 app.use("/", deleteRoutes);
+app.use("/", userRoutes);
 
 app.listen(3001, (req, res) => {
     console.log('Servidor escuchando en el puerto 3001');

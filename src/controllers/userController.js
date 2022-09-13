@@ -1,21 +1,17 @@
-const router = require("../routes/userRoutes");
-
-const userController = {
+const controller= {
    user: (req, res) => {
-        return res.render('user');
+       return res.render('user');
 
-    },
-    editUser: (req, res) => {
+   },
+   editUser: (req, res) => {
         return res.render('edit');
-    },
-    deleteUser: (req, res) => {
+   },
+   deleteUser: (req, res) => {
         return res.render('delete');  
     },
 
-    createUser: (req, res) => {
+   createUser: (req, res) => {
         return res.render('create');  
     },
 }
-
-
-module.exports= router;
+module.exports= controller;

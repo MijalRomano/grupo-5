@@ -1,16 +1,37 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const router = express.Router();
-app.use(express.static('./public'));
-app.set ('view engine', 'ejs');
+const path = require("path");
+const productCartRoutes = require ("../src/routes/productCartRoutes");
+const productDetailRoutes = require ("../src/routes/productDetailRoutes");
+const mainRoutes = require("../src/routes/mainRoutes");
+const productRoutes = require ("../src/routes/productRoutes");
+const errorRoutes = require ("../src/routes/errorRoutes");
+const createRoutes = require ("../src/routes/createRoutes");
+const editRoutes = require ("../src/routes/editRoutes");
+const deleteRoutes = require ("../src/routes/deleteRoutes");
 
-const mainRoutes = require("../grupo-5-finour-joyas/routes/mainRoutes");
+const publicPath= path.resolve(__dirname, "../public")
+app.use(express.static(publicPath));
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "./views"));
+
+app.get('/index', function(req, res){
+
+    res.sendFile(path.join(__dirname,  '/index'));
+    path.join(__dirname,'./views/user');
+})
+
 
 app.use("/", mainRoutes);
-app.use("/", loginRoutes);
-app.use("/", registerRoutes);
+app.use("/", productRoutes);
+app.use("/", productCartRoutes );
+app.use("/", productDetailRoutes);
+app.use("/", errorRoutes);
+app.use("/", createRoutes);
+app.use("/", editRoutes);
+app.use("/", deleteRoutes);
 
-app.listen(3001,(req, res) => {
+app.listen(3001, (req, res) => {
     console.log('Servidor escuchando en el puerto 3001');
-});
-
+})

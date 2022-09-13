@@ -1,9 +1,29 @@
-const express = require('express');
-const mainRouter = express.Router();
-const registerController = require('../controllers/registerController');
+const registerController = { 
+index: (req, res) => {
+    return res.render('index');
 
-router.get('/', registerController.index);
+},
+register: (req, res) => {
+    return res.render('register');
+},
+login: (req, res) => {
+    return res.render('login');
+},
+productCart: (req, res) => {
+    return res.render('productCart');
+},
+Userdelete: (req, res) => {
+return res.render('userDelete'); },
 
-router.get('/register', registerController.register);
+Usercreate:  (req, res) => {
+    return res.render('Usercreate'); },
 
-module.exports = router;
+    edit:  (req, res) => {
+        return res.render('edit'); },
+        create:  (req, res) => {
+            return res.render('create'); }
+
+} 
+    
+    
+    module.exports = registerController;

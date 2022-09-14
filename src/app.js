@@ -6,18 +6,35 @@ const productDetailRoutes = require ("../src/routes/productDetailRoutes");
 const mainRoutes = require("../src/routes/mainRoutes");
 const productRoutes = require ("../src/routes/productRoutes");
 const errorRoutes = require ("../src/routes/errorRoutes");
+const userRoutes = require ("../src/routes/userRoutes");
+
 
 
 const publicPath= path.resolve(__dirname, "../public")
 app.use(express.static(publicPath));
 
+app.use(mainRoutes);
+app.use("/user", userRoutes);
+
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "./views"));
 
-app.get('/index', function(req, res){
+app.set('views', 'src/views');
 
-    res.sendFile(path.join(__dirname,  '/index'));
-})
+app.set('views', path.resolve(__dirname, 'views'));
+
+
+// esto es para poner la pagina de error al final, dsp de terminar las rutas, anda
+// app.use((req, res, next) => { 
+//    res.status(404).render("error//")
+//});
+
+
+
+
+
+
+
+
 
 
 app.use("/", mainRoutes);
@@ -25,6 +42,8 @@ app.use("/", productRoutes);
 app.use("/", productCartRoutes );
 app.use("/", productDetailRoutes);
 app.use("/", errorRoutes);
+app.use("/user", userRoutes);
+
 
 
 app.listen(3001, (req, res) => {

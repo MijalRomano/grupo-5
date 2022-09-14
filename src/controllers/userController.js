@@ -1,17 +1,17 @@
 const controller= {
    user: (req, res) => {
-       return res.render('user');
+       return res.render('user/user');
 
    },
-   editUser: (req, res) => {
-        return res.render('edit');
+   edit: (req, res) => {
+        return res.render('user/edit');
    },
-   deleteUser: (req, res) => {
-        return res.render('delete');  
+   delete: (req, res) => {
+        return res.render('user/delete');  
     },
 
-   createUser: (req, res) => {
-        return res.render('create');  
+   create: (req, res) => {
+        return res.render('user/create');  
     },
 }
 module.exports= controller;

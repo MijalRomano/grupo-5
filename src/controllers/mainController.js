@@ -13,16 +13,18 @@ const mainController = {
     productCart: (req, res) => {
         return res.render('productCart');
 },
-Userdelete: (req, res) => {
+delete: (req, res) => {
     return res.render('userDelete'); },
 
-    Usercreate:  (req, res) => {
+    create:  (req, res) => {
         return res.render('Usercreate'); },
 
         edit:  (req, res) => {
-            return res.render('edit'); }
+            return res.render('edit'); },
 
- }
+ user:  (req, res) => {
+    return res.render('user'); } }
+
 
 module.exports = mainController;
 

@@ -9,6 +9,9 @@ const errorRoutes = require ("../src/routes/errorRoutes");
 
 const userRoutes = require ("../src/routes/userRoutes");
 
+const adminAddRoutes = require ("../src/routes/adminAddRoutes");
+const adminEditRoutes = require ("../src/routes/adminEditRoutes");
+
 
 
 
@@ -53,6 +56,9 @@ app.use("/", productCartRoutes );
 app.use("/", productDetailRoutes);
 app.use("/", errorRoutes);
 app.use("/user", userRoutes);
+app.use("/", adminAddRoutes);
+app.use("/", adminEditRoutes);
+
 
 
 

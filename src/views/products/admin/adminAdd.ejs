@@ -1,80 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agregar productos</title>
 </head>
+
 <body>
-    <form action="/" method="get" class="register" style="text-align:center" style="font-size: x-large">
+    <form action="/" method="get" class="Agregar" style="text-align:center" style="font-size: x-large">
         <br>
         <div>
-            <h2 style="color:peru"> Crear cuenta </h2>
+            <h2 style="color:peru"> Producto </h2>
 
-
-            <input type="text" placeholder=" Ingrese su nombre " style="border-radius:5px solid " required>
+            <input type="text" placeholder="Agregar" style="border-radius:5px solid ">
         </div>
         <br>
         <div>
-
-            <input type="text" placeholder=" Ingrese su mail " required>
+            <label for="tipo de producto" style="color:peru">tipo de producto</label> <br>
         </div>
         <br>
         <div>
-            <label for="Fecha de nacimiento" style="color:peru" required>Fecha de nacimiento</label> <br>
-            <input type="date">
-        </div>
-        <br>
-
-
-
-
-
-        <div>
-
-            <input type="password" placeholder="Contraseña" required>
+            <input type="Cantidad de productos">
         </div>
         <br>
         <div>
-
-            <input type="password" placeholder="Confirmar contraseña" required>
+            <input type="color">
             <br>
         </div>
-        <br>
         <div>
-            <label>
-                <input type="checkbox" name="terminosaceptados">
-                <label for="acepto los terminos de privacidad" style="color:peru" style="font-size:small">Acepto la
-                    politíca de privacidad </label>
-
-            </label>
-        </div>
-        <br>
-        <div>
-
-            <a href="views/home.html"> <button type="submit" class="submit" style="color:peru"> Registrarse </button>
+            <a href="views/home.html"> <button type="agregar" class="add" style="color:peru"> Agregar </button>
             </a>
         </div>
         <br>
-        <label for="iniciar sesion "> ¿Ya tienes una cuenta? </a>
-            <a href="/login"> Inicia sesion <label for="iniciar sesion "> </label> </a>
-            <div>
-
-            </div>
-            </div>
-            <br>
-            <%- include("./partials/footer.ejs") %>
-
+        <%- include("./partials/footer.ejs") %>
     </form>
-
     <footer>
-
-
     </footer>
-
 </body>
 
-</html>
-</body>
 </html>

@@ -1,8 +1,6 @@
-
-const mainController = {
+const editController = {
     index: (req, res) => {
         return res.render('index');
-
     },
    register: (req, res) => {
         return res.render('register');
@@ -13,28 +11,15 @@ const mainController = {
     productCart: (req, res) => {
         return res.render('productCart');
 },
-delete: (req, res) => {
-<<<<<<< HEAD
-    return res.render('userDelete'); },
-
-    create:  (req, res) => {
-        return res.render('Usercreate'); },
-=======
+Delete: (req, res) => {
     return res.render('delete'); },
 
     create:  (req, res) => {
         return res.render('create'); },
->>>>>>> 12bcaf6e7d048a0f215b7020b1fbd7c5f8d9af90
 
         edit:  (req, res) => {
-            return res.render('edit'); },
+            return res.render('edit'); }
 
- user:  (req, res) => {
-    return res.render('user'); } }
+ }
 
-
-module.exports = mainController;
-
-
-
-
+module.exports = editController;

@@ -1,22 +1,4 @@
 {
-  "name": "grupo-5-finour-joyas",
-  "version": "1.0.0",
-  "description": "Grupo 5 proyecto Integrador:\r Nombre del proyecto Finour joyas.\r Integrantes:\r -Esty 19 años, estudiante de programación\r -Johanna 41 años, estudiante de programación \r -Mijal 25 años, estudiante de programación \r Quienes somos:\r Somos una empresa dedicada a la venta de joyas finas, hechas con piedras autenticas seleccionadas a precios realmente incleibles. \r Garantizamos excelencia ofreciendo una amplia colección de joyas modernas y tradicionales a los precios más asequibles.\r Nos especializamos en joyas realizadas con cristales austríacos y diseños exclusivos.\r Nuesto objetivo es que todo publico pueda disfrutar de nuestras joyas que vendemos y son para: Niñas, adolescentes, adultas mayores, etc, todas las mujeres las pueden disfrutar en distintas ocasiones.\r Podes visitarnos en nuestro showroom en Av. Alvear 1433, o visitar nuestra pagina web https//www.finour.com.\r Instpiradas en:\r https://www.tiffany.com.mx/jewelry/ por sus fotos.\r https://wa.me/c/5491128673525 esta nos parecio buena por sus textos.\r https://www.antuanjoyerias.com/institucional/sobre-antuan por sus por como esta hecha la pagina y sus contenidos.\r https://www.swarovski.com.ar/sale esta nos parecio que tiene muy buenos colores sobrios.\r https://www.joyeriajeanpierre.com/ elegimos esta pagina por su estetica.",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MijalRomano/grupo-5-Finour-joyas.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MijalRomano/grupo-5-Finour-joyas/issues"
-  },
-  "homepage": "https://github.com/MijalRomano/grupo-5-Finour-joyas#readme",
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1"

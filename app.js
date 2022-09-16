@@ -11,6 +11,3 @@ app.use("/", mainRoutes);
 app.listen(3001,(req, res) => {
     console.log('Servidor escuchando en el puerto 3001');
 });
-
-
-

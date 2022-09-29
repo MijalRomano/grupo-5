@@ -6,11 +6,21 @@ const methodOverride = require ("method-override");
 
 
 const mainRoutes = require("../src/routes/mainRoutes");
+<<<<<<< HEAD
 const productRoutes = require("../src/routes/productRoutes");
 const errorRoutes = require("../src/routes/errorRoutes");
 const userRoutes = require("../src/routes/userRoutes");
 const adminAddRoutes = require("../src/routes/adminAddRoutes");
 const adminEditRoutes = require("../src/routes/adminEditRoutes");
+=======
+const productRoutes = require ("../src/routes/productRoutes");
+const errorRoutes = require ("../src/routes/errorRoutes");
+    
+const userRoutes = require ("../src/routes/userRoutes");
+
+const adminAddRoutes = require ("../src/routes/adminAddRoutes");
+const adminEditRoutes = require ("../src/routes/adminEditRoutes");
+>>>>>>> ae07b6726a7dd33a50e974e3d6b766ceb45849a1
 
 
 

@@ -1,0 +1,48 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Esty",
+        "email": "Estyprobando@gmail.com",
+        "contrasenia": "probando",
+        "confirmacionDeContrasenia": "probando",
+        "terminosaceptados": "aceptados",
+        "Imagen": "valafoto-nopusimosmulter"
+    },
+    {
+        "id": 2,
+        "nombre": "Esty",
+        "email": "Estyprobando@gmail.com",
+        "contrasenia": "probando",
+        "confirmacionDeContrasenia": "probando",
+        "terminosaceptados": "aceptados",
+        "Imagen": "valafoto-nopusimosmulter"
+    },
+    {
+        "email": "Martin@gmail.com",
+        "nombre": "Martin",
+        "apellido": "Gomez",
+        "contrasenia": "Martin123",
+        "confirmacionDeContrasenia": "Martin123",
+        "terminosaceptados": "on",
+        "id": null
+    },
+    {
+        "email": "Alicia@gmail.com",
+        "nombre": "Alicia",
+        "apellido": "Rodriguez",
+        "contrasenia": "cordoba4545",
+        "confirmacionDeContrasenia": "cordoba4545",
+        "terminosaceptados": "on",
+        "id": null
+    },
+    {
+        "email": "Delfi@gmail.com",
+        "nombre": "Delfina",
+        "apellido": "Suarez",
+        "contrasenia": "empanada123",
+        "confirmacionDeContrasenia": "empanada123",
+        "terminosaceptados": "on",
+        "id": null
+    }
+]

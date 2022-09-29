@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/col.png">
+
+</head>
+
+<body style="color:rgb(113, 108, 110)">
+    <a href="/"> <img src="./images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
+
+
+    <u style="color:peru;">
+        <h1 style="color:peru"> Lista de productos: </h1>
+    </u>
+
+    <br>
+    <ul>
+
+        <% productos.forEach(productoActual=> { %>
+    </ul>
+    <li style="color:rgb(231, 21, 137)">
+        <%=productoActual.id %>
+    </li>
+    <br>
+    <%=productoActual.name%>, <br>
+        <%= productoActual.description %>, <br>
+            <%= productoActual.image %>,
+                <br>
+                <%= productoActual.category %>, <br>
+                    <%= productoActual.price %>,<br>
+                        <%= productoActual.color %> <br><br><br>
+                            <% }); %>
+
+</body>
+
+
+
+<footer>
+    <%- include("./partials/footer.ejs") %>
+</footer>
+
+
+
+</html>

@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
-const users = JSON.parse(usersJSON);
+const usuarios = JSON.parse(usersJSON);
 
 
 
 const controller = {
     users: (req, res) => {
 
-        return res.render('user/users', { users: users })
+        return res.render('user/users', { users: usuarios })
 
     },
     edit: (req, res) => {
@@ -22,26 +22,63 @@ const controller = {
 
     postCreate: (req, res) => {
 
-        const usuarioData = req.body;
-        users.push(usuarioData);
-
-        // al nuevo usuario que vamos a pushear le agregamos un un numero mas del id anterior, si anres era 2 el nuevo es 3.   
-        usuarioData.id = users[users.length - 1].id + 1;
-        usuarioData.id = Number(usuarioData.id);
-
-        //
-
+        const nuevoUsuario = {
+            id: Date.now(),
+            email: req.body.email,
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            contrasenia: req.body.contrasenia,
+            confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
+            terminosaceptados: req.body.terminosaceptados
+            //imagen: "./profilephotos/" + req.file.filename
+        };
+        usuarios.push(nuevoUsuario);
         //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
-        const usersJSON = JSON.stringify(users);
+        const usuariosActualizadosJSON = JSON.stringify(usuarios);
 
-        fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usersJSON, "utf-8");
-        console.log(usuarioData)
-        
-        res.redirect("./users")
+        fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
+        console.log(usuarios);
 
+
+  
+res.redirect("/user/users");
+    },
+
+
+
+
+
+    userDetail: (req, res) => {
+
+
+        const id = req.params.id
+
+        // importamos el array de productos ya existente y lo taducimos a Json 
+        const usuariosJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
+        const usuarios = JSON.parse(usuariosJSON);
+
+        const usuarioPedido = usuarios.find(usuarioActual => usuarioActual.id == id);
+        res.render("user/userDetail", {
+            email: usuarioPedido.email,
+            nombre: usuarioPedido.nombre,
+            apellido: usuarioPedido.apellido,
+            contrasenia: usuarioPedido.contrasenia,
+            confirmacionDeContrasenia: usuarioPedido.confirmacionDeContrasenia,
+            terminosaceptados: usuarioPedido.terminosaceptados,
+            image: usuarioPedido.image
+            
+        });
+
+
+
+        return res.render('user/userDetail');
 
 
     },
+
+
+
+
     user: (req, res) => {
         return res.render('user/user');
 

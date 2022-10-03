@@ -7,7 +7,10 @@ const mainController = {
         return res.render('index');
 
     },
-   register: (req, res) => {
+   Postregister: (req, res) => {
+        return res.render('user/users');
+    },
+    register: (req, res) => {
         return res.render('register');
     },
     login: (req, res) => {

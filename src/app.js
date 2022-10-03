@@ -3,24 +3,16 @@ const app = express();
 const path = require("path");
 
 const methodOverride = require ("method-override");
+app.use(methodOverride("_method"));
 
 
 const mainRoutes = require("../src/routes/mainRoutes");
-<<<<<<< HEAD
 const productRoutes = require("../src/routes/productRoutes");
 const errorRoutes = require("../src/routes/errorRoutes");
 const userRoutes = require("../src/routes/userRoutes");
 const adminAddRoutes = require("../src/routes/adminAddRoutes");
 const adminEditRoutes = require("../src/routes/adminEditRoutes");
-=======
-const productRoutes = require ("../src/routes/productRoutes");
-const errorRoutes = require ("../src/routes/errorRoutes");
-    
-const userRoutes = require ("../src/routes/userRoutes");
 
-const adminAddRoutes = require ("../src/routes/adminAddRoutes");
-const adminEditRoutes = require ("../src/routes/adminEditRoutes");
->>>>>>> ae07b6726a7dd33a50e974e3d6b766ceb45849a1
 
 
 
@@ -39,7 +31,8 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 app.use (express.urlencoded({extended: true}));
 app.use(express.json());
-app.use (methodOverride ("_method"));
+
+
 
 // esto es para poner la pagina de error al final, dsp de terminar las rutas, anda
 // app.use((req, res, next) => { 
@@ -68,19 +61,6 @@ app.use("/", errorRoutes);
 app.use("/user", userRoutes);
 app.use("/", adminAddRoutes);
 app.use("/", adminEditRoutes);
-
-//aca van las rutas de los productos.
-//crud, sprint 4
-app.get("/product"); //listado de productos.
-app.get("/product/create"); // formularios de creacion de productos
-app.get("/product/:id"); // Detalle de un producto particular
-app.post("/product"); // Acción de creación (a donde se envía el formulario)
-app.get("/product/:id/edit"); // Formulario de edición de productos
-app.put("/product/:id"); // Acción de edición (a donde se envía el formulario):
-app.delete("/product/:id"); // Acción de borrado
-
-
-// aca van las rutas de los usuarios
 
 
 

@@ -25,7 +25,7 @@
 
     <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
     </div>
-    <form action="/listaprod/ ?_method=PUT" method="POST" class="email" style="text-align:center"
+    <form action="/listaprod/<%= product %> ?_method=PUT" method="POST" class="email" style="text-align:center"
         style="font-size: x-large">
         <br>
         <h2 style="color:rgb(178, 235, 159)">Editar producto</h2>
@@ -33,30 +33,30 @@
         <br>
         <br>
         <div>
-            <input type="text" placeholder="Nombre del producto" name="nombre" value="<%= productos.name %>" 
+            <input type="text" placeholder="Nombre del producto" name="nombre" value="<%= product %>" 
                 style="color:gray" required>
         </div>
         <br>
         <div>
-            <input type="text" placeholder=" Descripcion" style="color:gray" name="description"
+            <input type="text" placeholder=" Descripcion" style="color:gray" name="description" value="<%= product%>"
                  required>
         </div>
         <br>
-        <input type="text" placeholder="Imagen" style="color:gray" name="image" >
+        <input type="text" placeholder="Imagen" style="color:gray" name="image" value="<%= product %>" >
         <br>
 
         <br>
         <div>
-            <input type="text" placeholder="Categoria" name="category" required >
+            <input type="text" placeholder="Categoria" name="category" required value="<%= product %>">
         </div>
         <br>
         <div>
-            <input type="text" placeholder="Precio" name="price" required >
+            <input type="text" placeholder="Precio" name="price" required  value="<%= product %>">
             <br>
         </div>
         <br>
         <div>
-            <input type="text" placeholder="Color" name="color" required >
+            <input type="text" placeholder="Color" name="color" required value="<%= product %>" >
             <br>
         </div>
         <br>

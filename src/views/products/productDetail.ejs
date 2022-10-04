@@ -19,16 +19,16 @@
     <h2> <%= name %> </h2>
     <h2> <%= description %> </h2>
     <h2> <%= image %> </h2>
-    <h2> <%= category%> </h2>
+    <h2> <%= category %> </h2>
     <h2> <%= price %> </h2>
     <h2> <%= color %> </h2>
+   
   
   
-    <a  href=" "  ><button type="delete" value="eliminar producto" style="color:rgb(169, 7, 7)"> Eliminar producto</button> </a>
+   
 
-
-    <form action="/listaprod/:id?_method=DELETE" method="post">
-      <button type="submit">Eliminar</button>
+    <form action="/listaprod/<%= product %>?_method=DELETE" method="post" value="<%= product %>">
+   <button type="submit">Eliminar</button>
   </form>
 
 

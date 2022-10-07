@@ -20,7 +20,7 @@
 
     <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
     </div>
-    <form action="/listaprod" method="POST" class="email" style="text-align:center" style="font-size: x-large">
+    <form action="/listaprod" method="POST" class="email" style="text-align:center" style="font-size: x-large" enctype="multipart/form-data">
         <br>
         <h2 style="color:rgb(178, 235, 159)">Crear producto </h2>
       
@@ -34,7 +34,7 @@
             <input type="text" placeholder=" Descripcion"  style="color:gray" name="description" required>
         </div>
         <br>
-        <input type="file" placeholder="Imagen" style="color:gray"  name="image" required> 
+        <input type="file"   name="profilePhoto" > 
         <br>
         
         <br>

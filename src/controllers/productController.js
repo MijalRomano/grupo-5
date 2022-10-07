@@ -61,6 +61,7 @@ const productController = {
 
     },
     formulariosdecreaciondeproductos: function (req, res) {
+       
         res.render("./products/productCreate");
 
     },
@@ -81,7 +82,7 @@ const productController = {
             res.render("./products/productDetail", {
                 name: productoPedido.name,
                 description: productoPedido.description,
-                image: productoPedido.image,
+                profilePhoto: productoPedido.profilePhoto,
                 category: productoPedido.category,
                 price: productoPedido.price,
                 color: productoPedido.color,
@@ -100,10 +101,10 @@ const productController = {
             id: Date.now(),
             name: req.body.name,
             description: req.body.description,
-            // image: "./profilePhotos/" + req.file.filename, 
             category: req.body.category,
             price: req.body.price,
-            color: req.body.color
+            color: req.body.color,
+            profilePhoto: "./profilePhotos/" + req.file.filename, 
 
         };
         productos.push(nuevoProducto);
@@ -115,7 +116,7 @@ const productController = {
         console.log(productos);
 
 
-        res.send("producto agregado existosamente");
+        res.redirect("./listaprod");
 
     },
 
@@ -158,7 +159,8 @@ const productController = {
         const productId = Number(req.params.id);
         const theProduct = products.find(thisProduct => thisProduct.id === productId);
         return res.redirect(`/listaprod`, {
-            product: theProduct
+            product: theProduct,
+            
         });
 
 

@@ -27,10 +27,11 @@ const controller = {
             email: req.body.email,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
-            contrasenia: req.body.contrasenia,
+            profilePhoto: "./profilePhotos/" + req.file.filename,
+           contrasenia: req.body.contrasenia,
             confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
-            terminosaceptados: req.body.terminosaceptados
-            //imagen: "./profilephotos/" + req.file.filename
+            terminosaceptados: req.body.terminosaceptados,
+            
         };
         usuarios.push(nuevoUsuario);
         //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
@@ -65,7 +66,7 @@ res.redirect("/user/users");
             contrasenia: usuarioPedido.contrasenia,
             confirmacionDeContrasenia: usuarioPedido.confirmacionDeContrasenia,
             terminosaceptados: usuarioPedido.terminosaceptados,
-            image: usuarioPedido.image
+            profilePhoto: usuarioPedido.profilePhoto
             
         });
 

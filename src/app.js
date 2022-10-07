@@ -4,7 +4,8 @@ const path = require("path");
 
 const methodOverride = require ("method-override");
 app.use(methodOverride("_method"));
-
+// configuracion de public
+app.use(express.static("public"));
 
 const mainRoutes = require("../src/routes/mainRoutes");
 const productRoutes = require("../src/routes/productRoutes");

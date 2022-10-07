@@ -37,7 +37,7 @@
                    <h3> Categoria: <%= productoActual.category %>, <br></h3>
                        <h3> Precio: <%= productoActual.price %>,<br></h3>
                             <h3> Color:<%= productoActual.color %> <br></h3>
-                            <h3> Foto Del Producto: <br><img width="200" src="../<%= productoActual.profilePhoto %>" alt=""> <br></h2> <br><br><br></h3>
+                            <h3> Foto Del Producto: <br><img width="200" src="<%= productoActual.productPhoto %>" alt=""> <br></h2> <br><br><br></h3>
 
                                 <form action="/products/<%= product%>?_method=DELETE" method="post">
                                     <button type="submit" style="color:rgb(146, 66, 66)">Eliminar</button>

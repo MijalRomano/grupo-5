@@ -82,7 +82,7 @@ const productController = {
             res.render("./products/productDetail", {
                 name: productoPedido.name,
                 description: productoPedido.description,
-                profilePhoto: productoPedido.profilePhoto,
+                productPhoto: productoPedido.productPhoto,
                 category: productoPedido.category,
                 price: productoPedido.price,
                 color: productoPedido.color,
@@ -104,7 +104,7 @@ const productController = {
             category: req.body.category,
             price: req.body.price,
             color: req.body.color,
-            profilePhoto: "./profilePhotos/" + req.file.filename, 
+            productPhoto: "./productPhotos/" + req.file.filename, 
 
         };
         productos.push(nuevoProducto);

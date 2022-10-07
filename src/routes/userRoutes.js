@@ -10,8 +10,8 @@ router.post('/create', userController.postCreate);
 router.get('/create', userController.getCreate);
 router.get('/delete', userController.delete)
 router.put('/:id', userController.edit);
-
-
+router.get('/:id', userController.edit);
+router.get('/userDetail/:id', userController.userDetail);
 
 
 

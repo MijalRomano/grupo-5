@@ -26,16 +26,19 @@
     </ul>
     <li style="color:rgb(231, 21, 137)">
         <%=productoActual.id %>
+
+            <br>
+            <%=productoActual.name%>, <br>
+                <%= productoActual.description %>, <br>
+                    <%= productoActual.image %>,
+                        <br>
+                        <%= productoActual.category %>, <br>
+                            <%= productoActual.price %>,<br>
+                                <%= productoActual.color %> <br><br><br>
+                                
     </li>
-    <br>
-    <%=productoActual.name%>, <br>
-        <%= productoActual.description %>, <br>
-            <%= productoActual.image %>,
-                <br>
-                <%= productoActual.category %>, <br>
-                    <%= productoActual.price %>,<br>
-                        <%= productoActual.color %> <br><br><br>
-                            <% }); %>
+
+    <% }); %>
 
 </body>
 

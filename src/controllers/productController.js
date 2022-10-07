@@ -7,7 +7,19 @@ const productos = JSON.parse(productosJSON);
 const productController = {
 
     listaprod: (req, res) => {
-        return res.render("listaprod", { productos: productos });
+        const id = req.params.id
+
+        // importamos el array de productos ya existente y lo taducimos a Json 
+        const productosJSON = fs.readFileSync(path.join(__dirname, "../data/productsDB.json"), "utf-8");
+        const productos = JSON.parse(productosJSON);
+        const productId = Number(req.params.id);
+        const theProduct = productos.find(thisProduct => thisProduct.id === productId);
+
+        
+        //return res.render(`listaprod/productEdit`, {
+            //product: theProduct,
+        //});
+        return res.render("listaprod",{ product: theProduct, productos: productos });
 
     },
 
@@ -32,7 +44,20 @@ const productController = {
 
     //CRUD
     listdeproductos: function (req, res) {
-        res.render("/listaprod");
+        const id = req.params.id
+
+        // importamos el array de productos ya existente y lo taducimos a Json 
+        const productosJSON = fs.readFileSync(path.join(__dirname, "../data/productsDB.json"), "utf-8");
+        const productos = JSON.parse(productosJSON);
+        const productId = Number(req.params.id);
+        const theProduct = productos.find(thisProduct => thisProduct.id === productId);
+
+        
+        return res.render(`listaprod/productEdit`, {
+            product: theProduct,
+        });
+
+        //res.render("/listaprod");
 
     },
     formulariosdecreaciondeproductos: function (req, res) {
@@ -47,6 +72,10 @@ const productController = {
             // importamos el array de productos ya existente y lo taducimos a Json 
             const productosJSON = fs.readFileSync(path.join(__dirname, "../data/productsDB.json"), "utf-8");
             const productos = JSON.parse(productosJSON);
+            const productId = Number(req.params.id);
+            const theProduct = productos.find(thisProduct => thisProduct.id === productId);
+
+
 
             const productoPedido = productos.find(productoActual => productoActual.id == id);
             res.render("./products/productDetail", {
@@ -55,7 +84,8 @@ const productController = {
                 image: productoPedido.image,
                 category: productoPedido.category,
                 price: productoPedido.price,
-                color: productoPedido.color
+                color: productoPedido.color,
+                product: theProduct
             });
         },
 
@@ -90,65 +120,53 @@ const productController = {
     },
 
     Formulariodeedicióndeproductos: function (req, res) {
-        const id = req.params.id;
-        const productos = {
-            
-                name: req.body.name,
-                description: req.body.description,
-                //image: '/img/' + req.file.filename,
-                category: req.body.category,
-                price: req.body.price,
-            };
-
-
 
         const productId = Number(req.params.id);
+        const theProduct = productos.find(product => product.id === productId);
         
-
-        const newArrayProducts = productos.map(oneProduct => {
-            if (oneProduct.id === Number(req.params.id)) {
-                return {
-                    ...oneProduct,
-                    ...req.body,
-                  
-                   
-                    //image: req.file ? req.file.filename : oneProduct.image
-                }
-            }
-            return oneProduct;
+        return res.render(`products/:id/productEdit`, {
+            product: theProduct,
+            
+           
+            
         });
 
-        fs.writeFileSync(path.join(__dirname, "../data/productsDB.json"),productosJSON,  "utf-8", JSON.stringify(newArrayProducts, null, ' '));
-        return res.render(`./products/productEdit/${productId}`);
+      
 
- //fs.writeFileSync(path.join(__dirname, "../data/productsDB.json"), productosActualizadosJSON, "utf-8");
-        //console.log(productos);
-
-    }
-    ,
+},
 
     Accióndeediciónadondeseenvíaelformulario: function (req, res) {
+
         const productId = Number(req.params.id);
 
-        const theProduct = productos.find(thisProduct => thisProduct.id === productId);
+        const theProduct = products.find(thisProduct => thisProduct.id === productId);
 
-        return res.render('./products/productEdit', {
+        return res.render('products/:id/productEdit', {
             product: theProduct,
         });
+
+
     },
 
     acciondeborrado: function (req, res) {
-        
-       
-        const newArrayProducts = productos.filter(p => p.id !== Number(req.params.id));
-       
+        const newArrayProducts = products.filter(p => p.id !== Number(req.params.id));
 
-        fs.writeFileSync(productosJSON, JSON.stringify(newArrayProducts, null, ' '));
-        return res.redirect('/listaprod');
+        fs.writeFileSync(productsJSON, JSON.stringify(newArrayProducts, null, ' '));
+        //return res.redirect('/products');
 
-        
+
+        const productId = Number(req.params.id);
+        const theProduct = products.find(thisProduct => thisProduct.id === productId);
+        return res.redirect(`/listaprod`, {
+            product: theProduct
+        });
+
+
     }
-}
+    }
+
+
+
 
 
 

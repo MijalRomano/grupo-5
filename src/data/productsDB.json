@@ -1,0 +1,140 @@
+[
+    {
+        "id": 1,
+        "name": " Piedras azules",
+        "description": "Conjunto de collar y aros con piedras preciosas azules enchapado en plata",
+        "image": " ./images/img4.jpg",
+        "category": " Importado ",
+        "price": "  $200.000",
+        "color": " Plateado"
+    },
+    {
+        "id": 2,
+        "name": " Piedras violetas",
+        "description": "Aros con diamantes violetas de acero quirurgico",
+        "image": "./images/img10.jpg",
+        "category": " Mas vendido ",
+        "price": " $150.000",
+        "color": " Plateado"
+    },
+    {
+        "id": 3,
+        "name": " Brazalete de oro",
+        "description": " Brazalete con piedras preciosas y estraces de alta calidad enchapado en oro",
+        "imagen": "  ./images/img11.jpg",
+        "category": " Importado",
+        "price": " $250.000 ",
+        "color": "Dorado"
+    },
+    {
+        "id": 4,
+        "name": " Piedras finas ",
+        "description": " Conjunto de anillos de plata con piedras finas",
+        "imagen": "./images/img15.jpg",
+        "category": " Importado",
+        "price": "$50.000 ",
+        "color": " Plateado"
+    },
+    {
+        "id": 5,
+        "name": " Aros de plata",
+        "description": " aros de acero quirurgico baniado en plata",
+        "imagen": "./images/img18.jpg",
+        "category": " Sugerido",
+        "price": " $50.000",
+        "color": " Plateado"
+    },
+    {
+        "id": 6,
+        "name": "Conjunto brazalete",
+        "description": " conjunto de barzalete con aros y collar de plata",
+        "imagen": "./images/img8.jpg",
+        "category": " Sugerido",
+        "price": "$100.00",
+        "color": "Plateado"
+    },
+    {
+        "id": 7,
+        "name": " Conjunto piedras azules",
+        "description": "Conjunto de aros,anillo y collar con piedras azules",
+        "imagen": "./images/img 3.jpg",
+        "category": " Sugerido",
+        "price": "$170.000",
+        "color": " Zafiro"
+    },
+    {
+        "id": 8,
+        "name": " Aros de oro",
+        "description": "Aros de oro, 18 kilates con estraces",
+        "imagen": "./images/img19.jpg",
+        "category": " Sugerido",
+        "price": "$30.000",
+        "color": "Dorado"
+    },
+    {
+        "id": 1664550166862,
+        "name": "pulsera",
+        "description": "pulsera americana",
+        "category": "mas vendido",
+        "price": "$899890",
+        "color": "Plateado"
+    },
+    {
+        "id": 1664750408533,
+        "description": "f",
+        "category": "f",
+        "price": "f",
+        "color": "ff"
+    },
+    {
+        "id": 1664750430920,
+        "description": "g",
+        "category": "g",
+        "price": "g",
+        "color": "g"
+    },
+    {
+        "id": 1664750617690,
+        "description": "amuleto",
+        "category": "g",
+        "price": "g",
+        "color": "gg"
+    },
+    {
+        "id": 1664750642409,
+        "description": "amuleto",
+        "category": "g",
+        "price": "g",
+        "color": "gg"
+    },
+    {
+        "id": 1664807776549,
+        "name": "pulsera",
+        "description": "pulsera asiatica",
+        "category": "mas vendido",
+        "price": "$858069",
+        "color": "plateado"
+    },
+    {
+        "id": 1664807789587,
+        "name": "pulsera",
+        "description": "pulsera asiatica",
+        "category": "mas vendido",
+        "price": "$858069",
+        "color": "plateado"
+    },
+    {
+        "id": 1664808492167,
+        "description": "d",
+        "category": "d",
+        "price": "d",
+        "color": "d"
+    },
+    {
+        "id": 1664808492330,
+        "description": "d",
+        "category": "d",
+        "price": "d",
+        "color": "ddd"
+    }
+]

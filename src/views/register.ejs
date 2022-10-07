@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/register.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
-    
+    <link rel="icon" type="image/png" sizes="16x16"  href="/images/col.png">
 <head >
     <a href="/" > <style type="text/css"> .hola{
         color: rgb(79, 165, 42);
@@ -27,22 +27,22 @@
 
     <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
 </div>
-    <form action="/" method="get" class="register" style="text-align:center" style="font-size: x-large">
+    <form action="./user/users" method="post" class="register" style="text-align:center" style="font-size: x-large">
         <br>
         <div>
             <h2  style= "color:peru" >  Crear cuenta </h2>
          
            
-            <input type="text" placeholder=" Ingrese su nombre " style="border-radius:5px solid " required>
+            <input type="text" placeholder=" Ingrese su nombre  " style="border-radius:5px solid " name="nombre" required>
         </div>
         <br>
         <div >
           
-            <input type="text" placeholder=" Ingrese su mail " required>
+            <input type="text" placeholder=" Ingrese su mail "  name="email" required>
         </div>
         <br>
         <div>
-            <label for="Fecha de nacimiento" style="color:peru" required >Fecha de nacimiento</label> <br>
+            <label for="Fecha de nacimiento" style="color:peru" name="fechaDeNacimiento" required >Fecha de nacimiento</label> <br>
             <input type="date">
         </div>
         <br>
@@ -53,12 +53,12 @@
         
         <div>
            
-            <input type="password" placeholder="Contraseña" required>
+            <input type="password" placeholder="Contraseña" name="constrasenia" required>
         </div>
         <br>
         <div>
            
-            <input type="password" placeholder="Confirmar contraseña" required>
+            <input type="password" placeholder="Confirmar contraseña" name="confirmacionDeContrasenia" required>
             <br>
         </div>
         <br>

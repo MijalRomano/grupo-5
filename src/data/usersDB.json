@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1665094806991,
+        "email": "Cecilia@gmail.com",
+        "nombre": "Cecilia",
+        "apellido": "Suarez",
+        "profilePhoto": "./profilePhotos/1665094806986-mujer1.jpeg",
+        "contrasenia": "cecilialamejor123",
+        "confirmacionDeContrasenia": "cecilialamejor123",
+        "terminosaceptados": "on"
+    },
+    {
+        "id": 1665095354883,
+        "email": "Gustavo@gmail.com",
+        "nombre": "Gustavo",
+        "apellido": "Rodriguez",
+        "profilePhoto": "./profilePhotos/1665095354879-hombre1.jpeg",
+        "contrasenia": "asadoargentino4545",
+        "confirmacionDeContrasenia": "asadoargentino4545",
+        "terminosaceptados": "on"
+    },
+    
+    {
+        "id": 1665095622379,
+        "email": "Marta@gmail.com",
+        "nombre": "Marta",
+        "apellido": "Gomez",
+        "profilePhoto": "./profilePhotos/1665095622377-mujer2.jpeg",
+        "contrasenia": "Mnazanilla9090",
+        "confirmacionDeContrasenia": "Manzanilla9090",
+        "terminosaceptados": "on"
+    }
+]

@@ -123,6 +123,7 @@ main section article{
     justify-content: center;
     align-items: center;
     width: 20vw;
+    
 }
 
 .copy-header {
@@ -251,6 +252,7 @@ article img {
     .logo-search {
         display: flex;
         justify-content: space-between;
+        
 
     }
 

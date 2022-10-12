@@ -39,8 +39,8 @@ h3 {
     font-family: 'Roboto', sans-serif;
     text-align: left;
 }
-
-.burger {
+/*************a que hace referencia?*************/
+/*.burger {
     background-color: #03264C;
     padding: 5px;
     box-sizing: content-box;
@@ -51,12 +51,12 @@ h3 {
     font-size: 18px;
     margin: auto;
     display: flex;
-}
+
 
 .main-header {
     background-color: #EAC926;
     padding: 20px;
-}
+}*/
 
 main section article{
     background-color: white;
@@ -73,17 +73,18 @@ main section article{
     font-size: 18px;
     margin: auto;
 }
+/*************************
 .hamburger-button i{
     margin: auto;
-}
-.logo {
+}*/
+/*.logo {
     width: 200px;
 }
 
 .copy-header {
     font-weight: 400;
     text-align: center;
-}
+}***************************/
 
 .main-navbar ul {
     list-style: none;
@@ -99,10 +100,7 @@ main section article{
     font-size: 17px;
 }
 
-.main-navbar {
-    display: none;
-}
-
+/**************que es logo banner*****/
 .logo-banner {
     width: 100%;
     margin: 0%;
@@ -113,11 +111,11 @@ main section article{
     margin: 0%;
 
 }
-
+/*********************
 .main-header {
     background-color: #EAC926;
 }
-
+*/
 
 
 .barra-de-busqueda input i {
@@ -140,10 +138,10 @@ main section article{
     display: flex;
     justify-content: space-between;
 }
-
+/*     ****repite*****
 .main-navbar ul {
     display: flex;
-}
+}*/
 
 .main-navbar li {
     margin: 0 15px;

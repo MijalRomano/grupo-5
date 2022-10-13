@@ -15,14 +15,16 @@
 </head>
 <a href="/listaprod/:id"> <img src="/images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
 <body>
+  <form enctype="multipart/form-data">
    <u style="color:peru"> <h1 style="color:peru">Detalle del producto </h1> </u>
-    <h2> <%= name %> </h2>
-    <h2> <%= description %> </h2>
-    <h2> <%= image %> </h2>
-    <h2> <%= category %> </h2>
-    <h2> <%= price %> </h2>
-    <h2> <%= color %> </h2>
-   
+   <br>
+    <h3> Nombre de producto: <%= name %> </h3>
+    <h3> Descripcion: <%= description %> </h3>
+    <h3> Categoria: <%= category %> </h3>
+    <h3> Precio:  <%= price %> </h3>
+    <h3> Color: <%= color %> </h3>
+    <h3> Foto De Perfil: <br><img width="200" src="../../<%= productPhoto %>" alt=""> <br></h3> <br><br><br>
+  </form>
   
   
    

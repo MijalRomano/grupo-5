@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcryptjs = require('bcryptjs');
 
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
 const usuarios = JSON.parse(usersJSON);
@@ -7,6 +8,7 @@ const usuarios = JSON.parse(usersJSON);
 
 
 const controller = {
+    
     users: (req, res) => {
 
         return res.render('user/users', { users: usuarios })
@@ -19,7 +21,7 @@ const controller = {
     delete: (req, res) => {
         return res.render('user/delete');
     },
-
+    
     postCreate: (req, res) => {
 
         const nuevoUsuario = {
@@ -27,10 +29,14 @@ const controller = {
             email: req.body.email,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
-            contrasenia: req.body.contrasenia,
+            profilePhoto: "./profilePhotos/" + req.file.filename,
+           contrasenia: req.body.contrasenia,
             confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
-            terminosaceptados: req.body.terminosaceptados
-            //imagen: "./profilephotos/" + req.file.filename
+            terminosaceptados: req.body.terminosaceptados,
+            //encriptar contraseña
+            contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
+            confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
+
         };
         usuarios.push(nuevoUsuario);
         //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
@@ -38,14 +44,8 @@ const controller = {
 
         fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
         console.log(usuarios);
-
-
-  
 res.redirect("/user/users");
     },
-
-
-
 
 
     userDetail: (req, res) => {
@@ -65,7 +65,7 @@ res.redirect("/user/users");
             contrasenia: usuarioPedido.contrasenia,
             confirmacionDeContrasenia: usuarioPedido.confirmacionDeContrasenia,
             terminosaceptados: usuarioPedido.terminosaceptados,
-            image: usuarioPedido.image
+            profilePhoto: usuarioPedido.profilePhoto
             
         });
 

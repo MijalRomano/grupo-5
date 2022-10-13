@@ -14,23 +14,24 @@
     <u style="color:peru;">
         <h1 style="color:peru"> Lista de usuarios: </h1>
     </u>
-
+    <br><br>
     <ul>
 
 
         <% users.forEach (usuarioActual=> { %>
     </ul>
-    <li>
-        <%=usuarioActual.id %>, <br>
-            <%=usuarioActual.email %>, <br>
-                <%= usuarioActual.nombre %>, <br>
-                    <%= usuarioActual.apellido%>, <br>
-                        <%= usuarioActual.contrasenia %>, <br>
-                            <%= usuarioActual.confirmacionDeContrasenia %>, <br>
-                                <%= usuarioActual.terminosaceptados %>, <br><br>
-                                    <%= usuarioActual.Imagen %><br><br><br><br>
+  
+       <h3> Id:<%=usuarioActual.id %></h3>  
+            <h3> Gmail:<%=usuarioActual.email %></h3> 
+                 <h3> Nombre:  <%= usuarioActual.nombre %>,  </h3>
+                   <h3> Apellido: <%= usuarioActual.apellido%>, <br></h3>
+                    <h3> Contraseña:<%= usuarioActual.contrasenia %>, <br></h3>
+                         <h3> Confirmacion De Contraseña:   <%= usuarioActual.confirmacionDeContrasenia %>, <br></h3>
+                              <h3> Terminos aceptados: <%= usuarioActual.terminosaceptados %>, <br></h3>
+                                <h3> Foto De Perfil: <br><img width="200" src="../<%= usuarioActual.profilePhoto %>" alt=""> <br></h3> <br><br><br>
+                               
                                         <% }); %>
-    </li>
+   
 </body>
 
 

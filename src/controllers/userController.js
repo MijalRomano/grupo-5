@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcryptjs = require('bcryptjs');
 
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
 const usuarios = JSON.parse(usersJSON);
@@ -31,7 +32,9 @@ const controller = {
            contrasenia: req.body.contrasenia,
             confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
             terminosaceptados: req.body.terminosaceptados,
-            
+            contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
+            confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
+
         };
         usuarios.push(nuevoUsuario);
         //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
@@ -39,9 +42,6 @@ const controller = {
 
         fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
         console.log(usuarios);
-
-
-  
 res.redirect("/user/users");
     },
 

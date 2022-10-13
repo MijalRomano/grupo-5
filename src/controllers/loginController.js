@@ -1,4 +1,9 @@
+const fs= require('fs');
+
+
 const loginController = {
+
+
     index: (req, res) => {
         return res.render('index');
 
@@ -22,6 +27,8 @@ Userdelete: (req, res) => {
             return res.render('edit'); }
 
  }
-
+console.log(loginController.getData);
+console.log(loginController.findByField("email","mush@gmail.com"));
+console.log()
 module.exports = loginController;
 

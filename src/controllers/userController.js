@@ -8,6 +8,7 @@ const usuarios = JSON.parse(usersJSON);
 
 
 const controller = {
+    
     users: (req, res) => {
 
         return res.render('user/users', { users: usuarios })
@@ -20,7 +21,7 @@ const controller = {
     delete: (req, res) => {
         return res.render('user/delete');
     },
-
+    
     postCreate: (req, res) => {
 
         const nuevoUsuario = {
@@ -32,6 +33,7 @@ const controller = {
            contrasenia: req.body.contrasenia,
             confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
             terminosaceptados: req.body.terminosaceptados,
+            //encriptar contraseña
             contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
             confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
 
@@ -44,9 +46,6 @@ const controller = {
         console.log(usuarios);
 res.redirect("/user/users");
     },
-
-
-
 
 
     userDetail: (req, res) => {

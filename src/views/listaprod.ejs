@@ -27,6 +27,7 @@
         <% productos.forEach(productoActual=> { %>
     </ul
     style="color:rgb(198, 84, 147)">
+  
        <h3> Id: <%=productoActual.id %></h3>
 
    
@@ -39,11 +40,11 @@
                             <h3> Color:<%= productoActual.color %> <br></h3>
                             <h3> Foto Del Producto: <br><img width="200" src="<%= productoActual.productPhoto %>" alt=""> <br></h2> <br><br><br></h3>
 
-                                <form action="/products/<%= product%>?_method=DELETE" method="post">
-                                    <button type="submit" style="color:rgb(146, 66, 66)">Eliminar</button>
-                                </form>
+                            <form action="/listaprod/<%=productoActual.id%>?_method=DELETE" method="post">
+                                <button type="submit" style="color:rgb(196, 30, 4)">Eliminar</button>
+                            </form>
                                 <br>
-                                <form action="/products/:id/productEdit/" method="get">
+                                <form action="/products/<%= productoActual.id %>/productEdit/" method="get">
                                     <button type="submit" style="color:rgb(15, 152, 33)">Editar</button>
                                 </form>
                                 <br>

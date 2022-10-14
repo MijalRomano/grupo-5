@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+    <title>Productos</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/col.png">
+   
+
+</head>
+
+<body style="color:rgb(113, 108, 110)">
+    <a href="/"> <img src="../images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
+
+
+    <u style="color:peru;">
+        <h1
+         style="color:peru"> Lista de productos: </h1>
+    </u>
+  <a href="./products/productCreate" style="color:rgb(125, 89, 53)"> <h2> Crear Producto <i class="fa-solid fa-square-plus"></i></h2></a>
+<br><br>
+    <ul>
+
+        <% productos.forEach(productoActual=> { %>
+    </ul
+    style="color:rgb(198, 84, 147)">
+       <h3> Id: <%=productoActual.id %></h3>
+
+   
+           <h3> Nombre: <%=productoActual.name%>, <br></h3>
+
+               <h3> Descripcion: <%= productoActual.description %>, <br></h3>
+                    
+                   <h3> Categoria: <%= productoActual.category %>, <br></h3>
+                       <h3> Precio: <%= productoActual.price %>,<br></h3>
+                            <h3> Color:<%= productoActual.color %> <br></h3>
+                            <h3> Foto Del Producto: <br><img width="200" src="<%= productoActual.productPhoto %>" alt=""> <br></h2> <br><br><br></h3>
+
+                                <form action="/products/<%= product%>?_method=DELETE" method="post">
+                                    <button type="submit" style="color:rgb(146, 66, 66)">Eliminar</button>
+                                </form>
+                                <br>
+                                <form action="/products/:id/productEdit/" method="get">
+                                    <button type="submit" style="color:rgb(15, 152, 33)">Editar</button>
+                                </form>
+                                <br>
+
+
+    </li>
+
+    <% }); %>
+
+</body>
+
+
+
+<footer>
+    <%- include("./partials/footer.ejs") %>
+</footer>
+
+
+
+</html>

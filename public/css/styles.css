@@ -9,7 +9,8 @@
 }
 
 .descuentos {
-    color: rgb(6, 90, 117);
+    color: rgb(118, 169, 199);
+    text-shadow: 4px border #3d2230;
 }
 
 
@@ -127,8 +128,7 @@ text-shadow:  0 0 19px rgb(247, 247, 247) ;
     justify-content: center;
     align-items: center;
     width: 25vw;
-    
-    
+   
 }
 
 .search-button:hover {
@@ -157,8 +157,8 @@ article {
     transition: 0.25s;
     width: 700px;
     height: 300px;
-    border: 1px solid black;
-    box-shadow: 0 0 10px rgb(100, 100, 100);
+    border: 1px solid rgb(235, 233, 233);
+    box-shadow: 0 0 10px rgb(189, 149, 149);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,13 +174,13 @@ article {
 .article {
     position: relative;
     overflow: hidden;
-    box-shadow: 5px 8px 12px black;
+    box-shadow: 5px 8px 12px rgb(172, 170, 170);
     margin: 200px auto;
     border-radius: 15px;
     transition: 0.25s;
     width: 700px;
     height: 300px;
-    border: 1px solid black;
+    border: 1px solid rgb(230, 225, 225);
     box-shadow: 0 0 10px rgb(100, 100, 100);
     display: flex;
     flex-direction: row;
@@ -198,6 +198,7 @@ article {
   
 
 }
+
 
 .descuentos.descripciones.precio {
     justify-content: center;
@@ -229,11 +230,16 @@ article:hover {
 }
 
 p {
-    color: black;
+   
+      
+    color: rgb(83, 81, 81);
     text-align: center;
-    font-size: 1.5rem;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+   
 }
+
+
+     
 
 
 ul i {

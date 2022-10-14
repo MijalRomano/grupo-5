@@ -1,13 +1,38 @@
 const express = require('express');
+const multer = require ("multer");
+const path = require("path");
 const router = express.Router();
 const userController = require('../controllers/userController');
 
 
-router.get('/user', userController.user);
+const storage = multer.diskStorage({
+    destination: function(req, file, cb){
+cb(null, path.join(__dirname, "../../public/profilePhotos"))
+    },
 
-router.get('/create', userController.create);
+    filename: function (req, file, cb){
+        cb(null,  Date.now() + "-" +  file.originalname);
+    }
+
+});
+
+const upload = multer({ storage: storage });
+
+
+router.get('/user', userController.user);
+router.post('/user', userController.user);
+router.get('/users', userController.users);
+router.post('/create', upload.single("profilePhoto"), userController.postCreate);
+router.get('/create', userController.getCreate);
 router.get('/delete', userController.delete)
-router.get('/edit', userController.edit);
+router.put('/:id', userController.edit);
+router.get('/:id', userController.edit);
+router.get('/userDetail/:id', userController.userDetail);
+
+
+
+
+
 
 
 

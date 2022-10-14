@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usuarios</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/col.png">
+</head>
+<a href="/"> <img src="../images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
+
+<body style="color:rgb(79, 77, 77);">
+    <u style="color:peru;">
+        <h1 style="color:peru"> Lista de usuarios: </h1>
+    </u>
+    <br><br>
+    <ul>
+
+
+        <% users.forEach (usuarioActual=> { %>
+    </ul>
+  
+       <h3> Id:<%=usuarioActual.id %></h3>  
+            <h3> Gmail:<%=usuarioActual.email %></h3> 
+                 <h3> Nombre:  <%= usuarioActual.nombre %>,  </h3>
+                   <h3> Apellido: <%= usuarioActual.apellido%>, <br></h3>
+                    <h3> Contraseña:<%= usuarioActual.contrasenia %>, <br></h3>
+                         <h3> Confirmacion De Contraseña:   <%= usuarioActual.confirmacionDeContrasenia %>, <br></h3>
+                              <h3> Terminos aceptados: <%= usuarioActual.terminosaceptados %>, <br></h3>
+                                <h3> Foto De Perfil: <br><img width="200" src="../<%= usuarioActual.profilePhoto %>" alt=""> <br></h3> <br><br><br>
+                               
+                                        <% }); %>
+   
+</body>
+
+
+
+</html>

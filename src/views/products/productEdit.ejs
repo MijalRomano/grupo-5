@@ -25,38 +25,41 @@
 
     <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
     </div>
-    <form action="/listaprod/<%= product %> ?_method=PUT" method="POST" class="email" style="text-align:center"
+
+
+    
+    <form action="/listaprod/<%= productoActual.id %> ?_method=PUT" method="POST" class="email" style="text-align:center"
         style="font-size: x-large">
         <br>
         <h2 style="color:rgb(178, 235, 159)">Editar producto</h2>
-        <input type="text" placeholder="Id" name="id">
+        <input type="text" placeholder="Id" name="id" value="<%= productoActual.id %>" style="color:gray">
         <br>
         <br>
         <div>
-            <input type="text" placeholder="Nombre del producto" name="nombre" value="<%= product %>" 
+            <input type="text" placeholder="Nombre del producto" name="nombre" value="<%= productoActual.name %>" 
                 style="color:gray" required>
         </div>
         <br>
         <div>
-            <input type="text" placeholder=" Descripcion" style="color:gray" name="description" value="<%= product%>"
+            <input type="text" placeholder=" Descripcion" style="color:gray" name="description" value="<%= productoActual.description %>"
                  required>
         </div>
         <br>
-        <input type="text" placeholder="Imagen" style="color:gray" name="image" value="<%= product %>" >
+        <input type="file" placeholder="Imagen" style="color:gray" name="image" value="<%= productoActual.image %>" >
         <br>
 
         <br>
         <div>
-            <input type="text" placeholder="Categoria" name="category" required value="<%= product %>">
+            <input type="text" placeholder="Categoria" name="category" required value="<%= productoActual.category %>">
         </div>
         <br>
         <div>
-            <input type="text" placeholder="Precio" name="price" required  value="<%= product %>">
+            <input type="text" placeholder="Precio" name="price" required  value="<%= productoActual.price %>">
             <br>
         </div>
         <br>
         <div>
-            <input type="text" placeholder="Color" name="color" required value="<%= product %>" >
+            <input type="text" placeholder="Color" name="color" required value="<%= productoActual.color %>" >
             <br>
         </div>
         <br>

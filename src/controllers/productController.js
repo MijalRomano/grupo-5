@@ -126,8 +126,11 @@ const productController = {
         const productId = Number(req.params.id);
         const theProduct = productos.find(product => product.id === productId);
         
-        return res.render(`products/:id/productEdit`, {
-            product: theProduct,
+        return res.render(`products/productEdit`, {
+            productoActual: theProduct,
+           
+           
+           
             
            
             
@@ -141,10 +144,11 @@ const productController = {
 
         const productId = Number(req.params.id);
 
-        const theProduct = products.find(thisProduct => thisProduct.id === productId);
+        const theProduct = productos.find(thisproductoActual => thisproductoActual.id === productId);
 
-        return res.render('products/:id/productEdit', {
-            product: theProduct,
+        return res.render('./listaprod', {
+            productoActual: theProduct,
+           
         });
 
 

@@ -61,7 +61,6 @@ const productController = {
 
     },
     formulariosdecreaciondeproductos: function (req, res) {
-       
         res.render("./products/productCreate");
 
     },
@@ -82,10 +81,11 @@ const productController = {
             res.render("./products/productDetail", {
                 name: productoPedido.name,
                 description: productoPedido.description,
-                productPhoto: productoPedido.productPhoto,
+                image: productoPedido.image,
                 category: productoPedido.category,
                 price: productoPedido.price,
                 color: productoPedido.color,
+                productPhoto: productoPedido.productPhoto,
                 product: theProduct
             });
         },
@@ -101,10 +101,10 @@ const productController = {
             id: Date.now(),
             name: req.body.name,
             description: req.body.description,
+          productPhoto: "./productPhotos/" + req.file.filename, 
             category: req.body.category,
             price: req.body.price,
-            color: req.body.color,
-            productPhoto: "./productPhotos/" + req.file.filename, 
+            color: req.body.color
 
         };
         productos.push(nuevoProducto);
@@ -116,24 +116,18 @@ const productController = {
         console.log(productos);
 
 
-        res.render("./listaprod");
+        res.redirect("./listaprod"); 
+       
 
     },
 
     Formulariodeedicióndeproductos: function (req, res) {
 
         const productId = Number(req.params.id);
-        const theProduct = productos.find(productoActual => productoActual.id === productId);
+        const theProduct = productos.find(product => product.id === productId);
         
-        return res.render("products/productEdit", {
-            productoActual: theProduct,
-            productId: Date.now(),
-            name: theProduct ,
-            description: theProduct,
-            category:theProduct ,
-            price: theProduct,
-            color: theProduct,
-            productPhoto: "./productPhotos/" + theProduct
+        return res.render(`products/:id/productEdit`, {
+            product: theProduct,
             
            
             
@@ -144,58 +138,30 @@ const productController = {
 },
 
     Accióndeediciónadondeseenvíaelformulario: function (req, res) {
-        
-        
-        
-        const id = req.params.id
 
-        // importamos el array de productos ya existente y lo taducimos a Json 
-        const productosJSON = fs.readFileSync(path.join(__dirname, "../data/productsDB.json"), "utf-8");
-        const productos = JSON.parse(productosJSON);
         const productId = Number(req.params.id);
-        const theProduct = productos.find(thisproductoActual => thisproductoActual.id === productId);
 
-      
-        return res.render("listaprod", {productoActual: theProduct,
-            productId: Date.now(),
-            name: theProduct ,
-            description: theProduct,
-            category:theProduct ,
-            price: theProduct,
-            color: theProduct,
-            productPhoto: "./productPhotos/" + theProduct,
+        const theProduct = products.find(thisProduct => thisProduct.id === productId);
 
-        productos : productos });
-
-        
-        
-       
-
-        return res.render('./listaprod', {
-            productoActual: theProduct,
-           
-           
+        return res.render('products/:id/productEdit', {
+            product: theProduct,
         });
-
-        
-
-        
-        
-        
- 
-        
-
-
-      
 
 
     },
 
     acciondeborrado: function (req, res) {
-        const newArrayProducts = productos.filter(p => p.id !== Number(req.params.id));
+        const newArrayProducts = products.filter(p => p.id !== Number(req.params.id));
 
-        fs.writeFileSync(productsJSON, JSON.stringify(newArrayProducts, null, ' ../data/productsDB.json'));
-        return res.redirect('./listaprod');
+        fs.writeFileSync(productsJSON, JSON.stringify(newArrayProducts, null, ' '));
+        //return res.redirect('/products');
+
+
+        const productId = Number(req.params.id);
+        const theProduct = products.find(thisProduct => thisProduct.id === productId);
+        return res.redirect(`/listaprod`, {
+            product: theProduct
+        });
 
 
     }

@@ -13,3 +13,4 @@ La restropectiva💡:
 
 
 5. Del mismo modo que el punto de arriba , no hay nada para dejar de hacer siempre se puede dar lo mejores detalles y seguir actualizandolo conocimientos para que nuestra pagina web queda esplendida, poniendo cada una su cuota de esfuerzo y mucha organizacion.
+

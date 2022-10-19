@@ -139,7 +139,7 @@ const productController = {
     Accióndeediciónadondeseenvíaelformulario: function (req, res) {
         const productId = Number(req.params.id);
 
-        const theProduct = products.find(thisProduct => thisProduct.id === productId);
+        const theProduct = productos.find(thisProduct => thisProduct.id === productId);
 
         return res.render('products/productEdit', {
             product: theProduct,

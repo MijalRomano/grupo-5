@@ -18,5 +18,6 @@ router.get('/register', mainController.register);
 router.post('/user/users', mainController.Postregister);
 router.get("/asesoramiento", mainController.asesoramiento); 
 router.get('/error', mainController.error);
+router.get('/ayuda', mainController.ayuda);
 module.exports = router;
 

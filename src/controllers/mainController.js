@@ -57,6 +57,9 @@ const mainController = {
     adminEdit: (req, res) => {
         return res.render("adminAdd");
     },
+    ayuda: (req, res) => {
+        return res.render("ayuda");
+    },
 }
 
 

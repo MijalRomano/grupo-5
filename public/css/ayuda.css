@@ -1,0 +1,32 @@
+*{text-align: center;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    color:peru;
+    display: inline-block;
+}
+.titulo2{
+    text-align: center;
+    color:rgb(113, 112, 112);
+    text-decoration: double;
+  
+}
+h5{
+    font-size: 18px;
+    color:rgb(173, 105, 29);
+    text-decoration:underline;
+}
+p{
+  border-style:ridge;
+border-radius: 20px;
+border-color:rgb(243, 221, 226);
+  padding: 20px;
+    text-align:left;
+    
+    display:inline-block;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h2{ color:peru;}

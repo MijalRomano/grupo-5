@@ -9,10 +9,10 @@ app.use(express.static("public"));
 
 const mainRoutes = require("../src/routes/mainRoutes");
 const productRoutes = require("../src/routes/productRoutes");
-const errorRoutes = require("../src/routes/errorRoutes");
+//const errorRoutes = require("../src/routes/errorRoutes");
 const userRoutes = require("../src/routes/userRoutes");
-const adminAddRoutes = require("../src/routes/adminAddRoutes");
-const adminEditRoutes = require("../src/routes/adminEditRoutes");
+const adminRoutes = require("../src/routes/adminRoutes");
+//const adminEditRoutes = require("../src/routes/adminEditRoutes");
 
 
 const publicPath = path.resolve(__dirname, "../public")
@@ -55,10 +55,10 @@ app.get('/index', function (req, res) {
 
 app.use("/", mainRoutes);
 app.use("/", productRoutes);
-app.use("/", errorRoutes);
+
 app.use("/user", userRoutes);
-app.use("/", adminAddRoutes);
-app.use("/", adminEditRoutes);
+//app.use("/", adminRoutes);
+
 
 
 

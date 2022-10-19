@@ -15,11 +15,11 @@ const productController = {
         const productId = Number(req.params.id);
         const theProduct = productos.find(thisProduct => thisProduct.id === productId);
 
-        
+
         //return res.render(`listaprod/productEdit`, {
-            //product: theProduct,
+        //product: theProduct,
         //});
-        return res.render("listaprod",{ product: theProduct, productos: productos });
+        return res.render("listaprod", { product: theProduct, productos: productos });
 
     },
 
@@ -52,7 +52,7 @@ const productController = {
         const productId = Number(req.params.id);
         const theProduct = productos.find(thisProduct => thisProduct.id === productId);
 
-        
+
         return res.render(`listaprod/productEdit`, {
             product: theProduct,
         });
@@ -101,7 +101,7 @@ const productController = {
             id: Date.now(),
             name: req.body.name,
             description: req.body.description,
-          productPhoto: "./productPhotos/" + req.file.filename, 
+            productPhoto: "./productPhotos/" + req.file.filename,
             category: req.body.category,
             price: req.body.price,
             color: req.body.color
@@ -116,8 +116,8 @@ const productController = {
         console.log(productos);
 
 
-        res.redirect("./listaprod"); 
-       
+        res.redirect("./listaprod");
+
 
     },
 
@@ -125,32 +125,25 @@ const productController = {
 
         const productId = Number(req.params.id);
         const theProduct = productos.find(product => product.id === productId);
-        
+
         return res.render(`products/productEdit`, {
             productoActual: theProduct,
-           
-           
-           
-            
-           
-            
+
+
         });
 
-      
 
-},
+
+    },
 
     Accióndeediciónadondeseenvíaelformulario: function (req, res) {
-
         const productId = Number(req.params.id);
 
-        const theProduct = productos.find(thisproductoActual => thisproductoActual.id === productId);
+        const theProduct = products.find(thisProduct => thisProduct.id === productId);
 
-        return res.render('./listaprod', {
-            productoActual: theProduct,
-           
+        return res.render('products/productEdit', {
+            product: theProduct,
         });
-
 
     },
 
@@ -169,7 +162,7 @@ const productController = {
 
 
     }
-    }
+}
 
 
 

@@ -65,7 +65,7 @@ main section article{
 .hamburger-button {
     background-color: #03264C;
     color: white;
-    display: block;
+    display: flex;
     max-width: 50px;
     padding: 15px 0;
     border-radius: 8px;
@@ -73,10 +73,10 @@ main section article{
     font-size: 18px;
     margin: auto;
 }
-/*************************
+************************
 .hamburger-button i{
     margin: auto;
-}*/
+}
 /*.logo {
     width: 200px;
 }
@@ -101,6 +101,7 @@ main section article{
 }
 
 /**************que es logo banner*****/
+/*
 .logo-banner {
     width: 100%;
     margin: 0%;
@@ -116,7 +117,7 @@ main section article{
     background-color: #EAC926;
 }
 */
-
+/****** la vamos a eliminar
 
 .barra-de-busqueda input i {
     display: flex;
@@ -124,16 +125,14 @@ main section article{
     align-items: center;
     width: 20vw;
     
-}
+}*/
 
 .copy-header {
     max-width: 350px;
     text-align: right;
 }
 
-.hamburger-button {
-    display: flex;
-}
+
 
 .main-navbar {
     display: flex;
@@ -147,7 +146,7 @@ main section article{
 .main-navbar li {
     margin: 0 15px;
 }
-
+/*
 .footer {
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
@@ -157,7 +156,7 @@ main section article{
     text-align: center;
     justify-content: center;
 
-}
+}*/
 
 h4,
 .seguridad,
@@ -187,7 +186,7 @@ article{
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
 }
-
+/*
 main section article i {
     display: block;
     font-size: 16px;
@@ -198,46 +197,37 @@ main section article i {
     background-color: #FFF;
     border-radius: 50%;
     position: relative;
-}
+      }
+*//*
 .descuentos,
 article i {
     color: #39b54a;
-}
-
-/*section {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
 }*/
+
+section {
+align-items:center;
+}
 
 article img {
     width: 70%;
-    height: 70%;
+    height: 70%;    
 }
 
 @media (min-width: 480px) {
-    .articulos {
-        width: 80vw;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  
     .burger-menu{
         display: none;
     }
     main section article{
     box-shadow: 0 0 10px rgb(100, 100, 100);
     background-color: white;
-    width: 45%;
+    width: 80%
     }
     .precio .descuentos{
-        width: 50%;
+        width: 30%;
     }
-    footer{
-        display: flex;
-    }
-}
+    
+
 
 @media(min-width: 769px) {
     .main-header-top-bar {
@@ -245,23 +235,27 @@ article img {
         justify-content: space-between;
     }
 
-    main section article {
-        width: 22%;
-    }
+  
 
     .logo-search {
         display: flex;
         justify-content: space-between;
-        
-
+    
     }
+     section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+ 
 
     @media (min-width: 1200px) {
         .logo {
             width: 250px;
         }
 
-        .article .articulos {
+        .article {
             width: 40vw;
             display: flex;
             flex-direction: row;

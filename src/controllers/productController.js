@@ -140,10 +140,27 @@ const productController = {
         const productId = Number(req.params.id);
 
         const theProduct = productos.find(thisProduct => thisProduct.id === productId);
+        let products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productsDB.json"), "utf-8"))
+         const nuevoProducto = {
+            id: productId,
+            name: req.body.name,
+            description: req.body.description,
+            productPhoto: "./productPhotos/" + req.file.filename,
+            category: req.body.category,
+            price: req.body.price,
+            color: req.body.color
 
-        return res.render('products/productEdit', {
-            product: theProduct,
-        });
+        };
+        console.log(req.body);
+        const productIndex = products.indexOf(theProduct)
+        products[productIndex] = nuevoProducto;
+        console.log(productIndex)
+        console.log(nuevoProducto); 
+        products = JSON.stringify(products);
+        fs.writeFileSync(path.join(__dirname, "../data/productsDB.json"), products, "utf-8");
+
+        
+        return res.redirect('/listaprod')
 
     },
 

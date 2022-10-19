@@ -27,25 +27,26 @@
     </div>
 
 
-    
-    <form action="/listaprod/<%= productoActual.id %> ?_method=PUT" method="POST" class="email" style="text-align:center"
-        style="font-size: x-large">
+
+    <form action="/listaprod/<%= productoActual.id %> ?_method=PUT" method="POST" class="email"
+        style="text-align:center" enctype="multipart/form-data" style="font-size: x-large">
         <br>
         <h2 style="color:rgb(178, 235, 159)">Editar producto</h2>
         <input type="text" placeholder="Id" name="id" value="<%= productoActual.id %>" style="color:gray">
         <br>
         <br>
         <div>
-            <input type="text" placeholder="Nombre del producto" name="nombre" value="<%= productoActual.name %>" 
+            <input type="text" placeholder="Nombre del producto" name="name" value="<%= productoActual.name %>"
                 style="color:gray" required>
         </div>
         <br>
         <div>
-            <input type="text" placeholder=" Descripcion" style="color:gray" name="description" value="<%= productoActual.description %>"
-                 required>
+            <input type="text" placeholder=" Descripcion" style="color:gray" name="description"
+                value="<%= productoActual.description %>" required>
         </div>
         <br>
-        <input type="file" placeholder="Imagen" style="color:gray" name="image" value="<%= productoActual.image %>" >
+        <input type="file" placeholder="Imagen" style="color:gray" name="productPhoto"
+            value="http://localhost:3001/<%= productoActual.productPhoto %>">
         <br>
 
         <br>
@@ -54,12 +55,12 @@
         </div>
         <br>
         <div>
-            <input type="text" placeholder="Precio" name="price" required  value="<%= productoActual.price %>">
+            <input type="text" placeholder="Precio" name="price" required value="<%= productoActual.price %>">
             <br>
         </div>
         <br>
         <div>
-            <input type="text" placeholder="Color" name="color" required value="<%= productoActual.color %>" >
+            <input type="text" placeholder="Color" name="color" required value="<%= productoActual.color %>">
             <br>
         </div>
         <br>
@@ -73,12 +74,12 @@
         <br>
         <div>
             <input type="submit" value=" Editar producto" style="color:rgb(104, 199, 115)">
-            
+
             </input>
             <br>
-            
+
         </div>
-       
+
         </div>
     </form>
 

@@ -160,13 +160,12 @@
         "terminosaceptados": "on"
     },
     {
-        "id": 1665769185604,
-        "email": "estersrugo@gmail.com",
-        "nombre": "Esty",
-        "apellido": "srugo",
-        "profilePhoto": "./profilePhotos/1665769185602-mujer2.jpeg",
-        "contrasenia": "$2a$10$q1MjYUkY7j4Ow9TpwA3xYevjyk9BQ.NUTWf5qjQ9fGLQxdKb04KjW",
-        "confirmacionDeContrasenia": "$2a$10$VF.Mie/BkH9EKIHZDHO4P.ri9i5DE48w6voV8skUyBXFJ1UBIVxzi",
-        "terminosaceptados": "on"
+        "id": 1665756324798,
+        "email": "abi@abi",
+        "nombre": "abi",
+        "apellido": "ros",
+        "profilePhoto": "./profilePhotos/1665756324794-1665095622377-mujer2.jpeg",
+        "contrasenia": "$2a$10$DtPU3MNkD5nXmHAglLPpee80HipZu5QSfgeJrDyp23pEpa1Es.q6S",
+        "confirmacionDeContrasenia": "$2a$10$RiHoWrNoJjbCFvVun1cfP.mveHoZLhFzTXU72rUJCH/ZC54H0AuOy"
     }
 ]

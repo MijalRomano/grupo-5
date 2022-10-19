@@ -16,7 +16,7 @@ router.get('/', mainController.index);
 router.get('/user', mainController.user);
 router.get('/register', mainController.register);
 router.post('/user/users', mainController.Postregister);
-
+router.get("/asesoramiento", mainController.asesoramiento); 
 
 module.exports = router;
 

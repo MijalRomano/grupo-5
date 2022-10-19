@@ -7,7 +7,7 @@ const mainController = {
         return res.render('index');
 
     },
-   Postregister: (req, res) => {
+    Postregister: (req, res) => {
         return res.render('user/users');
     },
     register: (req, res) => {
@@ -18,28 +18,37 @@ const mainController = {
     },
     productCart: (req, res) => {
         return res.render('productCart');
-},
-Userdelete: (req, res) => {
+    },
+    Userdelete: (req, res) => {
 
-    return res.render('delete'); },
+        return res.render('delete');
+    },
 
-    Usercreate:  (req, res) => {
-        return res.render('create'); },
-
-
-        Useredit:  (req, res) => {
-            return res.render('edit'); },
-
- user:  (req, res) => {
-    return res.render('user'); },
-
-    productDetail:  (req, res) => {
-        return res.render('productDetail'); },
-
-        
+    Usercreate: (req, res) => {
+        return res.render('create');
+    },
 
 
-      }
+    Useredit: (req, res) => {
+        return res.render('edit');
+    },
+
+    user: (req, res) => {
+        return res.render('user');
+    },
+
+    productDetail: (req, res) => {
+        return res.render('productDetail');
+    },
+
+    asesoramiento: (req, res) => {
+        return res.render("asesoramiento");
+    },
+
+
+
+
+}
 
 
 module.exports = mainController;

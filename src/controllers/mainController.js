@@ -44,10 +44,19 @@ const mainController = {
     asesoramiento: (req, res) => {
         return res.render("asesoramiento");
     },
+    error: (req, res) => {
+        return res.render("error");
 
 
 
 
+    }, adminAdd: (req, res) => {
+        return res.render("adminAdd");
+
+    },
+    adminEdit: (req, res) => {
+        return res.render("adminAdd");
+    },
 }
 
 

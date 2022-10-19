@@ -523,4 +523,15 @@ h6,
     .main-navbar a {
         font-size: 20px;
     }
+
 }
+.fixed{
+    padding:2px;
+    position: relative;
+    left:85%;
+   bottom:10%;
+    position: fixed;
+    max-height:60px; 
+z-index: 200;
+filter:brightness(0.99);
+mix-blend-mode:multiply;}

@@ -15,9 +15,6 @@ const adminAddRoutes = require("../src/routes/adminAddRoutes");
 const adminEditRoutes = require("../src/routes/adminEditRoutes");
 
 
-
-
-
 const publicPath = path.resolve(__dirname, "../public")
 app.use(express.static(publicPath));
 

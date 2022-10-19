@@ -30,4 +30,4 @@ Delete: (req, res) => {
 
  }
 
-module.exports = adminEditController;
+module.exports = adminController;

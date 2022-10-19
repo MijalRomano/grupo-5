@@ -151,10 +151,11 @@ article {
     flex-wrap: wrap;
     display: flex;
     overflow: hidden;
-    box-shadow: 5px 8px 12px black;
+    box-shadow: 5px 8px 12px rgb(179, 9, 9);
     margin: 200px auto;
     border-radius: 15px;
-    transition: 0.25s;
+
+    transition: 2.0s;
     width: 700px;
     height: 300px;
     border: 1px solid rgb(235, 233, 233);
@@ -165,8 +166,8 @@ article {
     padding: 12px;
     margin: 20px;
     animation-name: enmovimiento;
-    animation-duration: 3em;
-    animation-timing-function: ease-out;
+    animation-duration: 25em;
+    animation-timing-function:ease-in-out;
     animation-iteration-count: infinite;
    
 }
@@ -201,13 +202,11 @@ article {
 
 
 .descuentos.descripciones.precio {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
+   text-align: center;
 }
-
+.precio{
+    text-align: center;
+}
 section {
     display: flex;
     text-align: center;
@@ -523,4 +522,15 @@ h6,
     .main-navbar a {
         font-size: 20px;
     }
+
 }
+.fixed{
+    padding:2px;
+    position: relative;
+    left:85%;
+   bottom:10%;
+    position: fixed;
+    max-height:80px; 
+z-index: 200;
+filter:brightness(0.99);
+mix-blend-mode:multiply;}

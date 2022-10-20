@@ -13,7 +13,7 @@ router.get('/productCart', mainController.productCart);
 router.get('/productDetail', mainController.productDetail);
 
 router.get('/login', mainController.login);
-router.post('/login', mainController.login);
+router.post('/login', mainController.loginProces);
 
 router.get('/', mainController.index);
 router.get('/user', mainController.user);

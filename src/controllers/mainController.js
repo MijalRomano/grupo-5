@@ -2,16 +2,17 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
 const usuarios = JSON.parse(usersJSON);
 
+let todosLosUsuarios= usuarios;
+
+/*
 findByeField=function(field,text){ 
-    let todosLosUsuarios= usuarios;
     let usuarioBuscado= todosLosUsuarios.find(oneUser=> oneUser[field]===text);
     return usuarioBuscado;
 }
-
+*/
 const mainController = {
     index: (req, res) => {
         return res.render('index');
@@ -27,8 +28,8 @@ const mainController = {
         return res.render('login');
     },
    
- loginproces:(req,res)=>{ 
-
+ loginProces:(req,res)=>{ 
+/*
   let usuarioLogueado = todosLosUsuarios.findByeField('email', req.body.email);
   if (usuarioLogueado){
    let contraseñaCorrecta= bcryptjs.compareSync(req.body.contraseña, usuarioLogueado.contraseña);
@@ -38,8 +39,20 @@ const mainController = {
     return res.send ("el email o la contraseña son incorrectas")
    }
   }
-},
+   },*/
 
+
+
+   const UsuarioLogueado = todosLosUsuarios.find(thisUser => thisUser.email ===req.body.email);
+   if (UsuarioLogueado){
+    let contraseñaCorrecta= bcryptjs.compareSync(req.body.contraseña, usuarioLogueado.contrasenia);;
+    if (contraseñaCorrecta){
+        res.send ("inicio sesion");
+        } else{ 
+            res.send ("error")
+        }
+    }
+   },
 
 
 

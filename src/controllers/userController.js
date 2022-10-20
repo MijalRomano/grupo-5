@@ -38,11 +38,11 @@ const controller = {
             confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
 
         };
-       /* comprobarContraseñas = function () {
-            if (contrasenia !== confirmacionDeContrasenia) {
+  /*      comprobarContraseñas = function () {
+            if (req.body.contrasenia !== req.body.confirmacionDeContrasenia) {
                 return res.send("las contraseñas no coinciden")
-            } else {*/
-
+            } else {
+*/
                 usuarios.push(nuevoUsuario);
                 //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
                 const usuariosActualizadosJSON = JSON.stringify(usuarios);
@@ -50,7 +50,7 @@ const controller = {
                 fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
                 console.log(usuarios);
                 res.redirect("/user/users");
-          /*  }
+    /*       }
         }*/
     },
 

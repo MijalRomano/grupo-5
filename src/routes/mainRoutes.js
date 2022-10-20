@@ -11,7 +11,10 @@ router.get('/create', mainController.Usercreate);
 
 router.get('/productCart', mainController.productCart);
 router.get('/productDetail', mainController.productDetail);
+
 router.get('/login', mainController.login);
+router.post('/login', mainController.login);
+
 router.get('/', mainController.index);
 router.get('/user', mainController.user);
 router.get('/register', mainController.register);

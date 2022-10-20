@@ -1,0 +1,46 @@
+section {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+article {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 5px 8px 12px rgb(179, 9, 9);
+    margin-left: 45px;
+    border-radius: 15px;
+    transition: 2.0s;
+    max-width: 250px;
+    height: 300px;
+    border: 1px solid rgb(235, 233, 233);
+    box-shadow: 0 0 10px rgb(189, 149, 149);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+   
+    animation-name: enmovimiento;
+    animation-duration: 25em;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+.fixed {
+    padding: 2px;
+    position: relative;
+    left: 85%;
+    bottom: 10%;
+    position: fixed;
+    max-height: 80px;
+    z-index: 200;
+    filter: brightness(1);
+    mix-blend-mode: multiply;
+}

@@ -1,6 +1,16 @@
 
+const fs = require('fs');
+const path = require('path');
+const bcryptjs = require('bcryptjs');
 
+const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
+const usuarios = JSON.parse(usersJSON);
 
+findByeField=function(field,text){ 
+    let todosLosUsuarios= usuarios;
+    let usuarioBuscado= todosLosUsuarios.find(oneUser=> oneUser[field]===text);
+    return usuarioBuscado;
+}
 
 const mainController = {
     index: (req, res) => {
@@ -16,6 +26,24 @@ const mainController = {
     login: (req, res) => {
         return res.render('login');
     },
+   
+ loginproces:(req,res)=>{ 
+
+  let usuarioLogueado = todosLosUsuarios.findByeField('email', req.body.email);
+  if (usuarioLogueado){
+   let contraseñaCorrecta= bcryptjs.compareSync(req.body.contraseña, usuarioLogueado.contraseña);
+   if (contraseñaCorrecta){
+    res.send ("inicio sesion")
+   } else {
+    return res.send ("el email o la contraseña son incorrectas")
+   }
+  }
+},
+
+
+
+
+
     productCart: (req, res) => {
         return res.render('productCart');
     },

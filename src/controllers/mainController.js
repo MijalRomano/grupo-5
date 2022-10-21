@@ -2,10 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
-const usuarios = JSON.parse(usersJSON);
 
-let todosLosUsuarios= usuarios;
+
+/*let todosLosUsuarios= usuarios;*/
 
 /*
 findByeField=function(field,text){ 
@@ -14,6 +13,43 @@ findByeField=function(field,text){
 }
 */
 const mainController = {
+    login: (req, res) => {
+        return res.render('login');
+    },
+
+    loginProcess: (req, res) => {
+        const userData = req.body;
+        const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
+        const usuarios = JSON.parse(usersJSON);
+
+        const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.email);
+        if (usuarioLogueado) {
+            let contraseñaCorrecta = bcryptjs.compareSync(userData.contrasenia, usuarioLogueado.contrasenia);
+            if (contraseñaCorrecta) {
+                res.send("bienvenido");
+            } else {
+                res.send("el email o la contraseña no coinciden")
+            }
+        }
+        /*
+        const usuarioLogueado = usuarios.find(thisUser => thisUser.email ===userData.email);
+        const contraseñaCorrecta= bcryptjs.compareSync(userData.contrasenia, usuarioLogueado.contrasenia);
+        console.log(contraseñaCorrecta);
+        if (contraseñaCorrecta){
+            res.send("correcto")
+        }else{
+            res.send("el email o la contraseña no coinciden")
+        };
+        */
+
+
+        /*console.log(usuarios);
+        console.log(usuarioLogueado);*/
+        console.log(usuarioLogueado.contrasenia, userData.contrasenia);
+
+
+
+    },
     index: (req, res) => {
         return res.render('index');
 
@@ -24,35 +60,12 @@ const mainController = {
     register: (req, res) => {
         return res.render('register');
     },
-    login: (req, res) => {
-        return res.render('login');
-    },
-   
- loginProces:(req,res)=>{ 
-/*
-  let usuarioLogueado = todosLosUsuarios.findByeField('email', req.body.email);
-  if (usuarioLogueado){
-   let contraseñaCorrecta= bcryptjs.compareSync(req.body.contraseña, usuarioLogueado.contraseña);
-   if (contraseñaCorrecta){
-    res.send ("inicio sesion")
-   } else {
-    return res.send ("el email o la contraseña son incorrectas")
-   }
-  }
-   },*/
 
 
 
-   const UsuarioLogueado = todosLosUsuarios.find(thisUser => thisUser.email ===req.body.email);
-   if (UsuarioLogueado){
-    let contraseñaCorrecta= bcryptjs.compareSync(req.body.contraseña, usuarioLogueado.contrasenia);;
-    if (contraseñaCorrecta){
-        res.send ("inicio sesion");
-        } else{ 
-            res.send ("error")
-        }
-    }
-   },
+
+
+
 
 
 

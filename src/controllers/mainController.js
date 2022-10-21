@@ -26,9 +26,11 @@ const mainController = {
         if (usuarioLogueado) {
             let contraseñaCorrecta = bcryptjs.compareSync(userData.contrasenia, usuarioLogueado.contrasenia);
             if (contraseñaCorrecta) {
-                res.send("bienvenido");
+                /*res.send("bienvenido");*/
+                res.redirect ('/');
             } else {
-                res.send("el email o la contraseña no coinciden")
+               /* res.send("el email o la contraseña no coinciden")*/
+               res.redirect('login');
             }
         }
         /*

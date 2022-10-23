@@ -17,9 +17,9 @@ const mainController = {
             const userData = req.body;
             const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
             const usuarios = JSON.parse(usersJSON);
-
+            const nombreUsuario= usuarios.find(thisUser => thisUser.nombre === userData.nombre);
             const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.email);
-            if (usuarioLogueado) {
+            if (usuarioLogueado && nombreUsuario) {
                 let contraseñaCorrecta = bcryptjs.compareSync(userData.contrasenia, usuarioLogueado.contrasenia);
                 if (contraseñaCorrecta) {
                     /*res.send("bienvenido");*/
@@ -34,7 +34,8 @@ const mainController = {
 
             //para enviar los errores a la vista, los agrego a la misma, con una propiedad que la nombre error, donde pido 
             // que mi variable errores se muestre como array.
-            res.render('login', {error:errores.array()});
+            res.render('login', {error:errores.array(),
+                                 datosIngresados:req.body });
         }
         /****la forma que uso nacho en clasee 
         const usuarioLogueado = usuarios.find(thisUser => thisUser.email ===userData.email);

@@ -38,13 +38,15 @@
     <h2 style="text-align:center"> Bienvenid@!</h2>
 
 
-    <!-- locals es una propiedad de exprees, que guarda todo lo que se muestra en la vista, por eso
-     errores esta guardada dentro locals. -->
-     <!-- errores es mi variable, error nombre del objeto,  -->
+    <!-- locals es una propiedad de exprees, que guarda todo lo que se muestra en la vista, por eso el objeto
+     error esta guardado dentro locals. -->
+    <!-- errores es mi variable, error nombre del objeto,erros la funcion  -->
 
-    <% if(locals.errores){ error.foreach(errors=>{%>
+
+
+    <% if(locals.error){ error.forEach(errors=>{%>
         <p style="color:rgb(252, 135, 154)">
-            <%= error.msg %>
+            <%= errors.msg %>
         </p>
         <%}) }%>
 
@@ -52,16 +54,17 @@
                 <br>
                 <div style="text-align:center">
 
-                    <input type="text" placeholder="Nombre y apellido" name="nombre" <!-- required -->>
+                    <input type="text" placeholder="Nombre y apellido" name="nombre"
+                        value="<%=locals.datosIngresados && datosIngresados.nombre ? datosIngresados.nombre : '' %>">
                 </div>
                 <br>
                 <div style="text-align:center">
 
-                    <input type="email" placeholder="email@email.com" name="email" <!-- required -->>
+                    <input type="email" placeholder="email@email.com" name="email" value="<%=locals.datosIngresados && datosIngresados.email ? datosIngresados.email : '' %>">
                 </div>
                 <br>
                 <div style="text-align:center">
-                    <input type="password" placeholder="Contraseña" name="contrasenia" <!-- required -->>
+                    <input type="password" placeholder="Contraseña" name="contrasenia" >
                 </div>
                 <br>
 

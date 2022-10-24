@@ -1,93 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="grupo-5-Finour-joyas/css/home.css">
-    <title>Login</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="grupo-5-Finour-joyas/css/home.css">
+<title>Login</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="grupo-5-Finour-joyas/css/home.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
 <title>Login</title>
-<link rel="icon" type="image/png" sizes="16x16"  href="/images/col.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/col.png">
 
 
 <head>
 
-<body >
-    <a href="/" > <style type="text/css"> .hola{
-        color: rgb(79, 165, 42);
-        font-size: 20px;
-        font-family:cursive;
-        
+<body>
+    <a href="/">
+        <style type="text/css">
+            .hola {
+                color: rgb(79, 165, 42);
+                font-size: 20px;
+                font-family: cursive;
             }
-             </style> 
-              <div class="hola"> <i class="fa-solid fa-arrow-right-from-bracket"></i></i></a>  </div>
- <a href="/"><img src="./images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
-  
+        </style>
+        <div class="hola"> <i class="fa-solid fa-arrow-right-from-bracket"></i></i>
+    </a> </div>
+    <a href="/"><img src="./images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
+
     <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
     <br>
     <br>
     <br>
     <br>
-    
-    <h2  style="text-align:center"> Bienvenid@!</h2>
-    <form action="/" method="get" class="login">
+
+    <h2 style="text-align:center"> Bienvenid@!</h2>
 
 
-        <br>
-        <div style="text-align:center">
+    <!-- locals es una propiedad de exprees, que guarda todo lo que se muestra en la vista, por eso el objeto
+     error esta guardado dentro locals. -->
+    <!-- errores es mi variable, error nombre del objeto,erros la funcion  -->
 
-            <input type="text" placeholder="Nombre y apellido" required>
-        </div>
-        <br>
-        <div style="text-align:center">
 
-            <input type="text" placeholder="Nombre de usuari@" required>
-        </div>
-        <br>
-        <div style="text-align:center">
-            <input type="password" placeholder="Contraseña" required>
-        </div>
-        <br>
-        <div>
-    </form>
-</body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <% if(locals.error){ error.forEach(errors=>{%>
+        <p style="color:rgb(252, 135, 154)">
+            <%= errors.msg %>
+        </p>
+        <%}) }%>
 
-</head>
-<body>
-  
-   <div style="text-align:center">            
-                 <input type="password" placeholder="Confirmar contraseña" required>
-            </div>
+            <form action="/login" method="post" class="login">
+                <br>
+                <div style="text-align:center">
+
+                    <input type="text" placeholder="Nombre y apellido" name="nombre"
+                        value="<%=locals.datosIngresados && datosIngresados.nombre ? datosIngresados.nombre : '' %>">
+                </div>
+                <br>
+                <div style="text-align:center">
+
+                    <input type="email" placeholder="email@email.com" name="email" value="<%=locals.datosIngresados && datosIngresados.email ? datosIngresados.email : '' %>">
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <input type="password" placeholder="Contraseña" name="contrasenia" >
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <a href="#"> <button type="reset" class="submit"> borrar </button> </a>
+                    <a href="#"> <button type="submit" class="submit"> Iniciar sesión </button> </a>
+                    <a href="">
+                        <p style="color:rgb(252, 135, 154) ">Olvidé mi contraseña </p>
+                    </a>
+                </div>
+            </form>
             <br>
-          
-
-            <div style="text-align:center">
-                <a href="views/home.html"> <button type="submit" class="submit"  > Enviar </button> </a>
-                <a href="views/home.html"> <button type="submit" class="submit" > Iniciar sesión </button> </a>
-            </div>
-<br>
-<br> 
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-    </form>
+            <br>
+            <!--"views/home.html"-->
+            <br>
+            <br <br>
+            </form>
 </body>
-<%- include("./partials/footer.ejs") %> 
+<%- include("./partials/footer.ejs") %>
 
 
 
@@ -95,6 +91,6 @@
 
 
 
-    
 
-</body>
+
+    </body>

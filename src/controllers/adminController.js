@@ -1,16 +1,16 @@
-const adminEditController = {
+const adminAddController = {
     index: (req, res) => {
-        return res.render('index');
+        return res.render('admin/index');
 
     },
    register: (req, res) => {
-        return res.render('register');
+        return res.render('admin/register');
     },
     login: (req, res) => {
-        return res.render('login');
+        return res.render('admin/login');
     },
     productCart: (req, res) => {
-        return res.render('productCart');
+        return res.render('admin/productCart');
 },
 Delete: (req, res) => {
     return res.render('admin/delete'); },
@@ -21,13 +21,15 @@ Delete: (req, res) => {
         edit:  (req, res) => {
             return res.render('admin/edit'); },
 
-            adminAdd:  (req, res) => {
+//Add
+        admin:  (req, res) => {
                 return res.render('admin/adminAdd'); },
-
-                adminEdit:  (req, res) => {
-                    return res.render('admin/adminEdit'); },
+                
+//Edit
+                admin:  (req, res) => {
+                    return res.render('admin/admin/Edit'); }
 
 
  }
 
-module.exports = adminController;
+module.exports = adminAddController;

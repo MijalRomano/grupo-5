@@ -8,7 +8,7 @@ const usuarios = JSON.parse(usersJSON);
 
 
 const controller = {
-
+    
     users: (req, res) => {
 
         return res.render('user/users', { users: usuarios })
@@ -21,7 +21,7 @@ const controller = {
     delete: (req, res) => {
         return res.render('user/delete');
     },
-
+    
     postCreate: (req, res) => {
 
         const nuevoUsuario = {
@@ -30,7 +30,7 @@ const controller = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             profilePhoto: "./profilePhotos/" + req.file.filename,
-            contrasenia: req.body.contrasenia,
+           contrasenia: req.body.contrasenia,
             confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
             terminosaceptados: req.body.terminosaceptados,
             //encriptar contraseña
@@ -38,21 +38,15 @@ const controller = {
             confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
 
         };
-  /*      comprobarContraseñas = function () {
-            if (req.body.contrasenia !== req.body.confirmacionDeContrasenia) {
-                return res.send("las contraseñas no coinciden")
-            } else {
-*/
-                usuarios.push(nuevoUsuario);
-                //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
-                const usuariosActualizadosJSON = JSON.stringify(usuarios);
+        usuarios.push(nuevoUsuario);
+        //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
+        const usuariosActualizadosJSON = JSON.stringify(usuarios);
 
-                fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
-                console.log(usuarios);
-                res.redirect("/user/users");
-    /*       }
-        }*/
+        fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
+        console.log(usuarios);
+res.redirect("/user/users");
     },
+
 
     userDetail: (req, res) => {
 
@@ -72,7 +66,7 @@ const controller = {
             confirmacionDeContrasenia: usuarioPedido.confirmacionDeContrasenia,
             terminosaceptados: usuarioPedido.terminosaceptados,
             profilePhoto: usuarioPedido.profilePhoto
-
+            
         });
 
 

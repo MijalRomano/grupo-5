@@ -1,61 +1,8 @@
 
-const fs = require('fs');
-const path = require('path');
-const bcryptjs = require('bcryptjs');
-const { validationResult } = require('express-validator')
+
 
 
 const mainController = {
-    login: (req, res) => {
-        return res.render('login');
-    },
-
-    loginProcess: (req, res) => {
-        let errores = validationResult(req);
-        if (errores.isEmpty()) {
-
-            const userData = req.body;
-            const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
-            const usuarios = JSON.parse(usersJSON);
-            const nombreUsuario= usuarios.find(thisUser => thisUser.nombre === userData.nombre);
-            const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.email);
-            if (usuarioLogueado && nombreUsuario) {
-                let contraseñaCorrecta = bcryptjs.compareSync(userData.contrasenia, usuarioLogueado.contrasenia);
-                if (contraseñaCorrecta) {
-                    /*res.send("bienvenido");*/
-                    res.redirect('/');
-                } else {
-                    /* res.send("el email o la contraseña no coinciden")*/
-                    res.redirect('login');
-                }
-            }
-        } else {
-            /*res.send("hay errores")*/
-
-            //para enviar los errores a la vista, los agrego a la misma, con una propiedad que la nombre error, donde pido 
-            // que mi variable errores se muestre como array.
-            res.render('login', {error:errores.array(),
-                                 datosIngresados:req.body });
-        }
-        /****la forma que uso nacho en clasee 
-        const usuarioLogueado = usuarios.find(thisUser => thisUser.email ===userData.email);
-        const contraseñaCorrecta= bcryptjs.compareSync(userData.contrasenia, usuarioLogueado.contrasenia);
-        console.log(contraseñaCorrecta);
-        if (contraseñaCorrecta){
-            res.send("correcto")
-        }else{
-            res.send("el email o la contraseña no coinciden")
-        };
-        */
-
-
-        /*console.log(usuarios);
-        console.log(usuarioLogueado);*/
-  /*      console.log(usuarioLogueado.contrasenia, userData.contrasenia);
-*/
-
-
-    },
     index: (req, res) => {
         return res.render('index');
 
@@ -66,16 +13,9 @@ const mainController = {
     register: (req, res) => {
         return res.render('register');
     },
-
-
-
-
-
-
-
-
-
-
+    login: (req, res) => {
+        return res.render('login');
+    },
     productCart: (req, res) => {
         return res.render('productCart');
     },

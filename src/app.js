@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 
 const methodOverride = require ("method-override");
+
 app.use(methodOverride("_method"));
 // configuracion de public
 app.use(express.static("public"));
@@ -31,34 +32,26 @@ app.use (express.urlencoded({extended: true}));
 app.use(express.json());
 
 
-
 // esto es para poner la pagina de error al final, dsp de terminar las rutas, anda
 // app.use((req, res, next) => { 
 //    res.status(404).render("error//")
 //});
 
 
-
-
-
-
-
 app.set("user", path.join(__dirname, "./user"));
 
+
+///////////////////////////////////que seria?
 app.get('/index', function (req, res) {
 
     res.sendFile(path.join(__dirname, '/index'));
     res.sendFile(path.join(__dirname, '/'));
 })
 
-
-
 app.use("/", mainRoutes);
 app.use("/", productRoutes);
-
 app.use("/user", userRoutes);
 //app.use("/", adminRoutes);
-
 
 
 

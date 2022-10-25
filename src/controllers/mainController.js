@@ -17,16 +17,19 @@ const mainController = {
             const userData = req.body;
             const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
             const usuarios = JSON.parse(usersJSON);
+
             const nombreUsuario= usuarios.find(thisUser => thisUser.nombre === userData.nombre);
-            const usuarioLogueado = usuarios.find(thisUser => thisUser.email === userData.email);
-            if (usuarioLogueado && nombreUsuario) {
-                let contraseñaCorrecta = bcryptjs.compareSync(userData.contrasenia, usuarioLogueado.contrasenia);
+            const usuarioALoguear = usuarios.find(thisUser => thisUser.email === userData.email);
+            if (usuarioALoguear ) {
+                let contraseñaCorrecta = bcryptjs.compareSync(userData.contrasenia, usuarioALoguear.contrasenia);
                 if (contraseñaCorrecta) {
                     /*res.send("bienvenido");*/
                     res.redirect('/');
                 } else {
                     /* res.send("el email o la contraseña no coinciden")*/
-                    res.redirect('login');
+                    res.render('login', {error:[
+                        {msg: 'Los datos ingresados son incorrectos'}
+                    ]});
                 }
             }
         } else {
@@ -37,25 +40,19 @@ const mainController = {
             res.render('login', {error:errores.array(),
                                  datosIngresados:req.body });
         }
-        /****la forma que uso nacho en clasee 
-        const usuarioLogueado = usuarios.find(thisUser => thisUser.email ===userData.email);
-        const contraseñaCorrecta= bcryptjs.compareSync(userData.contrasenia, usuarioLogueado.contrasenia);
-        console.log(contraseñaCorrecta);
-        if (contraseñaCorrecta){
-            res.send("correcto")
-        }else{
-            res.send("el email o la contraseña no coinciden")
-        };
-        */
-
-
-        /*console.log(usuarios);
-        console.log(usuarioLogueado);*/
-  /*      console.log(usuarioLogueado.contrasenia, userData.contrasenia);
-*/
-
-
+     
+        
     },
+
+
+//////////////////////////////////////////////////////
+       /* console.log(usuarios);
+        console.log(usuarioALoguear);*/
+  /*      console.log(usuarioALoguear.contrasenia, userData.contrasenia);
+**********************************************************/
+
+
+   
     index: (req, res) => {
         return res.render('index');
 

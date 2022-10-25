@@ -21,7 +21,7 @@ const loginValidaciones = [
     body('email').notEmpty().withMessage('Este campo es obligatorio').bail()
         .isEmail().withMessage('Por favor ingrese un email válido'),
     body('contrasenia').notEmpty().withMessage('Este campo es obligatorio').bail()
-        .isLength({ min: 2 }).withMessage('La contraseña no es correcta'),
+        .isLength({ min:4  }).withMessage('La contraseña no es correcta'),
 ]
 
 
@@ -30,6 +30,14 @@ const loginValidaciones = [
 router.get('/login', mainController.login);
 router.post('/login',loginValidaciones, mainController.loginProcess);
 
+/////checkear que sessionn este funcionando
+/*router.get('/check', function(req, res){
+if (req.session.usuarioLogueado==false){
+    res.send('no estas logueado')
+} else {
+    res.send(req.session.usuarioLogueado.email +" estas logueado " )
+}
+}),*/
 
 
 

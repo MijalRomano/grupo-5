@@ -2,86 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P.Edicion</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/col.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P.Edicion</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/col.png">
 </head>
 
 <body>
-    <a href="/">
-        <style type="text/css">
-            .hola {
-                color: rgb(79, 165, 42);
-                font-size: 20px;
-                font-family: cursive;
+  <a href="/">
+    <style type="text/css">
+      .hola {
+        color: rgb(79, 165, 42);
+        font-size: 20px;
+        font-family: cursive;
 
-            }
-        </style>
-        <div class="hola"> <i class="fa-solid fa-arrow-right-from-bracket"></i></i>
-    </a> </div>
-    <a href="/"><img src="/images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
+      }
+    </style>
+    <div class="hola"> <i class="fa-solid fa-arrow-right-from-bracket"></i></i>
+  </a> </div>
+  <a href="/"><img src="/images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
 
-    <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
+  <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
+  </div>
+
+
+
+  <form action="/listaprod/<%= productoActual.id %> ?_method=PUT" method="POST" style="text-align:center" enctype="multipart/form-data" style="font-size: x-large">
+    <br>
+    <h2 style="color:rgb(178, 235, 159)">Editar producto</h2>
+    <input type="text" placeholder="Id" name="id" value="<%= productoActual.id %>" style="color:gray">
+    <br>
+    <br>
+    <div>
+      <input type="text" placeholder="Nombre del producto" name="name" value="<%= productoActual.name %>" style="color:gray" required>
+    </div>
+    <br>
+    <div>
+      <input type="text" placeholder=" Descripcion" style="color:gray" name="description" value="<%= productoActual.description %>" required>
+    </div>
+    <br>
+    <input type="file" placeholder="Imagen" style="color:gray" name="productPhoto" value="http://localhost:3001/<%= productoActual.productPhoto %>">
+    <br>
+
+    <br>
+    <div>
+      <input type="text" placeholder="Categoria" name="category" required value="<%= productoActual.category %>">
+    </div>
+    <br>
+    <div>
+      <input type="text" placeholder="Precio" name="price" required value="<%= productoActual.price %>">
+      <br>
+    </div>
+    <br>
+    <div>
+      <input type="text" placeholder="Color" name="color" required value="<%= productoActual.color %>">
+      <br>
+    </div>
+    <br>
+    <div>
+      <label>
+        <input type="checkbox" name="terminosaceptados">
+        <label for="acepto los terminos de privacidad" style="color:rgb(112, 184, 88)" style="font-size:small">He leido nuevamente, para comfirmacion la informacion entrante. </label>
+
+    </div>
+    <br>
+    <div>
+      <input type="submit" value=" Editar producto" style="color:rgb(104, 199, 115)">
+
+      </input>
+      <br>
+
     </div>
 
-
-
-    <form action="/listaprod/<%= productoActual.id %> ?_method=PUT" method="POST" class="email"
-        style="text-align:center" enctype="multipart/form-data" style="font-size: x-large">
-        <br>
-        <h2 style="color:rgb(178, 235, 159)">Editar producto</h2>
-        <input type="text" placeholder="Id" name="id" value="<%= productoActual.id %>" style="color:gray">
-        <br>
-        <br>
-        <div>
-            <input type="text" placeholder="Nombre del producto" name="name" value="<%= productoActual.name %>"
-                style="color:gray" required>
-        </div>
-        <br>
-        <div>
-            <input type="text" placeholder=" Descripcion" style="color:gray" name="description"
-                value="<%= productoActual.description %>" required>
-        </div>
-        <br>
-        <input type="file" placeholder="Imagen" style="color:gray" name="productPhoto"
-            value="http://localhost:3001/<%= productoActual.productPhoto %>">
-        <br>
-
-        <br>
-        <div>
-            <input type="text" placeholder="Categoria" name="category" required value="<%= productoActual.category %>">
-        </div>
-        <br>
-        <div>
-            <input type="text" placeholder="Precio" name="price" required value="<%= productoActual.price %>">
-            <br>
-        </div>
-        <br>
-        <div>
-            <input type="text" placeholder="Color" name="color" required value="<%= productoActual.color %>">
-            <br>
-        </div>
-        <br>
-        <div>
-            <label>
-                <input type="checkbox" name="terminosaceptados">
-                <label for="acepto los terminos de privacidad" style="color:rgb(112, 184, 88)"
-                    style="font-size:small">He leido nuevamente, para comfirmacion la informacion entrante. </label>
-
-        </div>
-        <br>
-        <div>
-            <input type="submit" value=" Editar producto" style="color:rgb(104, 199, 115)">
-
-            </input>
-            <br>
-
-        </div>
-
-        </div>
-    </form>
+    </div>
+  </form>
 
 </body>
 

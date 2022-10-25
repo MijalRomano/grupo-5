@@ -86,7 +86,8 @@ const productController = {
                 price: productoPedido.price,
                 color: productoPedido.color,
                 productPhoto: productoPedido.productPhoto,
-                product: theProduct
+                product: theProduct,
+                id
             });
         },
 
@@ -122,26 +123,18 @@ const productController = {
     },
 
     Formulariodeedicióndeproductos: function (req, res) {
-
         const productId = Number(req.params.id);
         const theProduct = productos.find(product => product.id === productId);
 
         return res.render(`products/productEdit`, {
             productoActual: theProduct,
-
-
         });
-
-
-
     },
 
     Accióndeediciónadondeseenvíaelformulario: function (req, res) {
         const productId = Number(req.params.id);
 
-        const theProduct = productos.find(thisProduct => thisProduct.id === productId);
-        let products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productsDB.json"), "utf-8"))
-         const nuevoProducto = {
+        const nuevoProducto = {
             id: productId,
             name: req.body.name,
             description: req.body.description,
@@ -149,35 +142,35 @@ const productController = {
             category: req.body.category,
             price: req.body.price,
             color: req.body.color
-
         };
-        console.log(req.body);
-        const productIndex = products.indexOf(theProduct)
-        products[productIndex] = nuevoProducto;
-        console.log(productIndex)
-        console.log(nuevoProducto); 
-        products = JSON.stringify(products);
-        fs.writeFileSync(path.join(__dirname, "../data/productsDB.json"), products, "utf-8");
 
-        
+        const nuevosProductos = productos.map(productoActual => {
+            if (productoActual.id === productId) {
+                return nuevoProducto;
+            }
+
+            return productoActual;
+        });
+
+        const nuevosProductosJson = JSON.stringify(nuevosProductos);
+
+        fs.writeFileSync(path.join(__dirname, "../data/productsDB.json"), nuevosProductosJson, "utf-8");
+
         return res.redirect('/listaprod')
-
     },
 
     acciondeborrado: function (req, res) {
-        const newArrayProducts = products.filter(p => p.id !== Number(req.params.id));
-
-        fs.writeFileSync(productsJSON, JSON.stringify(newArrayProducts, null, ' '));
-        //return res.redirect('/products');
-
-
         const productId = Number(req.params.id);
-        const theProduct = products.find(thisProduct => thisProduct.id === productId);
-        return res.redirect(`/listaprod`, {
-            product: theProduct
-        });
 
+        const newArrayProducts = productos.filter(p => p.id !== productId);
 
+        console.log(newArrayProducts)
+
+        const productsJSON = JSON.stringify(newArrayProducts);
+
+        fs.writeFileSync(path.join(__dirname, '../data/productsDB.json'), productsJSON, 'utf-8');
+
+        return res.redirect(`/listaprod`);
     }
 }
 

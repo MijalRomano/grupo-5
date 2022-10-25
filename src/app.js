@@ -19,7 +19,7 @@ const adminRoutes = require("../src/routes/adminRoutes");
 const publicPath = path.resolve(__dirname, "../public")
 app.use(express.static(publicPath));
 
-//implementacion de plantillas ejs.
+
 app.set("view engine", "ejs");
 
 
@@ -27,7 +27,7 @@ app.set('views', 'src/views');
 
 app.set('views', path.resolve(__dirname, 'views'));
 
-//captura la info que viene de un form via post.
+
 app.use (express.urlencoded({extended: true}));
 app.use(express.json());
 

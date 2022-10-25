@@ -11,7 +11,35 @@ router.get('/create', mainController.Usercreate);
 
 router.get('/productCart', mainController.productCart);
 router.get('/productDetail', mainController.productDetail);
+
+
+
+//validaciones para el login
+const loginValidaciones = [
+    body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
+    body('email').notEmpty().withMessage('Este campo es obligatorio').bail()
+        .isEmail().withMessage('Por favor ingrese un email válido'),
+    body('contrasenia').notEmpty().withMessage('Este campo es obligatorio').bail()
+        .isLength({ min:4  }).withMessage('La contraseña no es correcta'),
+]
+
+
+
+//en el post del login implementamos la constante de validaciones como middelware 
 router.get('/login', mainController.login);
+router.post('/login',loginValidaciones, mainController.loginProcess);
+
+/////checkear que sessionn este funcionando
+/*router.get('/check', function(req, res){
+if (req.session.usuarioLogueado==false){
+    res.send('no estas logueado')
+} else {
+    res.send(req.session.usuarioLogueado.email +" estas logueado " )
+}
+}),*/
+
+
+
 router.get('/', mainController.index);
 router.get('/user', mainController.user);
 router.get('/register', mainController.register);

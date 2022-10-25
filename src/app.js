@@ -12,14 +12,14 @@ const mainRoutes = require("../src/routes/mainRoutes");
 const productRoutes = require("../src/routes/productRoutes");
 //const errorRoutes = require("../src/routes/errorRoutes");
 const userRoutes = require("../src/routes/userRoutes");
-const adminRoutes = require("../src/routes/adminRoutes");
+/*const adminRoutes = require("../src/routes/adminRoutes");*/
 //const adminEditRoutes = require("../src/routes/adminEditRoutes");
 
 
 const publicPath = path.resolve(__dirname, "../public")
 app.use(express.static(publicPath));
 
-
+//configuracion de plantillas ejs.
 app.set("view engine", "ejs");
 
 
@@ -27,7 +27,7 @@ app.set('views', 'src/views');
 
 app.set('views', path.resolve(__dirname, 'views'));
 
-
+//para capturar la info q viene desde un form via post
 app.use (express.urlencoded({extended: true}));
 app.use(express.json());
 

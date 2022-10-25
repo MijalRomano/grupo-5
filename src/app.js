@@ -31,6 +31,13 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.use (express.urlencoded({extended: true}));
 app.use(express.json());
 
+app.use((req, res , next) => {
+    res.status(404).render('404-page');
+    
+    next();
+    
+    });
+
 
 // esto es para poner la pagina de error al final, dsp de terminar las rutas, anda
 // app.use((req, res, next) => { 

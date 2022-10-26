@@ -4,9 +4,11 @@ const path = require("path");
 const router = express.Router();
 const userController = require('../controllers/userController');
 const logDBMiddleware = require('../middlewares/logDBMiddleware');
-const logMiddleware = require('../middlewares/logDBMiddleware');
-const authMiddleware = require('../middlewares/logDBMiddleware');
+const logMiddleware = require('../middlewares/logMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
+
+router.get('/user/perfil', userRoutes, userController)
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
 cb(null, path.join(__dirname, "../../public/profilePhotos"))

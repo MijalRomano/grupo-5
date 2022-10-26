@@ -1,70 +1,10 @@
 [
     {
-        "id": 1665094806991,
-        "email": "Cecilia@gmail.com",
-        "nombre": "Cecilia",
-        "apellido": "Suarez",
-        "profilePhoto": "./profilePhotos/1665094806986-mujer1.jpeg",
-        "contrasenia": "cecilialamejor123",
-        "confirmacionDeContrasenia": "cecilialamejor123",
-        "terminosaceptados": "on"
-    },
-    {
-        "id": 1665095354883,
-        "email": "Gustavo@gmail.com",
-        "nombre": "Gustavo",
-        "apellido": "Rodriguez",
-        "profilePhoto": "./profilePhotos/1665095354879-hombre1.jpeg",
-        "contrasenia": "asadoargentino4545",
-        "confirmacionDeContrasenia": "asadoargentino4545",
-        "terminosaceptados": "on"
-    },
-    {
-        "id": 1665095622379,
-        "email": "Marta@gmail.com",
-        "nombre": "Marta",
-        "apellido": "Gomez",
-        "profilePhoto": "./profilePhotos/1665095622377-mujer2.jpeg",
-        "contrasenia": "Mnazanilla9090",
-        "confirmacionDeContrasenia": "Manzanilla9090",
-        "terminosaceptados": "on"
-    },
-    {
-        "id": 1665607705674,
-        "email": "probando@gmail.com",
-        "nombre": "mijal",
-        "apellido": "maleh",
-        "profilePhoto": "./profilePhotos/1665607705479-A2.png",
-        "contrasenia": "125",
-        "confirmacionDeContrasenia": "123",
-        "terminosaceptados": "on"
-    },
-    {
-        "id": 1665623529861,
-        "email": "probando1@gmail.com",
-        "nombre": "ruth",
-        "apellido": "birman",
-        "profilePhoto": "./profilePhotos/1665623529834-5.png",
-        "contrasenia": "123",
-        "confirmacionDeContrasenia": "123",
-        "terminosaceptados": "on"
-    },
-    {
         "id": 1665623601017,
         "email": "probando2@gmail.com",
         "nombre": "ruth",
         "apellido": "birman",
         "profilePhoto": "./profilePhotos/1665623600992-4.png",
-        "contrasenia": "456",
-        "confirmacionDeContrasenia": "456",
-        "terminosaceptados": "on"
-    },
-    {
-        "id": 1665623807119,
-        "email": "probando3@gmail.com",
-        "nombre": "ruthi",
-        "apellido": "birman",
-        "profilePhoto": "./profilePhotos/1665623807099-4.png",
         "contrasenia": "456",
         "confirmacionDeContrasenia": "456",
         "terminosaceptados": "on"
@@ -107,16 +47,6 @@
         "profilePhoto": "./profilePhotos/1665630034256-IMG-20190901-WA0010.jpg",
         "contrasenia": "$2a$10$3uFcZLjnj2NC6vlcjTyAsOGO9IT7Y1Mh03/d0YiPXoiKelWGZCUyG",
         "confirmacionDeContrasenia": "$2a$10$zJD5yAVl8cU6QMm0oaSyt.eCtgMYEwvOmWbll2Oj2rnTrk1D3aZqK",
-        "terminosaceptados": "on"
-    },
-    {
-        "id": 1665637264522,
-        "email": "hfhthtrhgh@lkhlh",
-        "nombre": "nuevo",
-        "apellido": "intento",
-        "profilePhoto": "./profilePhotos/1665637264503-2022-09-29 (2) (1).png",
-        "contrasenia": "$2a$10$kGuojc09Nj2D3zN4HXwkX.oMKvyGETSqt0WYRmdnIQN31652W7nFa",
-        "confirmacionDeContrasenia": "$2a$10$/23ewPp9GTZ9rOGUL1DlWe/CgcEvQHgo45E8cpxjp/.YMadwybDB2",
         "terminosaceptados": "on"
     },
     {

@@ -33,29 +33,33 @@
         <br>
         <div style="text-align:center">
 
-            <input type="text" placeholder="Editar nombre y apellido">
+          
+            <input type="email" placeholder="email" value="<%= usuarioActual.email %>">
         </div>
         <br>
         <div style="text-align:center">
-            <input type="text" placeholder="Editar nombre de usuari@">
+            <input type="text" placeholder=" Edite su nombre aqui " value="<%= usuarioActual.nombre %>">
         </div>
         <br>
         <div style="text-align:center">
-            <input type="password" placeholder="Editar o cambiar contraseña">
+            <input type="text" placeholder=" Edite su apellido aqui " value="<%= usuarioActual.apellido %>">
         </div>
         <br>
-        <div>
+        <div style="text-align:center">
+            <input type="image"  value="./<%= usuarioActual.profilePhoto%> "> 
+        </div>
+        <br>
+        <div style="text-align:center">
+            <input type="password" placeholder=" Edite su contraseña aqui " value="<%= usuarioActual.contrasenia%>">
+        </div>
+        <br>
+        <div style="text-align:center">
+            <input type="password" placeholder=" Confirme su contraseña aqui " value="<%= usuarioActual.confirmacionDeContrasenia%>">
+        </div>
+       
 
-            <div style="text-align:center">
-                <input type="password" placeholder="Confirmar nueva contraseña">
-            </div>
-            <br>
 
-
-            <div style="text-align:center">
-                <a href="views/home.html"> <button type="submit" class="submit"> Enviar </button> </a>
-                <a href="views/profile.html"> <button type="edit" class="submit">Editar</button> </a>
-            </div>
+            
             <br>
             <br>
             <br>

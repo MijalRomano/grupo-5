@@ -18,7 +18,7 @@ const mainController = {
             const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
             const usuarios = JSON.parse(usersJSON);
 
-            /*const nombreUsuario= usuarios.find(thisUser => thisUser.nombre === userData.nombre);*/
+            const nombreUsuario= usuarios.find(thisUser => thisUser.nombre === userData.nombre);
             const usuarioALoguear = usuarios.find(thisUser => thisUser.email === userData.email);
             if (usuarioALoguear ) {
                 let contraseñaCorrecta = bcryptjs.compareSync(userData.contrasenia, usuarioALoguear.contrasenia);
@@ -121,7 +121,6 @@ const mainController = {
 
 
 module.exports = mainController;
-
 
 
 

@@ -3,7 +3,9 @@ const multer = require ("multer");
 const path = require("path");
 const router = express.Router();
 const userController = require('../controllers/userController');
-
+const logDBMiddleware = require('../middlewares/logDBMiddleware');
+const logMiddleware = require('../middlewares/logDBMiddleware');
+const authMiddleware = require('../middlewares/logDBMiddleware');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -28,6 +30,13 @@ router.get('/delete', userController.delete)
 router.put('/:id', userController.edit);
 router.get('/:id', userController.edit);
 router.get('/userDetail/:id', userController.userDetail);
+
+
+router.get('/user/create', userController.user);
+router.post('/user/create', logDBMiddleware, userController.user);
+router.post('/user/create', logMiddleware, userController.user);
+router.post('/login', authMiddleware, userController.user);
+
 
 
 

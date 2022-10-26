@@ -9,4 +9,3 @@ res.send ('Tenes que registrarte!')
 
 module.exports = authMiddleware;
 
-

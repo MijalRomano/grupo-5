@@ -14,12 +14,63 @@ const controller = {
         return res.render('user/users', { users: usuarios })
 
     },
-    edit: (req, res) => {
+    putEdit: (req, res) => {
+        const usuarioId = Number(req.params.id);
 
-        return res.render('user/edit');
+        const nuevoUsuario = {
+            id: usuarioId,
+            email: req.body.email,
+            nombre: req.body.nombre,
+            profilePhoto: "./profilePhotos/" + req.file.filename,
+            contrasenia: req.body.contrasenia,
+            confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
+            terminosaceptados: req.body.terminosaceptados
+        };
+
+        const nuevosUsuarios = usuarios.map(usuarioActual => {
+            if (usuarioActual.id === usuarioId) {
+                return nuevoUsuario;
+            }
+
+            return usuarioActual;
+
+        });
+
+
+        const nuevosUsuariosJson = JSON.stringify(nuevosUsuarios);
+
+        fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), nuevosUsuariosJson, "utf-8");
+
+        return res.redirect('/user/users')
+        
+    },
+    getEdit: (req, res) => {
+        const usuarioId = Number(req.params.id);
+        const theUser = usuarios.find(u => u.id === usuarioId);
+
+        return res.render(`user/edit`, {
+            usuarioActual: theUser,
+        });
+
+    
+       
     },
     delete: (req, res) => {
-        return res.render('user/delete');
+        const usuarioId = Number(req.params.id);
+
+        const newArrayUsuario = usuarios.filter(u => u.id !== usuarioId);
+
+        console.log(newArrayUsuario)
+
+        const usuariosJSON = JSON.stringify(newArrayUsuario);
+
+        fs.writeFileSync(path.join(__dirname, '../data/usersDB.json'), usuariosJSON, 'utf-8');
+
+        return res.redirect(`/user/users`);
+    
+        
+
+     
     },
     
     postCreate: (req, res) => {

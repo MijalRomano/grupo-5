@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/register.css">
+<title>profile</title>
+<link rel="icon" type="image/png" sizes="16x16"  href="/images/col.png">
+<head>
+
+<body>   
+     <%- include("./partials/head.ejs") %>
+
+    <a href="/" > <style type="text/css"> .hola{
+        color: rgb(79, 165, 42);
+        font-size: 20px;
+        font-family:cursive;
+        
+            }
+             </style> 
+              <div class="hola"> <i class="fa-solid fa-arrow-right-from-bracket"></i></i></a>  </div>
+    <a href="/"><img src="../images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
+
+    <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
+    </div>
+
+
+
+    
+    <form action="../user/create" method="POST" class="email" style="text-align:center" style="font-size: x-large" enctype="multipart/form-data">
+        <br>
+        <h2 style="color:rgb(178, 235, 159)">Crear perfil </h2>
+        
+        <div>
+            <input type="email" placeholder="Email" name="email" style="color:gray" required >
+        </div>
+        <br>
+        <div>
+            <input type="text" placeholder=" Nombre"  style="color:gray" name="nombre" required>
+        </div>
+        <br>
+        <input type="text" placeholder="Apellido" style="color:gray"  name="apellido" required> 
+        <br>
+        <input type="text" placeholder="alias o apodo" style="color:gray"  name="alias o apodo" required> 
+        <br>
+        <input type="file" name="profilePhoto" > 
+        <br>
+        <br>
+        
+        <div>
+            <input type="password" placeholder="Contraseña" name="contrasenia" required>
+        </div>
+        <br> 
+        <div>
+            <input type="password" placeholder="Confirmar contraseña" name="confirmacionDeContrasenia" required>
+            <br>
+        </div>
+        <br>
+        <div>
+            <label>
+                <input type="checkbox" name="terminosaceptados" >
+                <label for="acepto los terminos de privacidad" style="color:rgb(112, 184, 88)" 
+                    style="font-size:small">Acepto la politíca de privacidad </label>
+                    
+        </div>
+        <br>
+        <div>
+            <input type="submit" value=" Crear usuario" style="color:rgb(104, 199, 115)">
+        </input>
+        </div>
+        <form action="/profile/<%= productoActual.id %>/profile/" method="get">
+            <button type="submit" style="color:rgb(15, 152, 33)">Editar</button>
+        </div>
+        <div>
+            <a href="views/home.html"><button type="reset" class="reset" style="color:rgb(104, 199, 115)"> Borrar
+                    dartos </button></a>
+        </div>
+    </form>
+</body>
+</head>
+
+<footer>
+    <%- include("./partials/footer.ejs") %>
+</footer>
+
+</html> 

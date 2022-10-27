@@ -1,7 +1,7 @@
-function guestMiddleware (req, res, next) {
-    if (req.usuariologueado) {
-        
-  return res.redirect('/login');
+function guestMiddleware(req, res, next) {
+    if (req.session.usuariologueado) {
+
+        return res.redirect('/login');
     }
 
     next();

@@ -1,16 +1,33 @@
 const express = require('express');
 const router = express.Router();
+const multer = require("multer");
 const mainController = require('../controllers/mainController');
 const { body } = require('express-validator');
 
 
-/*router.get('/delete', mainController.Userdelete);
-router.get('/edit', mainController.Useredit);
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb){
+cb(null, path.join(__dirname, "../../public/profilePhotos"))
+    },
+
+    filename: function (req, file, cb){
+        cb(null,  Date.now() + "-" +  file.originalname);
+    }
+
+});
+
+const upload = multer({ storage: storage });
+
+
+
+router.get('/delete', mainController.Userdelete);
+router.get('/edit', upload.single("profilePhoto"), mainController.Useredit);
 
 router.get('/Usercreate', mainController.Usercreate);
 
 router.get('/create', mainController.Usercreate);
-*/
+
 router.get('/productCart', mainController.productCart);
 router.get('/productDetail', mainController.productDetail);
 

@@ -5,7 +5,7 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
-
+const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -26,16 +26,19 @@ router.post('/user', userController.user);
 router.get('/users', userController.users);
 router.post('/create', upload.single("profilePhoto"), userController.postCreate);
 router.get('/create', userController.getCreate);
-router.get('/delete', userController.delete)
-router.put('/:id', userController.edit);
-router.get('/:id', userController.edit);
+router.get('/delete', userController.delete);
+router.delete('/users/:id', userController.delete);
+router.put('/:id',upload.single("profilePhoto"), userController.putEdit);
+router.get('/:id', userController.getEdit);
+//probando edir por post
+//router.post('/:id', userController.edit);
 router.get('/userDetail/:id', userController.userDetail);
 
 
 router.get('/user/create', userController.user);
 router.post('/login', guestMiddleware, userController.user);
 router.post('/login', authMiddleware, userController.user);
-
+router.post('/login', userLoggedMiddleware, userController.user);
 
 
 

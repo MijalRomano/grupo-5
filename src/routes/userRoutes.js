@@ -24,8 +24,8 @@ const upload = multer({ storage: storage });
 router.get('/user', userController.user);
 router.post('/user', userController.user);
 router.get('/users', userController.users);
-router.post('/create', upload.single("profilePhoto"), userController.postCreate);
-router.get('/create', userController.getCreate);
+router.post('/create', upload.single("profilePhoto"), userController.postCreate);  //// procesa el registro por post
+router.get('/create',guestMiddleware, userController.getCreate);//////ruta de form de registro (x get)
 router.get('/delete', userController.delete);
 router.delete('/users/:id', userController.delete);
 router.put('/:id',upload.single("profilePhoto"), userController.putEdit);
@@ -35,7 +35,6 @@ router.get('/:id', userController.getEdit);
 router.get('/userDetail/:id', userController.userDetail);
 
 
-router.get('/user/create', userController.user);
 router.post('/login', guestMiddleware, userController.user);
 router.post('/login', authMiddleware, userController.user);
 router.post('/login', userLoggedMiddleware, userController.user);

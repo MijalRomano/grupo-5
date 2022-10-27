@@ -2,11 +2,13 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator');
+const { info } = require('console');
 
 
 const mainController = {
     login: (req, res) => {
+        console.log(req.session);
         return res.render('login');
     },
 
@@ -23,7 +25,12 @@ const mainController = {
             if (usuarioALoguear ) {
                 let contraseñaCorrecta = bcryptjs.compareSync(userData.contrasenia, usuarioALoguear.contrasenia);
                 if (contraseñaCorrecta) {
-                    /*res.send("bienvenido");*/
+               /* -antes del redireccionamiento, en caso de que el login este correcto, guardo su info en session.
+                - hago un request a session, atraves de una propiedad que la llamo userlogged donde guardo toda la info de usuarioAloguear.
+                 antes de guardar la info, elimino la contraseña para q no se guarde*/
+                    delete usuarioALoguear.contrasenia;
+                    delete usuarioALoguear.confirmacionDeContrasenia;
+                    req.session.userLogged=usuarioALoguear
                     res.redirect('/');
                 } else {
                     /* res.send("el email o la contraseña no coinciden")*/
@@ -54,9 +61,22 @@ const mainController = {
 
    
     index: (req, res) => {
-        return res.render('index');
+        //console.log('estas en home');
+       // console.log(req.session);
+       //le digo a la vista del home  q va a recibir los datos del user logueado.
+       
+       return res.render('index',{user :req.session.userLogged});
 
     },
+//////para cerrar session. hay q ver como implementarlo
+    logout:(req,res)=> {
+req.session.destroy();
+return res.redirect('/');
+    },
+
+
+
+
     Postregister: (req, res) => {
         return res.render('user/users');
     },

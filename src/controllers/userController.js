@@ -95,7 +95,7 @@ const controller = {
 
         fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
         console.log(usuarios);
-res.redirect("/user/users");
+res.redirect('login');
     },
 
 

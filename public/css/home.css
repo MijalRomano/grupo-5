@@ -52,13 +52,20 @@ h3 {
     font-size: 18px;
     margin: auto;
     display: flex;
+*/
 
-
-.main-header {
-    background-color: #EAC926;
-    padding: 20px;
-}*/
-
+.main-header-top-bar p {
+    color:beige;
+    text-align: end;
+    margin-right: 15px;
+    font-size: 15px;
+    font-family: 'Lucida Sans';
+     }
+     .cerrar{
+        color:beige;
+        
+     }
+/*
 main section article{
     background-color: white;
     }

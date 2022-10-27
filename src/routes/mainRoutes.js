@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require("multer");
 const mainController = require('../controllers/mainController');
 const { body } = require('express-validator');
-
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 const storage = multer.diskStorage({
@@ -41,9 +41,10 @@ const loginValidaciones =[
         .isLength({ min:4  }).withMessage('La contraseña no es correcta'),
 ]; 
 
+// en el get (form de login) agregamos mw. para impedir q un usuario ya logueado vuelva al login
+//en el post (procesamiento de login) implementamos la constante de validaciones como middelware 
 
-//en el post del login implementamos la constante de validaciones como middelware 
-router.get('/login', mainController.login);
+router.get('/login',guestMiddleware , mainController.login);
 router.post('/login',loginValidaciones, mainController.loginProcess);
 
 /////checkear que sessionn este funcionando
@@ -54,13 +55,14 @@ if (req.session.usuarioLogueado==false){
     res.send(req.session.usuarioLogueado.email +" estas logueado " )
 }
 }),*/
-
+//cerrar session
+router.get('logout', mainController.logout);
 
 router.get('/', mainController.index);
 router.get('/user', mainController.user);
  //que seria?
 /*router.get('/register', mainController.register); */
-router.post('/user/users', mainController.Postregister);// que seria?
+router.post('/user/users', mainController.Postregister);
 router.get("/asesoramiento", mainController.asesoramiento);
 router.get('/error', mainController.error);
 router.get('/ayuda', mainController.ayuda);

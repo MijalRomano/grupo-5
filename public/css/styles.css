@@ -431,10 +431,10 @@ h6,
     .main-header-top-bar {
         align-items: center;
     }
-
+/*
     .main-navbar {
         margin-top: 50px;
-    }
+    }*/
 }
 
 .Visitado-ultimamente.sugerencias .h3{
@@ -511,9 +511,9 @@ h6,
         align-items: center;
     }
 
-    .main-navbar {
+    /* .main-navbar {
         margin-top: 50px;
-    }
+    } */
 
     .main-navbar li {
         margin: 0 10px;

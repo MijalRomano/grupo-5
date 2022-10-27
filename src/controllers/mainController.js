@@ -69,7 +69,7 @@ const mainController = {
 
     },
 //////para cerrar session. hay q ver como implementarlo
-    logout:(req,res)=> {
+    logout:(req,res) => {
 req.session.destroy();
 return res.redirect('/');
     },

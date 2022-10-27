@@ -41,9 +41,16 @@
     <div>
       <input type="text" placeholder=" Descripcion" style="color:gray" name="description" value="<%= productoActual.description %>" required>
     </div>
-    <br>
-    <input type="file" placeholder="Imagen" style="color:gray" name="productPhoto" value="http://localhost:3001/<%= productoActual.productPhoto %>" required>
-    <br>
+    
+    <h2 style="color:peru">Imagen actual: </h2>
+    <p>
+        <img width="15%" src="/<%= productoActual.productPhoto %>" alt="foto"><br>
+    </p>
+    <h3 style="color:peru" for="img">¿ desea cambiar la imagen de usuario? </h3>
+    <h3 style="color:rgb(78, 139, 165)"> si es asi, Eliga una nueva foto ☺</h3>
+        <input type="file" id="img" accept="jpg" name="img">
+<br>
+<br>
 
     <br>
     <div>

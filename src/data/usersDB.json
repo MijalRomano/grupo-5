@@ -1,15 +1,5 @@
 [
     {
-        "id": 1665623601017,
-        "email": "probando2@gmail.com",
-        "nombre": "ruth",
-        "apellido": "birman",
-        "profilePhoto": "./profilePhotos/1665623600992-4.png",
-        "contrasenia": "456",
-        "confirmacionDeContrasenia": "456",
-        "terminosaceptados": "on"
-    },
-    {
         "id": 1665624076542,
         "email": "probando4@gmail.com",
         "nombre": "johana",

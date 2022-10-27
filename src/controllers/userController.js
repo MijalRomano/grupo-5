@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+//const multer = require("multer");
 const bcryptjs = require('bcryptjs');
 
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");

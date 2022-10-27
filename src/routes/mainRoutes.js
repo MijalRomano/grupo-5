@@ -56,7 +56,7 @@ if (req.session.usuarioLogueado==false){
 }
 }),*/
 //cerrar session
-router.get('/user/logout', mainController.logout);
+router.get('/logout', mainController.logout);
 
 router.get('/', mainController.index);
 router.get('/user', mainController.user);

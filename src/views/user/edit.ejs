@@ -4,11 +4,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="grupo-5-Finour-joyas/css/home.css">
-<title>Editar</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="grupo-5-Finour-joyas/css/home.css">
 <title>Edit</title>
 <link rel="icon" type="image/png" sizes="16x16"  href="/images/col.png">
 
@@ -28,12 +23,12 @@
     <br>
     <h2 style="text-align:center"> Edita tu usuario</h2>
   
-    <form action="/" method="get" class="edit user">
+    <form action="/user/users/<%= usuarioActual.id %>?_method=PUT" method="POST" style="text-align:center" enctype="multipart/form-data" style="font-size: x-large"> 
         <br>
         <div style="text-align:center">
 
           
-            <input type="email" placeholder="email" value="<%= usuarioActual.email %>">
+            <input type="email" placeholder="email" value= "<%= usuarioActual.email %>">
         </div>
         <br>
         <div style="text-align:center">
@@ -52,7 +47,8 @@
             </p>
             <h3 style="color:peru" for="img">¿ desea cambiar la imagen de usuario? </h3>
             <h3 style="color:rgb(78, 139, 165)"> si es asi, Eliga una nueva foto ☺</h3>
-            <input type="file" placeholder=" Edite su contraseña aqui " value="<%= usuarioActual.profilePhoto%>">
+            <u><h4 style="color:rgb(67, 69, 121)"> Debes poner una imagen obligatoriamente </h4></u> 
+            <input type="file" placeholder=" Edite su contraseña aqui " name="profilePhoto" value="<%= usuarioActual.profilePhoto%>">
         <br>
         <br>
 
@@ -65,10 +61,11 @@
             <input type="password" placeholder=" Confirme su contraseña aqui " value="<%= usuarioActual.confirmacionDeContrasenia%>">
         </div>
        
-        <form action="/user/<%= usuarioActual.id %>" method="post">
+        <form action="/user/users/<%= usuarioActual.id %>" method="post">
             <button type="submit" style="color:rgb(15, 152, 33)">Editar</button>
         </form>
         <br>
+       
 
             
             <br>

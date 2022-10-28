@@ -3,9 +3,9 @@ const multer = require ("multer");
 const path = require("path");
 const router = express.Router();
 const userController = require('../controllers/userController');
-const logDBMiddleware = require('../middlewares/logDBMiddleware');
-const logMiddleware = require('../middlewares/logDBMiddleware');
-const authMiddleware = require('../middlewares/logDBMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -19,27 +19,26 @@ cb(null, path.join(__dirname, "../../public/profilePhotos"))
 });
 
 const upload = multer({ storage: storage });
-
-
+router.get("/logout", userController.logout);
+router.get("/profile", userController.profile);
+router.get("/admin", userController.admin);
 router.get('/user', userController.user);
 router.post('/user', userController.user);
-router.get('/users', userController.users);
-router.post('/create', upload.single("profilePhoto"), userController.postCreate);
-router.get('/create', userController.getCreate);
+router.get('/users', upload.single("profilePhoto"), userController.users);
+router.post('/create', upload.single("profilePhoto"), userController.postCreate);  //// procesa el registro por post
+router.get('/create',guestMiddleware, userController.getCreate);//////ruta de form de registro (x get)
 router.get('/delete', userController.delete);
 router.delete('/users/:id', userController.delete);
-router.put('/:id',upload.single("profilePhoto"), userController.putEdit);
-router.get('/:id', userController.getEdit);
+router.put('user/users/:id/',upload.single("profilePhoto"),  userController.putEdit);
+router.get('/:id', upload.single("profilePhoto"),   userController.getEdit);
 //probando edir por post
 //router.post('/:id', userController.edit);
 router.get('/userDetail/:id', userController.userDetail);
 
 
-router.get('/user/create', userController.user);
-router.post('/user/create', logDBMiddleware, userController.user);
-router.post('/user/create', logMiddleware, userController.user);
+router.post('/login', guestMiddleware, userController.user);
 router.post('/login', authMiddleware, userController.user);
-
+router.post('/login', userLoggedMiddleware, userController.user);
 
 
 

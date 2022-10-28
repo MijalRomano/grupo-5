@@ -1,13 +1,17 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-
-
+ const session= require('express-session')
+const userLoggedMiddleware= require('./middlewares/userLoggedMiddleware');
 const methodOverride = require ("method-override");
 
 app.use(methodOverride("_method"));
 // configuracion de public
 app.use(express.static("public"));
+app.use (session({secret: "am israel jai",
+                resave:false,
+                saveUninitialized:false}));
+app.use(userLoggedMiddleware); // el mw de app. que va a servir para mostrar o no cierta info a users o guest.
 
 const mainRoutes = require("../src/routes/mainRoutes");
 const productRoutes = require("../src/routes/productRoutes");

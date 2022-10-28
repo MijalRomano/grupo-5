@@ -96,7 +96,7 @@ const controller = {
 
         fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
         console.log(usuarios);
-res.redirect("/user/users");
+res.redirect('/login');
     },
 
 
@@ -143,6 +143,32 @@ res.redirect("/user/users");
 
 
 
-        }
+        },
+        admin:
+        (req, res) => {
+            return res.render('user/admin');
+
+
+
+
+        },
+        profile:
+        (req, res) => {
+            return res.render('user/profile');
+
+
+
+
+        },
+        logout:
+        (req, res) => {
+            return res.render('user/logout');
+
+
+
+
+        },
+       
+
 }
 module.exports = controller;

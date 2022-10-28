@@ -28,7 +28,7 @@
 
 
 
-  <form action="/listaprod/<%= productoActual.id %> ?_method=PUT" method="POST" style="text-align:center" enctype="multipart/form-data" style="font-size: x-large">
+  <form action="/listaprod/<%= productoActual.id %> ?_method=PUT" method="POST" style="text-align:center" enctype="multipart/form-data" style="font-size: x-large"> 
     <br>
     <h2 style="color:rgb(178, 235, 159)">Editar producto</h2>
     <input type="text" placeholder="Id" name="id" value="<%= productoActual.id %>" style="color:gray">
@@ -44,11 +44,12 @@
     
     <h2 style="color:peru">Imagen actual: </h2>
     <p>
-        <img width="15%" src="/<%= productoActual.productPhoto %>" alt="foto"><br>
+        <img width="15%" src="/<%= productoActual.productPhoto %>" alt="foto" required><br>
     </p>
     <h3 style="color:peru" for="img">¿ desea cambiar la imagen de usuario? </h3>
     <h3 style="color:rgb(78, 139, 165)"> si es asi, Eliga una nueva foto ☺</h3>
-        <input type="file" id="img" accept="jpg" name="img">
+   <u><h4 style="color:rgb(67, 69, 121)"> Debes poner una imagen obligatoriamente </h4></u> 
+    <input type="file" placeholder=" Edite su contraseña aqui " name="productPhoto" value="<%= productoActual.productPhoto%>" require>
 <br>
 <br>
 

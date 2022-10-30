@@ -47,14 +47,7 @@ const loginValidaciones =[
 router.get('/login',guestMiddleware , mainController.login);
 router.post('/login',loginValidaciones, mainController.loginProcess);
 
-/////checkear que sessionn este funcionando
-/*router.get('/check', function(req, res){
-if (req.session.usuarioLogueado==false){
-    res.send('no estas logueado')
-} else {
-    res.send(req.session.usuarioLogueado.email +" estas logueado " )
-}
-}),*/
+
 //cerrar session
 router.get('/logout', mainController.logout);
 

@@ -181,7 +181,7 @@ article {
     margin: 200px auto;
     border-radius: 15px;
     transition: 0.25s;
-    width: 700px;
+    max-width: 70px;
     height: 300px;
     border: 1px solid rgb(230, 225, 225);
     box-shadow: 0 0 10px rgb(100, 100, 100);

@@ -22,9 +22,13 @@
 
     <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
     </div>
+ 
 
-
-
+    <% if(locals.error){ error.forEach(errors=>{%>
+        <p style="color:rgb(252, 135, 154)">
+            <%= errors.msg %>
+        </p>
+        <%}) }%>
     
     <form action="../user/create" method="POST" class="email" style="text-align:center" style="font-size: x-large" enctype="multipart/form-data">
         <br>

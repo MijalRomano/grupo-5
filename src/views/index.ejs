@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/poductDetail.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css"
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.google.com/specimen/Bree+Serif" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
         <br>
         <div class="main-header-top-bar">
 
-            <p>Bienvenido  <% if (locals.isLogged){ %> 
+            <p style="font-size:x-large">Bienvenido  <% if (locals.isLogged){ %> 
 
              <%=locals.userLogged.nombre %> <%=locals.userLogged.apellido %>!
              <%} else{ %> 
@@ -50,7 +50,7 @@
                 <li><a href="/user/create">Registrate<i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
                 <% } else{ %> 
                     <li><a href="/productCart">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a href="/profile">Mi perfil<i class="fas fa-user"></i></a></li>
+                    <li><a href="/user/profile">Mi perfil<i class="fas fa-user"></i></a></li>
                     <li><a href="/logout">cerrar sesion</a></li>
                     <% } %> 
              

@@ -1,4 +1,4 @@
-const express = require('express');
+  const express = require('express');
 const multer = require ("multer");
 const path = require("path");
 const router = express.Router();
@@ -35,24 +35,31 @@ router.post('/user', userController.user);
 router.get('/users', userController.users);
 router.post('/create', upload.single("profilePhoto"), registerValidaciones, userController.postCreate); //// procesa el registro por post
 router.get('/create',guestMiddleware, userController.getCreate);//////ruta de form de registro (x get)
+router.get("/logout", userController.logout);
+router.get("/profile", userController.profile);
+router.get("/admin", userController.admin);
+router.get('/user', userController.user);
+router.post('/user', userController.user);
+router.get('/users', upload.single("profilePhoto"), userController.users);
+router.post('/create', upload.single("profilePhoto"), userController.postCreate);  //// procesa el registro por post
+router.get('/create',guestMiddleware, userController.getCreate)///////ruta de form de registro (x get)
 router.get('/delete', userController.delete);
 router.delete('/users/:id', userController.delete);
-router.put('/:id',upload.single("profilePhoto"), userController.putEdit);
-router.get('/:id', userController.getEdit);
+router.put('user/users/:id/',upload.single("profilePhoto"),  userController.putEdit);
+router.get('/:id', upload.single("profilePhoto"),   userController.getEdit);
 //probando edir por post
-//router.post('/:id', userController.edit);
+router.post('/:id', userController.putEdit);
 router.get('/userDetail/:id', userController.userDetail);
+
+
+
 
 
 router.post('/login', guestMiddleware, userController.user);
 router.post('/login', authMiddleware, userController.user);
 router.post('/login', userLoggedMiddleware, userController.user);
 
+ 
+module.exports = router; 
 
-
-
-
-
-
-
-module.exports = router;
+ 

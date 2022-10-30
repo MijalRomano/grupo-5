@@ -15,8 +15,8 @@
 
 <body>
    
-        <div class="hola"> <i class="fa-solid fa-arrow-right-from-bracket"></i></i>
-    </a> </div>
+       <a href="/"  class="hola"> <i class="fa-solid fa-arrow-right-from-bracket"></i></i>
+    </a> 
     <a href="/"><img src="./images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
 
     <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
@@ -43,8 +43,8 @@
                 <br>
                 <div style="text-align:center">
 
-                    <input type="text" placeholder="nombre"  name="nombre"
-                    value="<%=locals.datosIngresados && datosIngresados.nombre ? datosIngresados.nombre : '' %> "> 
+                    <input type="text" placeholder="Nombre"  name="nombre" >
+                   <%=locals.datosIngresados && datosIngresados.nombre ? datosIngresados.nombre : '' %>
                     
                     <!-- <%if (locals.errors && errors.nombre){ %>
                         <div class="text-danger">
@@ -77,7 +77,7 @@
             <br>
             <!--"views/home.html"-->
             <br>
-            <br <br>
+            <br>
             </form>
 </body>
 <%- include("./partials/footer.ejs") %>

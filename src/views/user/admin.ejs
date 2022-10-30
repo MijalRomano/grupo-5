@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin</title>
 </head>
-<%- include("./partials/head.ejs") %>
+<%- include("../partials/head.ejs") %>
 
     <body>
         <div>
@@ -17,14 +17,9 @@
                 <a href="users/users"><button type="add" class="add" style="color:rgb(104, 199, 115)"> agregar usuario
                     </button></a>
     </body>
-    <form action="/user/users<%= productoActual.id %>/user/users" method="get">
-        <button type="submit" style="color:rgb(15, 152, 33)">Editar los usuarios</button>
-
-        <form action="/listaprod/<%=productoActual.id%>?_method=DELETE" method="post">
-            <button type="submit" style="color:rgb(196, 30, 4)">Eliminar a un usuario</button>
-        </form>
+   
 
 
-        <%- include("./partials/footer.ejs") %>
+        <%- include("../partials/footer.ejs") %>
 
 </html>

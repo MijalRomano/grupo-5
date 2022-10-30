@@ -7,6 +7,15 @@ const { info } = require('console');
 
 
 const mainController = {
+    nuevohome: (req, res) => {
+
+        return res.render('nuevohome')
+         } ,
+         header: (req, res) => {
+
+            return res.render('partials/header')
+             } ,
+
     login: (req, res) => {
         console.log(req.session);
         return res.render('login');
@@ -61,6 +70,9 @@ const mainController = {
 
    
     index: (req, res) => {
+
+
+        
         //console.log('estas en home');
        // console.log(req.session);
        //le digo a la vista del home  q va a recibir los datos del user logueado.
@@ -68,7 +80,7 @@ const mainController = {
        return res.render('index',{user :req.session.userLogged});
 
     },
-//////para cerrar session. hay q ver como implementarlo
+//////para cerrar session. 
     logout:(req,res) => {
 req.session.destroy();
 return res.redirect('/');

@@ -13,7 +13,9 @@
     text-shadow: 4px border #3d2230;
 }
 
-
+body{
+   background-color: rgb(253, 225, 225) 
+}
 
 .hamburger-button {
     padding: 5px;
@@ -57,7 +59,7 @@
 .main-header {
     padding: 0px;
     width: auto;
-    background: linear-gradient( #950202a1, rgb(253, 225, 225) , #fff ); 
+    background: linear-gradient( #b32e48a1, rgb(250, 200, 200)  ); 
 }
 
 

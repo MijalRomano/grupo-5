@@ -17,12 +17,7 @@
                 <a href="users/users"><button type="add" class="add" style="color:rgb(104, 199, 115)"> agregar usuario
                     </button></a>
     </body>
-    <form action="/user/users<%= usuarioActual.id %>/user/users" method="get">
-        <button type="submit" style="color:rgb(15, 152, 33)">Editar los usuarios</button>
-
-        <form action="/listaprod/<%=usuarioActual.id%>?_method=DELETE" method="post">
-            <button type="submit" style="color:rgb(196, 30, 4)">Eliminar a un usuario</button>
-        </form>
+   
 
 
         <%- include("../partials/footer.ejs") %>

@@ -61,6 +61,9 @@ const mainController = {
 
    
     index: (req, res) => {
+
+
+        
         //console.log('estas en home');
        // console.log(req.session);
        //le digo a la vista del home  q va a recibir los datos del user logueado.

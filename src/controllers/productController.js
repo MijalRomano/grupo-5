@@ -19,7 +19,8 @@ const productController = {
         //return res.render(`listaprod/productEdit`, {
         //product: theProduct,
         //});
-        return res.render("listaprod", { product: theProduct, productos: productos });
+        return res.render("listaprod", { product: theProduct, productos: productos,
+         });
 
     },
 

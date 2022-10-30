@@ -19,17 +19,18 @@ cb(null, path.join(__dirname, "../../public/profilePhotos"))
 });
 
 const upload = multer({ storage: storage });
-
-
+router.get("/logout", userController.logout);
+router.get("/profile", userController.profile);
+router.get("/admin", userController.admin);
 router.get('/user', userController.user);
 router.post('/user', userController.user);
-router.get('/users', userController.users);
+router.get('/users', upload.single("profilePhoto"), userController.users);
 router.post('/create', upload.single("profilePhoto"), userController.postCreate);  //// procesa el registro por post
 router.get('/create',guestMiddleware, userController.getCreate)///////ruta de form de registro (x get)
 router.get('/delete', userController.delete);
 router.delete('/users/:id', userController.delete);
-router.put('/:id',upload.single("profilePhoto"), userController.putEdit);
-router.get('/:id', userController.getEdit);
+router.put('user/users/:id/',upload.single("profilePhoto"),  userController.putEdit);
+router.get('/:id', upload.single("profilePhoto"),   userController.getEdit);
 //probando edir por post
 router.post('/:id', userController.putEdit);
 router.get('/userDetail/:id', userController.userDetail);

@@ -22,9 +22,8 @@
     <br>
     <br>
     <h2 style="text-align:center"> Edita tu usuario</h2>
-    <br>
-    <br>
-    <form action="/" method="get" class="edit user">
+  
+    <form action="/user/users/<%= usuarioActual.id %>?_method=PUT" method="POST" style="text-align:center" enctype="multipart/form-data" style="font-size: x-large"> 
         <br>
         <div style="text-align:center">
 
@@ -40,9 +39,19 @@
         </div>
         <br>
         <div style="text-align:center">
-            <input type="image"  value="./<%= usuarioActual.profilePhoto%> "> 
-        </div>
+
+            <h2 style="color:peru">Imagen actual: </h2>
+            <p>
+                <img width="15%" src="/<%= usuarioActual.profilePhoto %>" alt="foto"><br>
+            </p>
+            <h3 style="color:peru" for="img">¿ desea cambiar la imagen de usuario? </h3>
+            <h3 style="color:rgb(78, 139, 165)"> si es asi, Eliga una nueva foto ☺</h3>
+            <u><h4 style="color:rgb(67, 69, 121)"> Debes poner una imagen obligatoriamente </h4></u> 
+            <input type="file" placeholder=" Edite su contraseña aqui " name="profilePhoto" value="<%= usuarioActual.profilePhoto%>">
         <br>
+        <br>
+
+    
         <div style="text-align:center">
             <input type="password" placeholder=" Edite su contraseña aqui " value="<%= usuarioActual.contrasenia%>">
         </div>
@@ -51,7 +60,11 @@
             <input type="password" placeholder=" Confirme su contraseña aqui " value="<%= usuarioActual.confirmacionDeContrasenia%>">
         </div>
        
-
+        <form action="/user/users/<%= usuarioActual.id %>" method="post">
+            <button type="submit" style="color:rgb(15, 152, 33)">Editar</button>
+        </form>
+        <br>
+       
 
             
             <br>

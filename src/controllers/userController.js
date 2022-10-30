@@ -1,5 +1,6 @@
  const fs = require('fs');
 const path = require('path');
+//const multer = require("multer");
 const bcryptjs = require('bcryptjs');
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
 const usuarios = JSON.parse(usersJSON);
@@ -99,7 +100,7 @@ const controller = {
 
         fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
         console.log(usuarios);
-res.redirect('login');
+res.redirect('/login');
  }
     },
 
@@ -147,7 +148,33 @@ res.redirect('login');
 
 
 
-        }
+        },
+        admin:
+        (req, res) => {
+            return res.render('user/admin');
+
+
+
+
+        },
+        profile:
+        (req, res) => {
+            return res.render('user/profile');
+
+
+
+
+        },
+        logout:
+        (req, res) => {
+            return res.render('user/logout');
+
+
+
+
+        },
+       
+
 }
 module.exports = controller; 
 

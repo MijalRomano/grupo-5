@@ -10,7 +10,7 @@
 <head>
 
 <body>   
-     <%- include("./partials/head.ejs") %>
+     <%- include("../partials/head.ejs") %>
 
     <a href="/" > <style type="text/css"> .hola{
         color: rgb(79, 165, 42);
@@ -42,7 +42,9 @@
         <br>
         <input type="text" placeholder="Apellido" style="color:gray"  name="apellido" required> 
         <br>
+        <br>
         <input type="text" placeholder="alias o apodo" style="color:gray"  name="alias o apodo" required> 
+        <br>
         <br>
         <input type="file" name="profilePhoto" > 
         <br>
@@ -65,23 +67,23 @@
                     
         </div>
         <br>
+        <br>
         <div>
             <input type="submit" value=" Crear usuario" style="color:rgb(104, 199, 115)">
         </input>
-        </div>
-        <form action="/profile/<%= productoActual.id %>/profile/" method="get">
-            <button type="submit" style="color:rgb(15, 152, 33)">Editar</button>
-        </div>
+        <br>  <br>
         <div>
             <a href="views/home.html"><button type="reset" class="reset" style="color:rgb(104, 199, 115)"> Borrar
-                    dartos </button></a>
+                    datos </button></a>
         </div>
     </form>
 </body>
 </head>
+<br>
+<br>
 
 <footer>
-    <%- include("./partials/footer.ejs") %>
+    <img src="../images/footer.jpeg" style="width:100%">
 </footer>
 
 </html> 

@@ -14,23 +14,10 @@ cb(null, path.join(__dirname, "../../public/profilePhotos"))
     filename: function (req, file, cb){
         cb(null,  Date.now() + "-" +  file.originalname);
     }
-
+    
 });
 
 const upload = multer({ storage: storage });
-
-router.get("/nuevohome", mainController.nuevohome);
-router.get("/partials/header", mainController.header);
-router.get('/delete', mainController.Userdelete);
-router.get('/edit', upload.single("profilePhoto"), mainController.Useredit);
-
-router.get('/Usercreate', mainController.Usercreate);
-
-router.get('/create', mainController.Usercreate);
-
-router.get('/productCart', mainController.productCart);
-router.get('/productDetail', mainController.productDetail);
-
 
 //validaciones para el login
 const loginValidaciones =[
@@ -41,21 +28,19 @@ const loginValidaciones =[
         .isLength({ min:4  }).withMessage('La contraseña no es correcta'),
 ]; 
 
+router.get("/nuevohome", mainController.nuevohome);
+router.get("/partials/header", mainController.header);
+/* router.get('/edit', upload.single("profilePhoto"), mainController.Useredit); */
+router.get('/productCart', mainController.productCart);
+
 // en el get (form de login) agregamos mw. para impedir q un usuario ya logueado vuelva al login.
 //en el post (procesamiento de login) implementamos la constante de validaciones como middelware .
 
 router.get('/login',guestMiddleware , mainController.login);
 router.post('/login',loginValidaciones, mainController.loginProcess);
-
-
 //cerrar session
 router.get('/logout', mainController.logout);
-
 router.get('/', mainController.index);
-router.get('/user', mainController.user);
- //que seria?
-/*router.get('/register', mainController.register); */
-router.post('/user/users', mainController.Postregister);
 router.get("/asesoramiento", mainController.asesoramiento);
 router.get('/error', mainController.error);
 router.get('/ayuda', mainController.ayuda);

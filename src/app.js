@@ -15,11 +15,7 @@ app.use(userLoggedMiddleware); // el mw de app. que va a servir para mostrar o n
 
 const mainRoutes = require("../src/routes/mainRoutes");
 const productRoutes = require("../src/routes/productRoutes");
-//const errorRoutes = require("../src/routes/errorRoutes");
 const userRoutes = require("../src/routes/userRoutes");
-/*const adminRoutes = require("../src/routes/adminRoutes");*/
-//const adminEditRoutes = require("../src/routes/adminEditRoutes");
-
 
 const publicPath = path.resolve(__dirname, "../public")
 app.use(express.static(publicPath));

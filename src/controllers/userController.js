@@ -1,4 +1,4 @@
- const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 //const multer = require("multer");
 const bcryptjs = require('bcryptjs');
@@ -8,13 +8,13 @@ const { validationResult } = require('express-validator')
 
 
 const controller = {
-    
+
     users: (req, res) => {
 
         return res.render('user/users', { users: usuarios })
 
     },
-    
+
 
     putEdit: (req, res) => {
         const usuarioId = Number(req.params.id);
@@ -44,7 +44,7 @@ const controller = {
         fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), nuevosUsuariosJson, "utf-8");
 
         return res.redirect('/user/users')
-        
+
     },
     getEdit: (req, res) => {
         const usuarioId = Number(req.params.id);
@@ -54,8 +54,8 @@ const controller = {
             usuarioActual: theUser,
         });
 
-    
-       
+
+
     },
     delete: (req, res) => {
         const usuarioId = Number(req.params.id);
@@ -69,48 +69,53 @@ const controller = {
         fs.writeFileSync(path.join(__dirname, '../data/usersDB.json'), usuariosJSON, 'utf-8');
 
         return res.redirect(`/user/users`);
-    
-        
 
-     
+
+
+
     },
-    
+
     postCreate: (req, res) => {
         let errores = validationResult(req);
         if (errores.isEmpty()) {
 
-        const nuevoUsuario = {
-            id: Date.now(),
-            email: req.body.email,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            profilePhoto: "./profilePhotos/" + req.file.filename,
-           contrasenia: req.body.contrasenia,
-            confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
-            terminosaceptados: req.body.terminosaceptados,
-            //encriptar contraseña
-            contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
-            confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
+            const nuevoUsuario = {
+                id: Date.now(),
+                email: req.body.email,
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                profilePhoto: "./profilePhotos/" + req.file.filename,
+                contrasenia: req.body.contrasenia,
+                confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
+                terminosaceptados: req.body.terminosaceptados,
+                //encriptar contraseña
+                contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
+                confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
 
-        };
-        if(req.body.contrasenia!==req.body.confirmacionDeContrasenia){
-            res.render('user/create',{error:[
-                {msg: 'Las contraseñas no coinciden'}] });
-        } else { 
+            };
+            if (req.body.contrasenia !== req.body.confirmacionDeContrasenia) {
+                res.render('user/create', {
+                    error: [
+                        { msg: 'Las contraseñas no coinciden' }]
+                });
+            } else {
 
-        usuarios.push(nuevoUsuario);
-        //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
-        const usuariosActualizadosJSON = JSON.stringify(usuarios);
+                usuarios.push(nuevoUsuario);
+                //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
+                const usuariosActualizadosJSON = JSON.stringify(usuarios);
 
-        fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
-        console.log(usuarios);
-res.redirect('/login');
- }  
-    }else {
-     res.render('user/create', {error:errores.array(),
-                datosIngresados:req.body });
-               } }, 
-               
+                fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
+                console.log(usuarios);
+                res.redirect('/login');
+            }
+        } else {
+            res.render('user/create', {
+                error: errores.array(),
+                datosIngresados: req.body
+            });
+        }
+    },
+
     userDetail: (req, res) => {
 
 
@@ -129,7 +134,7 @@ res.redirect('/login');
             confirmacionDeContrasenia: usuarioPedido.confirmacionDeContrasenia,
             terminosaceptados: usuarioPedido.terminosaceptados,
             profilePhoto: usuarioPedido.profilePhoto
-            
+
         });
 
 
@@ -140,49 +145,30 @@ res.redirect('/login');
     },
 
 
-
-
-    user: (req, res) => {
-        return res.render('user/user');
-
-
-    },
     getCreate:
         (req, res) => {
             return res.render('user/create');
 
-
-
-
         },
-        admin:
-        (req, res) => {
-            return res.render('user/admin');
 
 
 
 
-        },
-        profile:
+
+
+    profile:
         (req, res) => {
             return res.render('user/profile');
-
-
-
-
         },
-        logout:
+    logout:
         (req, res) => {
             return res.render('user/logout');
 
-
-
-
         },
-       
+
 
 }
-module.exports = controller; 
+module.exports = controller;
 
 
 

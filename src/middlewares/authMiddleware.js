@@ -1,9 +1,9 @@
 function authMiddleware(req, res, next) {
 
-    if (req.session.userLogged != undefined) {
-        next();
-    } else {
-        return res.redirect('login');
+    if (req.session.userLogged != undefined) {       //si userlogged(si esta logueado) es falso
+        next();                                      // continua el proceso de iniciar iniciar session
+    } else {                                           // caso contrario
+        return res.redirect('login');                 // que redireccione al login asi se loguea.
     }
 
 };

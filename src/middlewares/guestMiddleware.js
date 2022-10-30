@@ -1,10 +1,10 @@
 function guestMiddleware(req, res, next) {
-    if (req.session.userLogged) {
+    if (req.session.userLogged) {      //si esta logueado
 
-        return res.redirect('/');   /*en realidad deberia mostrar el profile, peromientras lo hacemos enhome*/
+        return res.redirect('/');   // que le redireccione al home. ( con sus datos)
     }
 
-    next();
+    next();                            // caso contrario, sigue navegando como inivtado.
 }
 
 module.exports = guestMiddleware;

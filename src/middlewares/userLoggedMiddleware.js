@@ -10,5 +10,5 @@ function userLoggedMiddleware(req, res, next) {
 
 module.exports = userLoggedMiddleware;
 
-/*pasamso variables para poder ser usadas en distintas vistas, para eso pasamos lo q hay en session a la variable global
+/*pasamos variables para poder ser usadas en distintas vistas, para eso pasamos lo q hay en session a la variable global
 user logged*/

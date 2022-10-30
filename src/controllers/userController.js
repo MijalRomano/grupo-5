@@ -1,11 +1,10 @@
-const fs = require('fs');
+ const fs = require('fs');
 const path = require('path');
 //const multer = require("multer");
 const bcryptjs = require('bcryptjs');
-
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
 const usuarios = JSON.parse(usersJSON);
-
+const { validationResult } = require('express-validator')
 
 
 const controller = {
@@ -15,6 +14,8 @@ const controller = {
         return res.render('user/users', { users: usuarios })
 
     },
+    
+
     putEdit: (req, res) => {
         const usuarioId = Number(req.params.id);
 
@@ -49,7 +50,7 @@ const controller = {
         const usuarioId = Number(req.params.id);
         const theUser = usuarios.find(u => u.id === usuarioId);
 
-        return res.render(`user/edit`, {
+        return res.render('user/edit', {
             usuarioActual: theUser,
         });
 
@@ -75,6 +76,8 @@ const controller = {
     },
     
     postCreate: (req, res) => {
+        let errores = validationResult(req);
+        if (errores.isEmpty()) {
 
         const nuevoUsuario = {
             id: Date.now(),
@@ -90,6 +93,11 @@ const controller = {
             confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
 
         };
+        if(req.body.contrasenia!==req.body.confirmacionDeContrasenia){
+            res.render('user/create',{error:[
+                {msg: 'Las contraseñas no coinciden'}] });
+        } else { 
+
         usuarios.push(nuevoUsuario);
         //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
         const usuariosActualizadosJSON = JSON.stringify(usuarios);
@@ -97,9 +105,12 @@ const controller = {
         fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
         console.log(usuarios);
 res.redirect('/login');
-    },
-
-
+ }  
+    }else {
+     res.render('user/create', {error:errores.array(),
+                datosIngresados:req.body });
+               } }, 
+               
     userDetail: (req, res) => {
 
 
@@ -171,4 +182,7 @@ res.redirect('/login');
        
 
 }
-module.exports = controller;
+module.exports = controller; 
+
+
+

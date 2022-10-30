@@ -7,6 +7,15 @@ const { info } = require('console');
 
 
 const mainController = {
+    nuevohome: (req, res) => {
+
+        return res.render('nuevohome')
+         } ,
+         header: (req, res) => {
+
+            return res.render('partials/header')
+             } ,
+
     login: (req, res) => {
         console.log(req.session);
         return res.render('login');
@@ -71,7 +80,7 @@ const mainController = {
        return res.render('index',{user :req.session.userLogged});
 
     },
-//////para cerrar session. hay q ver como implementarlo
+//////para cerrar session. 
     logout:(req,res) => {
 req.session.destroy();
 return res.redirect('/');

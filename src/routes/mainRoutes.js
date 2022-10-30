@@ -19,8 +19,8 @@ cb(null, path.join(__dirname, "../../public/profilePhotos"))
 
 const upload = multer({ storage: storage });
 
-
-
+router.get("/nuevohome", mainController.nuevohome);
+router.get("/partials/header", mainController.header);
 router.get('/delete', mainController.Userdelete);
 router.get('/edit', upload.single("profilePhoto"), mainController.Useredit);
 
@@ -41,8 +41,8 @@ const loginValidaciones =[
         .isLength({ min:4  }).withMessage('La contraseña no es correcta'),
 ]; 
 
-// en el get (form de login) agregamos mw. para impedir q un usuario ya logueado vuelva al login
-//en el post (procesamiento de login) implementamos la constante de validaciones como middelware 
+// en el get (form de login) agregamos mw. para impedir q un usuario ya logueado vuelva al login.
+//en el post (procesamiento de login) implementamos la constante de validaciones como middelware .
 
 router.get('/login',guestMiddleware , mainController.login);
 router.post('/login',loginValidaciones, mainController.loginProcess);

@@ -36,6 +36,9 @@ router.post('/:id', userController.putEdit);
 router.get('/userDetail/:id', userController.userDetail);
 
 
+
+
+
 router.post('/login', guestMiddleware, userController.user);
 router.post('/login', authMiddleware, userController.user);
 router.post('/login', userLoggedMiddleware, userController.user);

@@ -14,6 +14,8 @@ const controller = {
         return res.render('user/users', { users: usuarios })
 
     },
+    
+
     putEdit: (req, res) => {
         const usuarioId = Number(req.params.id);
 

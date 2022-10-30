@@ -66,22 +66,29 @@ article:hover{
     top: auto;
 }
 
-.h3 {
-    font-size: 18px;
+h3 {
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    color:dimgray;
+    color:beige;
+
+}
+.pago1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .pago{
     display: flex;
     flex-direction:column;
     text-align: center;
+    background-color: rgb(209, 153, 153);
 }
 .pago i{
     font-size: 20px;
-    color:dimgray;
+    color:beige;
+    margin-right: 5px;
 }
-
 
 @media (min-width: 480px) {
     section{
@@ -95,9 +102,18 @@ article:hover{
         width: 45%;
     }
  }
+ @media (min-width: 769px) {
+    h3{
+        font-size: 25px;
+    }
+.pago i{
+    font-size: 30px;
+}
+
  
 @media (min-width: 1200px) {
     article{
         width: 22%;
     }
+
      }

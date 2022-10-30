@@ -105,11 +105,12 @@ const controller = {
         fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
         console.log(usuarios);
 res.redirect('/login');
- }
+ }  
     }else {
-     res.render('/user/create', {error:errores.array(),
+     res.render('user/create', {error:errores.array(),
                 datosIngresados:req.body });
-               } },
+               } }, 
+               
     userDetail: (req, res) => {
 
 

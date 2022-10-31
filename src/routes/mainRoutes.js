@@ -44,5 +44,5 @@ router.get('/', mainController.index);
 router.get("/asesoramiento", mainController.asesoramiento);
 router.get('/error', mainController.error);
 router.get('/ayuda', mainController.ayuda);
-
+router.get('/admin/admin', mainController.admin);
 module.exports = router;

@@ -6,7 +6,7 @@ const productos = JSON.parse(productosJSON);
 
 const productController = {
 
-    listaprod: (req, res) => {
+    listaprod: (req, res) => {                    //lista prod p admin
         const id = req.params.id
 
         // importamos el array de productos ya existente y lo taducimos a Json 
@@ -31,16 +31,14 @@ const productController = {
     productEdit: (req, res) => {
         return res.render("productEdit");
     },
-    productCreate: (req, res) => {
+  /*   productCreate: (req, res) => {
 
         return res.render("productCreate");
-    },
-    productDelete: (req, res) => {
-        return res.render("productDelete");
-    },
+    }, */
+    
 
     productos: (req, res) => {
-        return res.render("product");
+        return res.render("product");                  //lista de prod para el usuario
     },
 
     //CRUD

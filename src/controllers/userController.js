@@ -78,42 +78,50 @@ const controller = {
     postCreate: (req, res) => {
         let errores = validationResult(req);
         if (errores.isEmpty()) {
-
-            const nuevoUsuario = {
-                id: Date.now(),
-                email: req.body.email,
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                profilePhoto: "./profilePhotos/" + req.file.filename,
-                contrasenia: req.body.contrasenia,
-                confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
-                terminosaceptados: req.body.terminosaceptados,
-                //encriptar contraseña
-                contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
-                confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
-
-            };
-            if (req.body.contrasenia !== req.body.confirmacionDeContrasenia) {
+            const usuarioRegistrado = usuarios.find(thisUser => thisUser.email === req.body.email);
+            if (usuarioRegistrado) {
                 res.render('user/create', {
                     error: [
-                        { msg: 'Las contraseñas no coinciden' }]
-                });
+                        { msg: 'Este mail ya esta registrado' }]
+                })
             } else {
 
-                usuarios.push(nuevoUsuario);
-                //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
-                const usuariosActualizadosJSON = JSON.stringify(usuarios);
+                const nuevoUsuario = {
+                    id: Date.now(),
+                    email: req.body.email,
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    profilePhoto: "./profilePhotos/" + req.file.filename,
+                    contrasenia: req.body.contrasenia,
+                    confirmacionDeContrasenia: req.body.confirmacionDeContrasenia,
+                    terminosaceptados: req.body.terminosaceptados,
+                    //encriptar contraseña
+                    contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
+                    confirmacionDeContrasenia: bcryptjs.hashSync(req.body.confirmacionDeContrasenia, 10),
+                };
 
-                fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
-                console.log(usuarios);
-                res.redirect('/login');
-            }
-        } else {
+                if (req.body.contrasenia !== req.body.confirmacionDeContrasenia) {
+                    res.render('user/create', {
+                        error: [
+                            { msg: 'Las contraseñas no coinciden' }]
+                    });
+                } else {
+
+                    usuarios.push(nuevoUsuario);
+                    //esto 2 reglones para conectarlo con el json y q aparezcan ahi los usuarios nuevos.
+                    const usuariosActualizadosJSON = JSON.stringify(usuarios);
+
+                    fs.writeFileSync(path.join(__dirname, "../data/usersDB.json"), usuariosActualizadosJSON, "utf-8");
+                    console.log(usuarios);
+                    res.redirect('/login');
+                }
+             }
+            } else {
             res.render('user/create', {
                 error: errores.array(),
                 datosIngresados: req.body
             });
-        }
+         }
     },
 
     userDetail: (req, res) => {

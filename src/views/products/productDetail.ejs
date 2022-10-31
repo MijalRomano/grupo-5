@@ -35,18 +35,15 @@
 
 
   <form action="/">
-    <button type="submit"> Volver al home</button>
+    <button style="background-color:rgb(243, 225, 121);" type="submit"> Volver al home</button>
   </form>
   <br>
-  <form action="/listaprod/<%= id %> ?_method=DELETE" method="post">
-    <button type="submit" style="color:rgb(196, 30, 4)">Eliminar</button>
+  
+  <form action="/productCart">
+    <button style="background-color:rgb(243, 215, 226);"type="submit"> Agregar al carrito</button>
   </form>
   <br>
-  <form action="/products/<%= id %> /productEdit/" method="get">
-    <button type="submit" style="color:rgb(15, 152, 33)">Editar</button>
-  </form>
-  <br>
-
+  
 
 
 

@@ -158,6 +158,37 @@ const productController = {
         return res.redirect('/listaprod')
     },
 
+
+
+    //AcciónPrueba: function (req, res) {
+    //    const productId = Number(req.params.id);
+//
+    //    const nuevoProducto = {
+    //        id: productId,
+    //        name: req.body.name,
+    //        description: req.body.description,
+   //        productPhoto: "./productPhotos/" + req.file.filename,
+   //         category: req.body.category,
+  //         price: req.body.price,
+   //         color: req.body.color
+   //     };
+//
+   //     const nuevosProductos = productos.map(productoActual => {
+      //      if (productoActual.id === productId) {
+    //            return nuevoProducto;
+   //         }
+//
+   //         return productoActual;
+   //     });
+//
+   //     const nuevosProductosJson = JSON.stringify(nuevosProductos);
+
+   //     fs.writeFileSync(path.join(__dirname, "../data/productsDB.json"), nuevosProductosJson, "utf-8");
+//
+   //     return res.redirect('/')
+    //},
+
+
     acciondeborrado: function (req, res) {
         const productId = Number(req.params.id);
 

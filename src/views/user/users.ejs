@@ -31,7 +31,7 @@
                     <h3> Contraseña:<%= usuarioActual.contrasenia %>, <br></h3>
                          <h3> Confirmacion De Contraseña:   <%= usuarioActual.confirmacionDeContrasenia %>, <br></h3>
                               <h3> Terminos aceptados: <%= usuarioActual.terminosaceptados %>, <br></h3>
-                                <h3> Foto De Perfil: <br><img width="200" src="../<%= usuarioActual.profilePhoto %>" alt=""> <br></h3> <br><br><br>
+                              <a href="/user/userDetail/<%= usuarioActual.id %> " > <h3> Foto De Perfil: <br><img width="200" src="../<%= usuarioActual.profilePhoto %>" alt=""> <br></h3> <br><br><br></a>
                                
 
                                 <form action="/user/users/<%=usuarioActual.id%>?_method=DELETE" method="post">

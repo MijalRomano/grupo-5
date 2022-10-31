@@ -34,7 +34,11 @@ router.get("/products/productDetail/:id", productController.Detalledeunproductop
 router.post("/listaprod", upload.single("productPhoto"), productController.Accióndecreaciónadondeseenvíaelformulario); // Acción de creación (a donde se envía el formulario) 
 router.get("/products/:id/productEdit",  upload.single("productPhoto"), productController.Formulariodeedicióndeproductos); // Formulario de edición de productos (la vista)
 router.put("/listaprod/:id", upload.single("productPhoto"), productController.Accióndeediciónadondeseenvíaelformulario); // Acción de edición (a donde se envía el formulario):
+
+//router.put("/:id", upload.single("productPhoto"), productController.AcciónPrueba); // Acción de edición (a donde se envía el formulario):
+
 router.delete("/listaprod/:id", productController.acciondeborrado);
+
 
 
 

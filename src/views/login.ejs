@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="grupo-5-Finour-joyas/css/login.css">
+<link rel="stylesheet" href="css/login.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
 <title>Login</title>
 <link rel="icon" type="image/png" sizes="16x16" href="/images/col.png">
@@ -44,13 +44,13 @@
                 <div style="text-align:center">
 
                     <input type="text" placeholder="Nombre"  name="nombre" 
-                   <%=locals.datosIngresados && datosIngresados.nombre ? datosIngresados.nombre : '' %>>
+                    value= "<%=locals.datosIngresados && datosIngresados.nombre ? datosIngresados.nombre : '' %> " >
                     
-                    <!-- <%if (locals.errors && errors.nombre){ %>
+                     <%if (locals.errors && errors.nombre){ %>
                         <div class="text-danger">
                             <%= errors.nombre.msg  %>
                         </div> 
-                        <%  } %> -->
+                        <%  } %> 
                              
                 </div>
                 <br>

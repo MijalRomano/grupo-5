@@ -38,6 +38,8 @@ const productController = {
     
 
     productos: (req, res) => {
+
+        
         return res.render("product");                  //lista de prod para el usuario
     },
 

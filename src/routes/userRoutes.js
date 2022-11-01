@@ -28,12 +28,15 @@ const registerValidaciones =[
         .isEmail().withMessage('Por favor ingrese un email válido'),
     body('contrasenia').notEmpty().withMessage('Este campo es obligatorio').bail()
         .isLength({ min:4  }).withMessage('La contraseña debe ser mas larga'),  
-          body('confirmacionDeContrasenia').notEmpty().withMessage('Este campo es obligatorio').bail()
+          body('confirmacionDeContrasenia').notEmpty().withMessage('Este campo es obligatorio').bail(),
 ];
 
 
+    
+  
+
 /* router.get('/users', userController.users);//esta */
-router.post('/create', upload.single("profilePhoto"), registerValidaciones, userController.postCreate); //// procesa el registro por post
+router.post('/create', upload.single("profilePhoto"),registerValidaciones, userController.postCreate); //// procesa el registro por post
 router.get('/create',guestMiddleware, userController.getCreate);//////ruta de form de registro (x get)
 router.get("/logout", userController.logout);//esta
 router.get("/profile", userController.profile);

@@ -4,12 +4,13 @@ const path = require('path');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const { info } = require('console');
-
+const productosJSON = fs.readFileSync(path.join(__dirname, "../data/productsDB.json"), "utf-8");
+const productos = JSON.parse(productosJSON);
 
 const mainController = {
     nuevohome: (req, res) => {
 
-        return res.render('nuevohome')
+        return res.render('nuevohome',{productos:productos});
     },
     header: (req, res) => {
 

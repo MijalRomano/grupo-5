@@ -28,7 +28,7 @@ const loginValidaciones =[
         .isLength({ min:4  }).withMessage('La contraseña no es correcta'),
 ]; 
 
-/*router.get("/nuevohome", mainController.nuevohome);*/
+router.get("/nuevohome", mainController.nuevohome);
 router.get("/partials/header", mainController.header);
 /* router.get('/edit', upload.single("profilePhoto"), mainController.Useredit); */
 router.get('/productCart',authMiddleware, mainController.productCart);

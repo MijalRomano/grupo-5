@@ -1,20 +1,14 @@
-
-
-
-
-
-        <%- include("./partials/head") %>
+<%- include("./partials/head") %>
 
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.google.com" rel="stylesheet">
-
         <link rel="stylesheet" href="css/nuevohome.css">
-
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
         <link href="https://fonts.google.com/specimen/Bree+Serif" rel="stylesheet">
+        
     </head>
     <%- include("./partials/header") %>
 
@@ -23,54 +17,31 @@
                 <title>FINOUR JOYAS</title>
             </h1>
             <h3>NUESTRAS JOYAS</h3>
-            <article class="articulo1"><a href="products/productDetail/<%=product.id%>">
-                    <img src=<%=product.productPhoto%> alt="">
-                    <div class="detalles">
-                        <p class="descuentos">
-                            <%= product.name %>
-                        </p>
-                        <p class="precio">
-                            <%= product.price %>
-                        </p>
-                    </div>
-                </a>
-            </article>
-            <% }}); %>
 
-                <h3>SUGERIDAS</h3>
+            <% productos.forEach(product=> {%>
+                <article class="articulo"><a href="products/productDetail/<%=product.id%>">
+                        <img src=<%=product.productPhoto %> alt="">
+                        <div class="detalles">
+                            <p class="descuentos">
+                                <%= product.name %>
+                            </p>
+                            <p class="precio">
+                                <%= product.price %>
+                            </p>
+                        </div>
+                    </a>
+                </article>
+                <%  }); %>
 
-                <% products.forEach(product=> {
-                    if (product.id > 4 && <=8 {%>
+                  
+ 
+                    
+                    <div class="admin">
+                        <a href="admin/admin">
+                            <h1 style="color:rgb(27, 124, 122)"><i class="fa-solid fa-user-lock"></i>
+                    </div></a></h1>
+                    </main>
+                    </footer>
+                    <%- include("./partials/footer.ejs") %>
 
-                        <article class="articulo1"><a href="products/productDetail/<%=product.id%>">
-                                <img src=<%=product.productPhoto%> alt="">
-                                <div class="detalles">
-                                    <p class="descuentos">
-                                        <%= product.name %>
-                                    </p>
-                                    <p class="precio">
-                                        <%= product.price %>
-                                    </p>
-                                </div>
-                            </a>
-                        </article>
-                        <% }}); %>
-
-
-
-                            </header>
-
-                            <main>
-                                <br>
-                                <h2 style="text-align:center">Nuestras joyas</h2>
-                                <br>
-
-</div>
-<div class ="admin">
-    <a href="admin/admin" >
- <h1 style="color:rgb(27, 124, 122)"><i class="fa-solid fa-user-lock" ></i></div></a></h1>
-    </main>
-    </footer>
-    <%- include("./partials/footer.ejs") %>
-      
-        </html>
+                        </html>

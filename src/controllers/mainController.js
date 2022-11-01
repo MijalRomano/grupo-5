@@ -42,21 +42,27 @@ const mainController = {
                     req.session.userLogged = usuarioALoguear
                     res.redirect('/');
                 } else {
-                    /* res.send("el email o la contraseña no coinciden")*/
+                /*en caso de q no coincide contraseña con email ingresado*/
                     res.render('login', {
                         error: [
                             { msg: 'Los datos ingresados son incorrectos' }
                         ]
                     });
                 }
-            }
-        } else {
+            }else{  /*en caso de q no encuentra al email registrado en la db*/
+                res.render('login', {
+                    error: [
+                        { msg: 'Aun no estas registrado' }
+                    ]
+                });
+                 }
+        } else {  /*en caso de q hay errores de validacion */
             
-            //para enviar los errores a la vista, los agrego a la misma, con una propiedad que la nombre error, donde pido 
-            // que mi variable errores se muestre como array.
+            //para enviar los errores a la vista, los agrego a la misma, con una propiedad a la que nombre 'error', donde pido 
+            // que mi variable errores se muestre como array. y pido que los datos ingresados anteriormente por el usuario persistan.
             res.render('login', {
                 error: errores.array(),
-                datosIngresados: req.body
+                datosIngresados: req.body,
             });
         }
 
@@ -100,7 +106,16 @@ const mainController = {
     ayuda: (req, res) => {
         return res.render("ayuda");
     },
-}
+
+    productosHome: (req, res) => {
+    const productosJSON = fs.readFileSync(path.join(__dirname, "../data/productsDB.json"), "utf-8");
+    const productos = JSON.parse(productosJSON);
+    const theProduct = productos.find(thisProduct => thisProduct.id === productId);
+
+    res. render ('/', {products:productos})
+},
+
+ }
 
 
 module.exports = mainController;

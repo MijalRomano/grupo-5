@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,47 +6,54 @@
 <link rel="stylesheet" href="../css/login.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
 <title>create</title>
-<link rel="icon" type="image/png" sizes="16x16"  href="/images/col.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/col.png">
+
 <head>
 
 <body>
-             </a>
+    </a>
     <a href="/"><img src="../images/WhatsApp Image 2022-08-23 at 5.59.17 PM.jpeg" style="width:100%"></a>
 
     <src img="https://cdn.forbes.co/2022/03/623e1f123c15e__822x460-copia.jpg"></src>
     </div>
- 
-<div class="text-danger">
-    <% if(locals.error){ error.forEach(errors=>{%>
-            <%= errors.msg %>
-        <%}) }%>
-    </div>  
-    <form action="../user/create" method="POST" class="email" style="text-align:center" style="font-size: x-large" enctype="multipart/form-data">
+
+    <div class="text-danger">
+        <% if(locals.error){ error.forEach(errors=>{%>
+            <p style="color:rgb(252, 135, 154)">
+                <%= errors.msg %>
+            </p>
+            <%}) }%>
+    </div>
+    <form action="../user/create" method="POST" class="email" style="text-align:center" style="font-size: x-large"
+        enctype="multipart/form-data">
         <br>
         <h2 style="color:rgb(178, 235, 159)">Crear usuario </h2>
-        
+
         <div>
-            <input type="email" placeholder="Email"  style="color:gray" name="email" required 
-            value= "<%=locals.datosIngresados && datosIngresados.email ? datosIngresados.email : '' %> " >
+            <input type="email" placeholder="Email" style="color:gray" name="email"
+                value="<%=locals.datosIngresados && datosIngresados.email ? datosIngresados.email : '' %> " required>
         </div>
         <br>
         <div>
-            <input type="text" placeholder=" Nombre"  style="color:gray" name="nombre"    required
-            value= "<%=locals.datosIngresados && datosIngresados.nombre ? datosIngresados.nombre : '' %> " >
+            <input type="text" placeholder="Nombre" style="color:gray" name="nombre"
+                value="<%=locals.datosIngresados && datosIngresados.nombre ? datosIngresados.nombre : '' %> " required>
+        </div>
+        <div>
+            <br>
+            <input type="text" placeholder="Apellido" style="color:gray" name="apellido"
+                value="<%=locals.datosIngresados && datosIngresados.apellido ? datosIngresados.apellido : '' %> "
+                required>
+            <br>
         </div>
         <br>
-        <input type="text" placeholder="Apellido" style="color:gray"  name="apellido" required
-        value= "<%=locals.datosIngresados && datosIngresados.apellido ? datosIngresados.apellido : '' %> " > 
+        <input type="file" name="profilePhoto">
         <br>
         <br>
-        <input type="file" name="profilePhoto" > 
-        <br>
-        <br>
-        
+
         <div>
             <input type="password" placeholder="Contraseña" name="contrasenia" required>
         </div>
-        <br> 
+        <br>
         <div>
             <input type="password" placeholder="Confirmar contraseña" name="confirmacionDeContrasenia" required>
             <br>
@@ -54,15 +61,15 @@
         <br>
         <div>
             <label>
-                <input type="checkbox" name="terminosaceptados" >
-                <label for="acepto los terminos de privacidad" style="color:rgb(112, 184, 88)" 
+                <input type="checkbox" name="terminosaceptados">
+                <label for="acepto los terminos de privacidad" style="color:rgb(112, 184, 88)"
                     style="font-size:small">Acepto la politíca de privacidad </label>
-                    
+
         </div>
         <br>
         <div>
             <input type="submit" value=" Crear usuario" style="color:rgb(104, 199, 115)">
-        </input>
+            </input>
         </div>
         </div>
     </form>
@@ -73,5 +80,4 @@
     <img src="../images/footer.jpeg" style="width:100%">
 </footer>
 
-</html>  
-
+</html>

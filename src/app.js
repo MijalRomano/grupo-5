@@ -58,6 +58,6 @@ app.use("/user", userRoutes);
 
 
 
-app.listen(3001, (req, res) => {
-    console.log('Servidor escuchando en el puerto 3001');
+app.listen(3002, (req, res) => {
+    console.log('Servidor escuchando en el puerto 3002');
 })

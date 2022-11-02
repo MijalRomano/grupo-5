@@ -3,179 +3,29 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
-
-p {
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+main{
+    background-color: rgb(253, 225, 225) ;
 }
 
-body{
-    display: block;
-}
-
-h3 {
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
+section {
     display: flex;
-    text-align: center;
-}
-
-.precio {
-    font-size: 18 px;
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-}
-
-
-.descuentos {
-    font-size: 16 px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    top: auto;
-}
-
-.descripciones {
-    font-size: 16 px;
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-}
-/*hice yo*/
-.main-header-top-bar p {
-    color:beige;
-    text-align: end;
-    margin-right: 15px;
-    font-size: 15px;
-    font-family: 'Lucida Sans';
-     }
-     .cerrar{
-        color:beige;
-        
-     }
-/*
-main section article{
-    background-color: white;
-    }
-
-.hamburger-button {
-    background-color: #03264C;
-    color: white;
-    display: block;
-    max-width: 50px;
-    padding: 15px 0;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 18px;
-    margin: auto;
-}
-/*************************
-.hamburger-button i{
-    margin: auto;
-}*/
-/*.logo {
-    width: 200px;
-}
-
-.copy-header {
-    font-weight: 400;
-    text-align: center;
-}***************************/
-
-.main-navbar ul {
-    list-style: none;
-    /* margin: 10px; */
-    padding: 0px;
-    justify-content: space-between;
-    margin-top: 100px;
-}
-
-.main-navbar a {
-    text-decoration: none;
-    color: #222222;
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
-}
-
-/**************que es logo banner*****/
-.logo-banner {
-    width: 100%;
-    margin: 0%;
-}
-
-.banner {
-    width: 100%;
-    margin: 0%;
-
-}
-/*********************
-.main-header {
-    background-color: #EAC926;
-}
-*/
-
-
-.barra-de-busqueda input i {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 20vw;
-    
-}
-
-.copy-header {
-    max-width: 350px;
-    text-align: right;
-}
-
-.hamburger-button {
-    display: flex;
-}
-
-.main-navbar {
-    display: flex;
-    justify-content: space-between;
-
+    width: 100%;
 }
 
 
-.main-navbar li {
-    margin: 0 15px;
-}
-
-.footer {
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    width: 90vw;
-    height: 30vh;
-    text-align: center;
-    justify-content: center;
-
-}
-
-h4,
-.seguridad,
-.pago,
-.envio {
-    border-top: solid 1px #ebebeb;
-    padding-left: 15px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-}
-article{
-    /*width: 300px;
-    height: 250px;*/
+article {
+    height: 80%;
+    width: 80%;
+    background-color: white;
     border: 1px solid black;
     box-shadow: 0 0 10px rgb(100, 100, 100);
     border-radius: 12px;
     transition: 0.25s;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: 12px;
     margin: 10px;
     animation-name: enmovimiento;
@@ -184,138 +34,86 @@ article{
     animation-iteration-count: infinite;
 }
 
-main section article i {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: relative;
-}
-.descuentos,
-article i {
-    color: #39b54a;
-}
-
-/*section {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-}*/
-
 article img {
-    width: 70%;
-    height: 70%;
+    width: 40%;
+    height: 40%;
+      
 }
-
-@media (min-width: 480px) {
-
-    .articulos {
-        width: 80vw;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .burger-menu{
-        display: none;
-    }
-    main section article{
-    box-shadow: 0 0 10px rgb(100, 100, 100);
-    background-color: white;
-    width: 45%;
-    }
-    .precio .descuentos{
-        width: 50%;
-    }
-    footer{
-        display: flex;
-    }
-}
-
-@media(min-width: 769px) {
-    .main-navbar{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        list-style: none;
-        justify-content: space-between;
-    }
-    .main-header-top-bar {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    main section article {
-        width: 22%;
-    }
-
-    .logo-search {
-        display: flex;
-        justify-content: space-between;
-        
-
-    }
-
-    @media (min-width: 1200px) {
-        .logo {
-            width: 250px;
-        }
-
-        .article .articulos {
-            width: 40vw;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .main-header-top-bar,
-        .main-navbar {
-            max-width: 1200px;
-            /* margin: auto; */
-        }
-
-        .copy-header {
-            margin: 0;
-            max-width: none;
-            font-size: 18px;
-            font-weight: 400;
-        }
-
-        .main-header-top-bar {
-            align-items: center;
-        }
-
-        /* .main-navbar {
-            margin-top: 50px;
-        } */
-
-        .main-navbar li {
-            margin: 0 10px;
-        }
-
-        .main-navbar a {
-            font-size: 20px;
-        }
-    }
-}
-
-article i:hover {
-    transform: rotateZ(-90deg);
-    transition: 0.5s;
-}
-
-Article:hover .descripciones {
-    display: none;
-}
-footer i:hover {
-    color: #0022AA;
+.articulo1 {
+    height:40%;
 }
 article:hover{
     box-shadow: 10px 5px 25px black;
 }
-button:hover{
+/* button:hover{
     color: #0022AA;
+} */
+
+.detalles{
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
+.precio {
+    font-size: 18 px;
+    
+}
+
+
+.descuentos {
+    font-size: 16 px;
+    top: auto;
+}
+
+h3 {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color:beige;
+
+}
+.pago1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pago{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    background-color: rgb(209, 153, 153);
+}
+.pago i{
+    font-size: 20px;
+    color:beige;
+    margin-right: 5px;
+}
+
+@media (min-width: 480px) {
+    section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    article{
+        width: 45%;
+    }
+ }
+ @media (min-width: 769px) {
+    h3{
+        font-size: 25px;
+    }
+.pago i{
+    font-size: 30px;
+}
+
+  }
+@media (min-width: 1200px) {
+    article{
+        width: 22%;
+    }
+
+     }

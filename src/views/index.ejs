@@ -1,103 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/nuevohome.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.google.com/specimen/Bree+Serif" rel="stylesheet">
-    <title>FinourJOYAS</title>
-</head>
 
-</html>
 
-<%- include("./partials/header") %>
-
-    <main>
-        <br>
-        <h2 style="text-align:center">Nuestras joyas</h2>
-        <br>
-        <section>
-             <article class="articulo1"><a href = "products/productDetail/1">
-                <img src="./images/img4.jpg" alt="">
-                 <div class="detalles">
-                <p class="descuentos"> 12% OFF</p>
-                <p class="precio"> $200.000</p>
-            </div></a>
-            </article>
-            <article class="articulo2"><a href = "products/productDetail/2"> 
-                <img src="./images/newpicture.jpg" alt="">
-                 <div class="detalles">
-                <p class="descuentos"> 10% OFF </p>
-                <p class="precio"> $150.000 </p>
-            </div></a>
-            </article>
-
-            <article class="articulo3"><a href = "products/productDetail/3">
-                <img src="./images/brazalete.jpg" alt="">
-                 <div class="detalles">
-                <p class="descuentos"> 15% OFF </p>
-                <p class="precio">$250.000 </p>
-            </div></a>
-            </article>
-            <article class="articulo4"><a href = "products/productDetail/4">
-                <img src="./images/anillo.jpg" alt="">
-                 <div class="detalles">
-            
-                <p class="descuentos">10% OFF</p>
-                <p class="precio"> $50.000</p>
-            </div></a>
-            </article>
-        </section>
-        <br>
-        <h2 style="text-align:center">Sugeridas</h2>
-        <br>
-        <section>
-            <article class="articulo1"><a href = "products/productDetail/5">
-                <img src="./images/fotonueva.jpg" alt="">
-                <div class="detalles">
-                <p class="descuentos">10% OFF</p>
-                <p class="precio">$40.000</p>
-            </div></a>
-            </article>
-            <article class="articulo2"><a href = "products/productDetail/6">
-                <img src="./images/img8.jpg" alt="">
-                <div class="detalles">
-                <p class="descuentos">12% OFF</p>
-                <p class="precio">$100.000</p>
-            </div></a>
-            </article>
-            <article class="articulo3"><a href = "products/productDetail/7">
-                <img src="./images/img 3.jpg" alt="">
-                <div class="detalles">
-                <p class="descuentos">12% OFF</p>
-                <p class="precio">$170.000 </p>
-            </div></a>
-            </article>
-            <article class="articulo4"><a href = "products/productDetail/8">
-                <img src="./images/img19.jpg" alt="">
-                <div class="detalles">
-                <p class="descuentos">10% OFF</p> 
-                <p class="precio">$30.000 </p>
-            </div></a>
-            </article>
-        </section>
+     <head>
+        <!--  <%- include("./partials/head") %>  -->
     
-    <div class="pago">
-        <div class="pago1">
-    <i class="fas fa-hand-holding-usd"></i> 
-        <h3>Medios de pago:</h3> </div>
-        
-    <h3> Tarjeta,efectivo,transferencia.</h3>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.google.com" rel="stylesheet">
+       
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.google.com/specimen/Bree+Serif" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/nuevohome.css">
+                <title>FINOUR JOYAS</title>
+            
+    </head>
 
-</div>
-<div class ="admin">
-        <a href="admin/admin" >
-     <h1 style="color:rgb(27, 124, 122)"><i class="fa-solid fa-user-lock" ></i> </h1></a>
-    </div>
-    </main>
-    </footer>
-    <%- include("./partials/footer.ejs") %>
-      
-        </html>
+            <%- include("./partials/header") %>
+            <main>
+
+            <h2>NUESTRAS JOYAS</h2>
+ <section> 
+            <% productos.forEach(product=> {%>
+                <article class="articulo"><a href="products/productDetail/<%=product.id%>">
+                        <img src=<%=product.productPhoto %> alt="">
+                        <div class="detalles">
+                            <p class="nombre">
+                                <%= product.name %>
+                            </p>
+                            <p class="precio">
+                                <%= product.price %>
+                            </p>
+                        </div>
+                    </a>
+                </article>
+                <%  }); %>
+            
+            </section>            
+ 
+            <div class="pago">
+                <div class="pago1">
+            <i class="fas fa-hand-holding-usd"></i> 
+                <h3>Medios de pago:</h3> </div>
+                
+            <h3> Tarjeta,efectivo,transferencia.</h3> 
+ </div>
+ </main>
+                    <div class="admin">
+                        <a href="admin/admin">
+                            <h1 style="color:rgb(27, 124, 122)"><i class="fa-solid fa-user-lock"></i>
+                    </div></a></h1>
+                    </main>
+                    </footer>
+                    <%- include("./partials/footer.ejs") %>
+
+                        </html>

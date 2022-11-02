@@ -31,7 +31,7 @@ const loginValidaciones =[
 router.get("/nuevohome", mainController.nuevohome);
 router.get("/partials/header", mainController.header);
 /* router.get('/edit', upload.single("profilePhoto"), mainController.Useredit); */
-router.get('/productCart',authMiddleware, mainController.productCart);
+router.get('/productCart/:id',authMiddleware, mainController.productCart);////////////////////ver carrito//
 
 // en el get (form de login) agregamos mw. para impedir q un usuario ya logueado vuelva al login.
 //en el post (procesamiento de login) implementamos la constante de validaciones como middelware .

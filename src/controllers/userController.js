@@ -51,7 +51,7 @@ const controller = {
         const theUser = usuarios.find(u => u.id === usuarioId);
 
         return res.render('user/edit', {
-            usuarioActual: theUser,
+            user: theUser,
         });
 
 
@@ -161,13 +161,23 @@ const controller = {
 
 
 
-
-
-
-    profile:
+   profile:
         (req, res) => {
-            return res.render('user/profile');
-        },
+            
+        const id = req.body.id
+
+        // importamos el array de productos ya existente y lo taducimos a Json 
+        const usuariosJSON = fs.readFileSync(path.join(__dirname, "../data/usersDB.json"), "utf-8");
+        const usuarios = JSON.parse(usuariosJSON);
+
+        const usuarioPedido = usuarios.find(usuarioActual => usuarioActual.id == id);
+        res.render("user/profile"/* , { user: usuarioPedido 
+       
+
+        }*/);
+
+            return res.render('user/profile')
+             }, 
     logout:
         (req, res) => {
             return res.render('user/logout');
@@ -180,3 +190,15 @@ module.exports = controller;
 
 
 
+/*
+ <u style="color:peru"> <h1 style="color:peru" > Hola <%= user.nombre %></h1> </u>
+    <h3> Email:<%= user.email%> </h3>
+    <h3> Nombre:<%= user.nombre %> </h3>
+    <h3> Apellido:<%= user.apellido %> </h3>
+    <h3> Contraseña: <%=  user.contrasenia %> </h3>
+    <h3> Confirmacion de contraseña<%= user.confirmacionDeContrasenia %> </h3>
+    <h3> Trerminos Aceptados <%= user.terminosaceptados %> </h3>
+    <h3> Foto De Perfil: <br><img width="200" src="../../<%= user.profilePhoto %>" alt=""> </h3>
+
+
+<a href="./edit"> > <button> Edita tus Datos</button></a> --></br>*/

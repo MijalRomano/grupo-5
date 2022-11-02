@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
 <title>Edit</title>
 <link rel="icon" type="image/png" sizes="16x16"  href="/images/col.png">
 
-<head>
+</head>
+<%- include("./../partials/header") %>
 <body>
     <a href="/" > <style type="text/css"> .hola{
         color: rgb(79, 165, 42);
@@ -23,7 +25,7 @@
     <br>
     <h2 style="text-align:center"> Edita tu usuario</h2>
   
-    <form action="/user/users/<%= usuarioActual.id %>?_method=PUT" method="POST" style="text-align:center" enctype="multipart/form-data" style="font-size: x-large"> 
+    <form action="user/users/<%= usuarioActual.id %>"?_method="PUT" method="POST" style="text-align:center" enctype="multipart/form-data" style="font-size: x-large"> 
         <br>
         <div style="text-align:center">
 

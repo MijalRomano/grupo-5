@@ -39,14 +39,16 @@ const registerValidaciones =[
 router.post('/create', upload.single("profilePhoto"),registerValidaciones, userController.postCreate); //// procesa el registro por post
 router.get('/create',guestMiddleware, userController.getCreate);//////ruta de form de registro (x get)
 router.get("/logout", userController.logout);//esta
-router.get("/profile", userController.profile);
+
+router.get('/profile', userController.profile);
+
 router.get('/users', upload.single("profilePhoto"), userController.users);//
 router.get('/delete', userController.delete);//esta
 router.delete('/users/:id', userController.delete);
 router.put('user/users/:id/',upload.single("profilePhoto"),  userController.putEdit);
-router.get('/:id', upload.single("profilePhoto"),   userController.getEdit);// esta p editar usuario. falta q funcione
+router.get('/edit/:id', upload.single("profilePhoto"),   userController.getEdit);// esta p editar usuario. falta q funcione
 //probando edir por post
-router.post('/:id', userController.putEdit);
+router.post('/edit/:id', userController.putEdit);
 router.get('/userDetail/:id', userController.userDetail);
 
 

@@ -38,3 +38,10 @@ mix-blend-mode:multiply;
 border-radius: 25px;
 border-color: black;
 }
+
+p{
+    
+    font-family:cursive;
+    display:inline-block;
+text-align:center;
+}

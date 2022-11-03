@@ -4,14 +4,24 @@
     box-sizing: border-box;
 }
 main{
-    background-color: rgb(253, 225, 225) ;
+    background-color: rgb(248, 233, 233) ;
 }
-
+h2{
+    
+    padding-top:15px; 
+     margin-bottom: 15px;
+    text-align: center;
+    font-family:monospace;
+    color:rgb(187, 101, 132);
+    font-size: 25px;
+    
+}
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    justify-content: center;
 }
 
 
@@ -19,58 +29,65 @@ article {
     height: 80%;
     width: 80%;
     background-color: white;
-    border: 1px solid black;
-    box-shadow: 0 0 10px rgb(100, 100, 100);
-    border-radius: 12px;
-    transition: 0.25s;
+    
+    box-shadow: 0 0 18px rgb(208, 162, 162);
+    /* transition: 0.25s; */
     display: flex;
     flex-direction: column;
+    justify-content: space-between ;
     text-align: center;
-    padding: 12px;
-    margin: 10px;
-    animation-name: enmovimiento;
+    padding: 16px;
+    margin: 21px;
+    /* animation-name: enmovimiento;
     animation-duration: 3em;
     animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 
 article img {
-    width: 40%;
-    height: 40%;
+    max-width: 60%;
+    height: 180;
+ 
+    text-align: center;
+    
       
 }
-.articulo1 {
-    height:40%;
-}
 article:hover{
-    box-shadow: 10px 5px 25px black;
+    box-shadow: 10px 5px 25px rgb(211, 160, 190);
+   
 }
 /* button:hover{
     color: #0022AA;
 } */
 
 .detalles{
-    font-family:'Roboto', sans-serif;
+    /* font-family:'Roboto', sans-serif;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
+    color: rgb(105, 105, 105);
+    font-family:cursive;
+    text-decoration: none;
 }
 .precio {
-    font-size: 18 px;
+    font-size: 18px;
     
 }
 
-
-.descuentos {
-    font-size: 16 px;
+.nombre {
+    font-size: 16px;
     top: auto;
+  /*   color:blueviolet; */
 }
+
+
 
 h3 {
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     color:beige;
+    margin-top: 15px;
 
 }
 .pago1{
@@ -95,11 +112,11 @@ h3 {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        height: 100%;
+        
     }
 
     article{
-        width: 45%;
+        width: 40%;
     }
  }
  @media (min-width: 769px) {
@@ -113,7 +130,8 @@ h3 {
   }
 @media (min-width: 1200px) {
     article{
-        width: 22%;
+        width: 20%;
+        height: 300;
     }
 
      }

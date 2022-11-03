@@ -10,11 +10,11 @@ const productos = JSON.parse(productosJSON);
 const mainController = {
     nuevohome: (req, res) => {
 
-        return res.render('nuevohome',{productos:productos});
+        return res.render('nuevohome'/* ,{productos:productos} */);
     },
     header: (req, res) => {
 
-        return res.render('partials/header')
+        return res.render('partials/header', { user: req.session.userLogged })
     },
 
     login: (req, res) => {
@@ -76,7 +76,7 @@ const mainController = {
 
         //le digo a la vista del home  q va a recibir los datos del user logueado.
 
-        return res.render('index', { user: req.session.userLogged });
+        return res.render('index', { user: req.session.userLogged , productos:productos});
 
     },
     //para cerrar session. 
@@ -88,7 +88,9 @@ const mainController = {
 
 
     productCart: (req, res) => {
-        return res.render('productCart');
+        
+    res.render('productCart')        
+            
     },
     
     
